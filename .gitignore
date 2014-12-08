@@ -1,0 +1,5 @@
+.DS_Store
+.sass-cache/
+*.css
+icons*.png
+icons-2x*.png
