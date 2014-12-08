@@ -1,0 +1,216 @@
+// Drop Down
+//------------------------------------------------------------
+//
+
+
+// Drop Down Toogle
+// --------------------------------------------------
+
+.toogle-menu {
+    display: block;
+    padding: rem-calc(15 25);
+    color: $light-color;
+    cursor: pointer;
+    position: relative;
+    font-size: rem-calc(13);
+    text-align: right;
+    text-transform: uppercase;
+    @include user-select(none);
+    background: darken($light-color, 90%);
+    border-bottom: 1px solid darken($light-color, 70%);
+
+    span {
+        margin: rem-calc(0 15 0 0);
+
+        &:after {
+            content: "";
+            width: 16px;
+            right: rem-calc(15);
+            position: absolute;
+            box-shadow: 0 0 0 1px $light-color, 0 7px 0 1px $light-color, 0 14px 0 1px $light-color;
+        }
+    }
+
+    @include screen($medium) {
+        display: none;
+    }
+}
+
+
+// Drop Down Menu
+// --------------------------------------------------
+
+.drop-down-menu {
+    @extend %reset-list;
+    font-size: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .6s ease;
+
+    &.expanded {
+        max-height: 1000px;
+        transition: max-height 1.4s ease;
+    }
+
+    @include screen($medium) {
+        float: right;
+        max-height: 100%;
+        overflow: visible;
+    }
+
+    > li {
+        display: block;
+        position: relative;
+        font-size: rem-calc(14);
+        border-bottom: 1px solid darken($light-color, 70%);
+        background: darken($light-color, 90%);
+
+        @include screen($medium) {
+            display: inline-block;
+            border-bottom: none;
+            border-left: 1px solid darken($light-color, 70%);
+        }
+
+        @include screen($medium) {
+            &:first-child {
+                border: none;
+            }
+        }
+
+        &:hover {
+            > .drop-down {
+                margin: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        > a {
+            display: block;
+            color: darken($light-color, 40%);
+            padding: rem-calc(15 25);
+            text-transform: uppercase;
+
+            &:hover {
+                color: $light-color;
+                background: $brand-primary;
+            }
+        }
+    }
+
+    .has-drop-down {
+        > a {
+            &:after {
+                content: "▾";
+                float: right;
+                font-size: rem-calc(14);
+                margin: rem-calc(-1 -15 0 10);
+                transition: all .15s ease;
+            }
+        }
+    }
+}
+
+.drop-down {
+    @extend %reset-list;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    margin: rem-calc(20 0 0);
+    visibility: hidden;
+    position: absolute;
+    background: darken($light-color, 78%);
+    transition: all .15s ease;
+
+    li {
+        border-bottom: 1px solid darken($light-color, 65%);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    a {
+        display: block;
+        position: relative;
+        padding: rem-calc(15 10);
+        color: darken($light-color, 40%);
+
+        &:hover {
+            color: $light-color;
+            background: $brand-primary;
+        }
+    }
+
+    > li {
+        &:first-child {
+            a {
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    top: rem-calc(-8);
+                    left: 50%;
+                    position: absolute;
+                    transition: all .3s ease;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid darken($light-color, 78%);
+                    transform: translateX(-50%);
+                }
+
+                &:hover {
+                    &:before {
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-bottom: 8px solid $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        &.has-drop-down {
+            position: relative;
+
+            > a {
+                &:after {
+                    content: "»";
+                    float: right;
+                    font-size: rem-calc(18);
+                    margin: rem-calc(-2 0 0);
+                    transition: all .15s ease;
+                }
+            }
+        }
+
+        &:hover {
+            > .drop-down {
+                margin: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .drop-down {
+        width: 100%;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        margin: rem-calc(20 0 0);
+        visibility: hidden;
+
+        > li {
+            &:first-child {
+                a {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+

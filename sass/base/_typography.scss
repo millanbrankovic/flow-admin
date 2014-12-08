@@ -1,0 +1,130 @@
+// Typography
+//------------------------------------------------------------
+//
+
+
+// WebFonts
+// --------------------------------------------------
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../../assets/fonts/opensans-light-webfont.eot');
+    src: url('../../assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/opensans-light-webfont.woff') format('woff'),
+        url('../../assets/fonts/opensans-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../../assets/fonts/opensans-regular-webfont.eot');
+    src: url('../../assets/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/opensans-regular-webfont.woff') format('woff'),
+        url('../../assets/fonts/opensans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../../assets/fonts/opensans-bold-webfont.eot');
+    src: url('../../assets/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/opensans-bold-webfont.woff') format('woff'),
+        url('../../assets/fonts/opensans-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// Headings
+// --------------------------------------------------
+
+h1 {
+    font-size: $h1-sml-size;
+
+    @include screen($medium) {
+        font-size: $h1-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h1-lrg-size;
+    }
+}
+
+h2 {
+    font-size: $h2-sml-size;
+
+    @include screen($medium) {
+        font-size: $h2-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h2-lrg-size;
+    }
+}
+
+h3 {
+    font-size: $h3-sml-size;
+
+    @include screen($medium) {
+        font-size: $h3-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h3-lrg-size;
+    }
+}
+
+h4 {
+    font-size: $h4-sml-size;
+
+    @include screen($medium) {
+        font-size: $h4-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h4-lrg-size;
+    }
+}
+
+h5 {
+    font-size: $h5-sml-size;
+
+    @include screen($medium) {
+        font-size: $h5-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h5-lrg-size;
+    }
+}
+
+h6 {
+    font-size: $h6-sml-size;
+
+    @include screen($medium) {
+        font-size: $h6-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $h6-lrg-size;
+    }
+}
+
+
+// Paragraph
+// --------------------------------------------------
+
+p {
+    font-size: $paragraph-sml-size;
+
+    @include screen($medium) {
+        font-size: $paragraph-med-size;
+    }
+
+    @include screen($large) {
+        font-size: $paragraph-lrg-size;
+    }
+}
+

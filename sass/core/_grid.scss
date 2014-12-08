@@ -1,0 +1,66 @@
+// Grid
+//------------------------------------------------------------
+//
+
+
+// Grid Variables
+// --------------------------------------------------
+
+$col-total: 12 !default;
+$row-width: rem-calc(1280) !default;
+$col-gutter: rem-calc(15) !default;
+
+
+// Grid Row & Columns
+// --------------------------------------------------
+
+%row {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $row-width;
+    @extend %clearfix;
+}
+
+// --------------------------------------------------
+
+%col {
+    float: left;
+    width: 100%;
+    padding: 0 $col-gutter;
+    position: relative;
+}
+
+@mixin col($col, $float: false, $padding: false) {
+    width: percentage($col / $col-total);
+
+    @if ($float) {
+        float: $float;
+    }
+
+    @if ($padding) {
+        padding: $padding;
+    }
+}
+
+
+// Placeholder Helper for styling content inside columns
+// --------------------------------------------------
+
+%panel {
+    border: 1px solid darken($light-color, 20%);
+    margin: rem-calc(0 0 15);
+    padding: rem-calc(15);
+    background: darken($light-color, 10%);
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @include screen($large) {
+        margin: rem-calc(0 0 30);
+    }
+}
+
