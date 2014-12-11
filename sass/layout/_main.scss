@@ -5,6 +5,9 @@
 
 .main {
     height: 100%;
+    z-index: 2;
+    position: relative;
+    background: $light-gray;
     transition: all .2s ease;
 
     @include screen($large) {
@@ -30,11 +33,15 @@
 .header {
     top: 0;
     width: 100%;
-    height: rem-calc(61);
+    height: rem-calc(60);
     z-index: 2;
     position: fixed;
     background: #fff;
     border-bottom: $base-border;
+
+    @include screen($large) {
+        height: rem-calc(61);
+    }
 
     .ico {
         color: $base-font-color;
