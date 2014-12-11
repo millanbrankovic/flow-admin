@@ -10,13 +10,11 @@
     bottom: 0;
     overflow-y: auto;
     position: fixed;
+    z-index: 1;
     background: $dark-color;
-    transition: all .2s ease;
-    @include transform(translateX(-100%));
 
     @include screen($large) {
         width: rem-calc(270);
-        @include transform(translateX(0));
     }
 
     * {
@@ -25,16 +23,6 @@
 
     .ico {
         font-size: rem-calc(20);
-    }
-}
-
-.toggle {
-    .sidebar {
-        @include transform(translateX(0));
-
-        @include screen($large) {
-            @include transform(translateX(-100%));
-        }
     }
 }
 

@@ -5,6 +5,10 @@
 
 .main {
     height: 100%;
+    left: 0;
+    z-index: 2;
+    position: relative;
+    background: $light-gray;
     transition: all .2s ease;
 
     @include screen($large) {
@@ -18,11 +22,11 @@
 
 .toggle {
     .main {
-        @include transform(translateX(60px));
+        left: 60px;
 
         @include screen($large) {
+            left: 0;
             margin-left: 0;
-            @include transform(translateX(0));
         }
     }
 }
@@ -62,7 +66,7 @@
     position: relative;
 
     &:after {
-        @include same-size(auto);
+        @include same-size(0);
         content: "";
         opacity: 0;
         top: rem-calc(60);
