@@ -23,22 +23,23 @@
 @import "core/variables";
 @import "core/mixins";
 @import "core/mediaqueries";
-// @import "core/grid";
+@import "core/grid";
 
 
 // Base
 //------------------------------------------------------------
 
 @import "base/typography";
+@import "base/icofonts";
 @import "base/base";
 
 
 // Components
 //------------------------------------------------------------
 
-// @import "components/alerts";
-// @import "components/buttons";
-// @import "components/forms";
+@import "components/alerts";
+@import "components/buttons";
+@import "components/forms";
 // @import "components/dropdown";
 
 
@@ -46,6 +47,9 @@
 //------------------------------------------------------------
 
 // @import "layout/header";
+@import "layout/sidebar";
+@import "layout/nav";
+@import "layout/main";
 // @import "layout/footer";
 
 

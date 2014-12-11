@@ -7,10 +7,18 @@
 // --------------------------------------------------
 
 $light-color: #fff;
-$dark-color: #191818;
-$base-font-color: #222;
-$brand-primary: #078fd8;
-$brand-secondary: #e94e77;
+$dark-color: #445d72;
+$gray-color: #d3dde5;
+$light-gray: #ecf0f1;
+$mid-gray: #f6f8f8;
+$dark-gray: #244058;
+$base-font-color: #94b3cd;
+$brand-primary: #ee6e73;
+$green-color: #67d481;
+$blue-color: #4fc5ea;
+$purple-color: #9b8ad8;
+$yellow-color: #fad733;
+$red-color: #ef4238;
 
 
 // Alerts Colors
@@ -25,7 +33,7 @@ $error-color: #fb9282;
 
 $rem-base: 16px !default;
 $body-bg: darken($light-color, 10%);
-$body-font-family: Helvetica, Arial, sans-serif;
+$body-font-family: 'open_sansregular', Helvetica, Arial, sans-serif;
 $font-smoothing: antialiased;
 
 
@@ -33,7 +41,7 @@ $font-smoothing: antialiased;
 // --------------------------------------------------
 
 $base-line-height: 1.6;
-$base-font-size: rem-calc(16) !default;
+$base-font-size: rem-calc(16);
 $base-font-light: 'open_sanslight';
 $base-font-regular: 'open_sansregular';
 $base-font-strong: 'open_sansbold';
@@ -78,5 +86,6 @@ $paragraph-lrg-size: rem-calc(18);
 $global-radius: 3px;
 $global-shadow: 0 0 8px rgba($dark-color, .2);
 $global-shadow-inset: 0 0 6px rgba($dark-color, .3);
-$base-border: 1px solid darken($light-color, 15%);
+$base-border: 1px solid $light-gray;
+$thin-border: 1px solid #516d84;
 

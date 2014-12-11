@@ -1,3 +1,87 @@
 // Sidebar
 //------------------------------------------------------------
 //
+
+
+.sidebar {
+    width: rem-calc(60);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    position: fixed;
+    background: $dark-color;
+    transition: all .2s ease;
+    @include transform(translateX(-100%));
+
+    @include screen($large) {
+        width: 270px;
+        @include transform(translateX(0));
+    }
+
+    .ico {
+        color: $dark-gray;
+        font-size: rem-calc(20);
+        margin: rem-calc(0 10 0 0);
+    }
+}
+
+.toggle {
+    .sidebar {
+        @include transform(translateX(0));
+
+        @include screen($large) {
+            @include transform(translateX(-100%));
+        }
+    }
+}
+
+.sidebar-brand {
+    @include same-size(rem-calc(60));
+    padding: rem-calc(6 0);
+    text-align: center;
+    background: $brand-primary;
+
+    @include screen($large) {
+        width: 270px;
+    }
+
+    .logo {
+        @extend %hide-text;
+        @include retina-icon("logo");
+    }
+}
+
+.sidebar-user {
+    padding: rem-calc(20);
+    text-align: center;
+
+    .quick-nav {
+        font-size: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: rem-calc(0 10);
+        }
+
+        a {
+            display: block;
+            @include same-size(rem-calc(30));
+            border-radius: 100px;
+            border: 1px solid $light-gray;
+        }
+    }
+}
+
+.user {
+    margin: rem-calc(20 0);
+}
+
+.avatar {
+    @include same-size(rem-calc(90));
+    border-radius: 100px;
+}
+
+
+

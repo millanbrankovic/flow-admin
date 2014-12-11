@@ -1,0 +1,26 @@
+// Nav
+//------------------------------------------------------------
+//
+
+
+.main-nav {
+    li {
+        border-bottom: $thin-border;
+
+        &:first-child {
+            border-top: $thin-border;
+        }
+    }
+
+    a {
+        display: block;
+        padding: rem-calc(15 20);
+        color: $base-font-color;
+
+        &:hover,
+        &.active {
+            box-shadow: 5px 0 0 $brand-primary inset;
+            background: #425a6e;
+        }
+    }
+}

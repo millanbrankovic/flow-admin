@@ -55,6 +55,11 @@
 
 .fright { float: right; }
 
+.text, .number {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 %reset-list {
     margin: 0;
     padding: 0;
@@ -62,8 +67,8 @@
 }
 
 %hide-text {
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 

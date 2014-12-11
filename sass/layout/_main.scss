@@ -1,3 +1,105 @@
 // Main
 //------------------------------------------------------------
 //
+
+
+.main {
+    height: 100%;
+    transition: all .2s ease;
+    @include transform(translateX(0));
+
+    @include screen($large) {
+        margin-left: 270px;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+}
+
+.toggle {
+    .main {
+        @include transform(translateX(60px));
+
+        @include screen($large) {
+            margin-left: 0;
+            @include transform(translateX(0));
+        }
+    }
+}
+
+.header {
+    top: 0;
+    width: 100%;
+    height: rem-calc(60);
+    position: fixed;
+    background: $light-color;
+
+    .ico {
+        color: $base-font-color;
+    }
+}
+
+.nav-toggle {
+    @include same-size(rem-calc(60));
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    border-right: $base-border;
+
+    .ico {
+        line-height: 1.8;
+    }
+}
+
+.main-content {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+        content: "";
+        @include same-size(0);
+        opacity: 0;
+        top: rem-calc(60);
+        position: absolute;
+        transition: opacity .35s ease;
+        background: rgba(68, 93, 114, .5);
+
+        @include screen($large) {
+            display: none;
+        }
+    }
+}
+
+.toggle {
+    .main-content {
+        &:after {
+            @include same-size(100%);
+            opacity: 1;
+        }
+    }
+}
+
+.content {
+    height: 100%;
+    padding-top: rem-calc(60);
+}
+
+.content-inner {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+

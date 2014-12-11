@@ -4,20 +4,30 @@
 
 
 *, *:before, *:after {
-    box-sizing: border-box !important;
+    box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
 }
 
 body, html {
+    @include same-size(100%);
     color: $base-font-color;
     font: {
         size: $base-font-size;
         family: $body-font-family;
     }
+    background: $mid-gray;
 }
 
-img { max-width: 100%; }
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 a {
     line-height: 1;
@@ -32,4 +42,8 @@ a {
     &:active {
         color: darken($brand-primary, 10%);
     }
+}
+
+ul, ol, dl {
+    @extend %reset-list;
 }
