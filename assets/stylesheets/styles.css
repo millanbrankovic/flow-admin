@@ -970,7 +970,9 @@ input[type="radio"] + label .check:after {
 
 .main {
   height: 100%;
-  -moz-transform-origin: 0 0;
+  -moz-perspective: 1000px;
+  opacity: .99;
+  background: #f6f8f8;
   transition: all .2s ease;
 }
 @media (min-width: 1025px) {
