@@ -9,7 +9,7 @@
     @include transform(translateX(0));
 
     @include screen($large) {
-        margin-left: 270px;
+        margin-left: rem-calc(270);
     }
 
     h1 {

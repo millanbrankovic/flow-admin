@@ -783,7 +783,7 @@ input[type="radio"] + label .check:after {
 }
 @media (min-width: 1025px) {
   .sidebar {
-    width: 270px;
+    width: 16.875rem;
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -webkit-transform: translateX(0);
@@ -820,7 +820,7 @@ input[type="radio"] + label .check:after {
 }
 @media (min-width: 1025px) {
   .sidebar-brand {
-    width: 270px;
+    width: 16.875rem;
   }
 }
 .sidebar-brand .logo {
@@ -898,7 +898,7 @@ input[type="radio"] + label .check:after {
 }
 @media (min-width: 1025px) {
   .main {
-    margin-left: 270px;
+    margin-left: 16.875rem;
   }
 }
 .main h1 {

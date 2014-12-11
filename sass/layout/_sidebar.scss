@@ -15,7 +15,7 @@
     @include transform(translateX(-100%));
 
     @include screen($large) {
-        width: 270px;
+        width: rem-calc(270);
         @include transform(translateX(0));
     }
 
@@ -43,7 +43,7 @@
     background: $brand-primary;
 
     @include screen($large) {
-        width: 270px;
+        width: rem-calc(270);
     }
 
     .logo {
