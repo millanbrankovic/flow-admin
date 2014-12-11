@@ -8,6 +8,7 @@
         e.preventDefault();
 
         $("body").toggleClass("toggle");
+        return false;
     });
 
     $(".main-nav a").on('click', function() {

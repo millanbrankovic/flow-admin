@@ -4,26 +4,26 @@
 
 
 .sidebar {
-    width: rem-calc(60);
+    width: 20%;
     top: 0;
     left: 0;
     bottom: 0;
     overflow-y: auto;
-    overflow-x: hidden;
     position: fixed;
     background: $dark-color;
     transition: all .2s ease;
     @include transform(translateX(-100%));
 
     @include screen($large) {
-        width: rem-calc(270);
         @include transform(translateX(0));
     }
 
+    * {
+        transition: all .35s ease;
+    }
+
     .ico {
-        color: $dark-gray;
         font-size: rem-calc(20);
-        margin: rem-calc(0 10 0 0);
     }
 }
 
@@ -38,50 +38,128 @@
 }
 
 .sidebar-brand {
-    @include same-size(rem-calc(60));
+    width: 100%;
+    height: rem-calc(60);
     padding: rem-calc(6 0);
     text-align: center;
     background: $brand-primary;
 
     @include screen($large) {
-        width: rem-calc(270);
+        width: 100%;
     }
 
     .logo {
-        @extend %hide-text;
-        @include retina-icon("logo");
+        .ico {
+            color: #fff;
+            font-size: rem-calc(19);
+            line-height: 2.4;
+
+            @include screen($large) {
+                font-size: rem-calc(50);
+                line-height: 1;
+            }
+        }
     }
 }
 
 .sidebar-user {
-    padding: rem-calc(20);
+    padding: rem-calc(20 0);
     text-align: center;
+
+    @include screen($large) {
+        padding: rem-calc(20);
+    }
 
     .quick-nav {
         font-size: 0;
         text-align: center;
 
+        @include screen($large) {
+            margin: rem-calc(0 0 20);
+        }
+
         li {
-            display: inline-block;
-            margin: rem-calc(0 10);
+            display: block;
+            margin: rem-calc(0 0 10);
+
+            &:last-child {
+                margin: 0;
+            }
+
+            @include screen($large) {
+                display: inline-block;
+                margin: rem-calc(0 10);
+
+                &:last-child {
+                    margin: rem-calc(0 10);
+                }
+            }
         }
 
         a {
-            display: block;
+            display: inline-block;
             @include same-size(rem-calc(30));
             border-radius: 100px;
-            border: 1px solid $light-gray;
+            border: 1px solid $base-font-color;
+
+            &:active {
+                border-color: $dark-gray;
+
+                .ico {
+                    color: $dark-gray;
+                }
+            }
         }
+    }
+
+    h3 {
+        color: $light-color;
+        margin: rem-calc(15 0 0);
+        font-size: rem-calc(12);
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: rem-calc(10 0 0);
+        line-height: 1;
+    }
+
+    .ico {
+        line-height: 1.4;
+        color: $base-font-color;
     }
 }
 
 .user {
-    margin: rem-calc(20 0);
+    display: none;
+
+    @include screen($large) {
+        display: inline;
+    }
 }
 
 .avatar {
     @include same-size(rem-calc(90));
     border-radius: 100px;
+}
+
+.user-description {
+    font: {
+        family: $base-font-light;
+        size: rem-calc(12);
+    }
+}
+
+.user-location {
+    color: $red-color;
+    font-size: rem-calc(11);
+    text-transform: uppercase;
+
+    .ico {
+        display: block;
+        color: $red-color;
+        font-size: rem-calc(18);
+    }
 }
 
 

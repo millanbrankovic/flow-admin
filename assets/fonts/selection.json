@@ -4,6 +4,100 @@
 		{
 			"icon": {
 				"paths": [
+					"M40.258 180.136h512v144.004h-304.011v117.029h259.657v135.314h-259.657v273.818h-207.989v-670.164z",
+					"M448.483 180.136h207.082v505.125h323.204v165.040h-530.286v-670.164z",
+					"M857.117 180.136h554.979v143.097h-347.429v106.525h451.233v136.66h-451.233v132.125h357.493v151.786h-565.043v-670.193z",
+					"M1272.656 180.136h228.118l118.638 206.175 115.419-206.175h225.836l-208.603 324.579 158.983 242.337-66.589-0.351-69.486 147.485-159.685-259.189-132.33 215.303h-231.336l231.161-349.243-210.125-320.922z",
+					"M1983.312 135.753l50.82-79.082h-225.836l-44.266 79.082z",
+					"M1934.102 939.652h-58.778l-8.163 27.648h-52.868l62.961-167.556h56.466l62.991 167.556h-54.243l-8.368-27.648zM1923.365 903.431l-18.491-60.24-18.286 60.24h36.776z",
+					"M1995.132 799.773h76.888c15.214 0 27.443 2.048 36.747 6.173 9.362 4.125 17.086 10.006 23.142 17.701 6.115 7.724 10.503 16.618 13.253 26.858s4.125 21.036 4.125 32.446c0 17.876-1.989 31.773-6.115 41.662-4.067 9.889-9.713 18.11-16.969 24.81-7.197 6.7-14.98 11.088-23.318 13.312-11.323 3.043-21.592 4.564-30.866 4.564h-76.888v-167.526zM2046.859 837.72v91.546h12.698c10.854 0 18.52-1.2 23.084-3.599s8.163-6.583 10.737-12.581c2.633-5.998 3.891-15.653 3.891-29.082 0-17.759-2.867-29.872-8.689-36.454-5.764-6.583-15.36-9.83-28.789-9.83h-12.932z",
+					"M2157.217 799.773h68.052l26.273 101.932 26.068-101.932h68.052v167.556h-42.394v-127.766l-32.68 127.766h-38.356l-32.622-127.766v127.766h-42.394v-167.556z",
+					"M2362.017 799.773h51.873v167.556h-51.873v-167.556z",
+					"M2432.644 799.773h48.333l63.078 92.687v-92.687h48.801v167.556h-48.801l-62.757-92.014v92.014h-48.684v-167.556z"
+				],
+				"attrs": [
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					},
+					{
+						"visibility": false
+					}
+				],
+				"width": 2633,
+				"grid": 0,
+				"tags": [
+					"logo"
+				]
+			},
+			"attrs": [
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				},
+				{
+					"visibility": false
+				}
+			],
+			"properties": {
+				"order": 35,
+				"id": 34,
+				"prevSize": 32,
+				"code": 58914,
+				"name": "logo"
+			},
+			"setIdx": 0,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
 					"M708.286 366.943l-196.286 196.257-196.257-196.257-59.743 59.714 256 256.029 256-256.029z"
 				],
 				"attrs": [
@@ -29,7 +123,7 @@
 				"name": "arrow-down"
 			},
 			"setIdx": 0,
-			"iconIdx": 0
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -59,7 +153,7 @@
 				"name": "arrow-left"
 			},
 			"setIdx": 0,
-			"iconIdx": 1
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -89,7 +183,7 @@
 				"name": "arrow-right"
 			},
 			"setIdx": 0,
-			"iconIdx": 2
+			"iconIdx": 3
 		},
 		{
 			"icon": {
@@ -119,7 +213,7 @@
 				"name": "arrow-up"
 			},
 			"setIdx": 0,
-			"iconIdx": 3
+			"iconIdx": 4
 		},
 		{
 			"icon": {
@@ -233,7 +327,7 @@
 				"name": "calendar"
 			},
 			"setIdx": 0,
-			"iconIdx": 4
+			"iconIdx": 5
 		},
 		{
 			"icon": {
@@ -298,7 +392,7 @@
 				"name": "chart-up"
 			},
 			"setIdx": 0,
-			"iconIdx": 5
+			"iconIdx": 6
 		},
 		{
 			"icon": {
@@ -328,7 +422,7 @@
 				"name": "chart"
 			},
 			"setIdx": 0,
-			"iconIdx": 6
+			"iconIdx": 7
 		},
 		{
 			"icon": {
@@ -358,7 +452,7 @@
 				"name": "check"
 			},
 			"setIdx": 0,
-			"iconIdx": 7
+			"iconIdx": 8
 		},
 		{
 			"icon": {
@@ -395,7 +489,7 @@
 				"name": "clock"
 			},
 			"setIdx": 0,
-			"iconIdx": 8
+			"iconIdx": 9
 		},
 		{
 			"icon": {
@@ -425,7 +519,7 @@
 				"name": "close"
 			},
 			"setIdx": 0,
-			"iconIdx": 9
+			"iconIdx": 10
 		},
 		{
 			"icon": {
@@ -455,7 +549,7 @@
 				"name": "customer"
 			},
 			"setIdx": 0,
-			"iconIdx": 10
+			"iconIdx": 11
 		},
 		{
 			"icon": {
@@ -485,7 +579,7 @@
 				"name": "dashboard"
 			},
 			"setIdx": 0,
-			"iconIdx": 11
+			"iconIdx": 12
 		},
 		{
 			"icon": {
@@ -529,7 +623,7 @@
 				"name": "diagram"
 			},
 			"setIdx": 0,
-			"iconIdx": 12
+			"iconIdx": 13
 		},
 		{
 			"icon": {
@@ -580,7 +674,7 @@
 				"name": "extensions"
 			},
 			"setIdx": 0,
-			"iconIdx": 13
+			"iconIdx": 14
 		},
 		{
 			"icon": {
@@ -610,7 +704,7 @@
 				"name": "favorite"
 			},
 			"setIdx": 0,
-			"iconIdx": 14
+			"iconIdx": 15
 		},
 		{
 			"icon": {
@@ -647,7 +741,7 @@
 				"name": "labels"
 			},
 			"setIdx": 0,
-			"iconIdx": 15
+			"iconIdx": 16
 		},
 		{
 			"icon": {
@@ -677,7 +771,7 @@
 				"name": "logout"
 			},
 			"setIdx": 0,
-			"iconIdx": 16
+			"iconIdx": 17
 		},
 		{
 			"icon": {
@@ -707,7 +801,7 @@
 				"name": "mail"
 			},
 			"setIdx": 0,
-			"iconIdx": 17
+			"iconIdx": 18
 		},
 		{
 			"icon": {
@@ -737,7 +831,7 @@
 				"name": "map"
 			},
 			"setIdx": 0,
-			"iconIdx": 18
+			"iconIdx": 19
 		},
 		{
 			"icon": {
@@ -767,7 +861,7 @@
 				"name": "menu"
 			},
 			"setIdx": 0,
-			"iconIdx": 19
+			"iconIdx": 20
 		},
 		{
 			"icon": {
@@ -797,7 +891,7 @@
 				"name": "minus"
 			},
 			"setIdx": 0,
-			"iconIdx": 20
+			"iconIdx": 21
 		},
 		{
 			"icon": {
@@ -827,7 +921,7 @@
 				"name": "note"
 			},
 			"setIdx": 0,
-			"iconIdx": 21
+			"iconIdx": 22
 		},
 		{
 			"icon": {
@@ -857,7 +951,7 @@
 				"name": "notifications"
 			},
 			"setIdx": 0,
-			"iconIdx": 22
+			"iconIdx": 23
 		},
 		{
 			"icon": {
@@ -887,7 +981,7 @@
 				"name": "plus"
 			},
 			"setIdx": 0,
-			"iconIdx": 23
+			"iconIdx": 24
 		},
 		{
 			"icon": {
@@ -917,7 +1011,7 @@
 				"name": "preferences"
 			},
 			"setIdx": 0,
-			"iconIdx": 24
+			"iconIdx": 25
 		},
 		{
 			"icon": {
@@ -947,7 +1041,7 @@
 				"name": "refresh"
 			},
 			"setIdx": 0,
-			"iconIdx": 25
+			"iconIdx": 26
 		},
 		{
 			"icon": {
@@ -977,7 +1071,7 @@
 				"name": "search"
 			},
 			"setIdx": 0,
-			"iconIdx": 26
+			"iconIdx": 27
 		},
 		{
 			"icon": {
@@ -1007,7 +1101,7 @@
 				"name": "settings"
 			},
 			"setIdx": 0,
-			"iconIdx": 27
+			"iconIdx": 28
 		},
 		{
 			"icon": {
@@ -1037,7 +1131,7 @@
 				"name": "shopping"
 			},
 			"setIdx": 0,
-			"iconIdx": 28
+			"iconIdx": 29
 		},
 		{
 			"icon": {
@@ -1067,7 +1161,7 @@
 				"name": "swap"
 			},
 			"setIdx": 0,
-			"iconIdx": 29
+			"iconIdx": 30
 		},
 		{
 			"icon": {
@@ -1097,7 +1191,7 @@
 				"name": "tools"
 			},
 			"setIdx": 0,
-			"iconIdx": 30
+			"iconIdx": 31
 		},
 		{
 			"icon": {
@@ -1127,7 +1221,7 @@
 				"name": "user"
 			},
 			"setIdx": 0,
-			"iconIdx": 31
+			"iconIdx": 32
 		},
 		{
 			"icon": {
@@ -1157,7 +1251,7 @@
 				"name": "visibility"
 			},
 			"setIdx": 0,
-			"iconIdx": 32
+			"iconIdx": 33
 		},
 		{
 			"icon": {
@@ -1201,7 +1295,7 @@
 				"name": "world"
 			},
 			"setIdx": 0,
-			"iconIdx": 33
+			"iconIdx": 34
 		}
 	],
 	"height": 1024,
