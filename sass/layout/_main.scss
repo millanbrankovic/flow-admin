@@ -4,7 +4,7 @@
 
 
 .main {
-    height: 100%;
+    min-height: 100%;
     left: 0;
     z-index: 1;
     position: relative;
@@ -31,17 +31,8 @@
     }
 }
 
-.main-content {
-    overflow: hidden;
-    position: relative;
-}
-
 .content {
-    padding-top: rem-calc(60);
-}
-
-.content-inner {
-    padding: rem-calc(15);
+    padding: rem-calc(60 15 15);
 }
 
 

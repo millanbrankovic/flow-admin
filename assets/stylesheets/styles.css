@@ -981,7 +981,7 @@ input[type="radio"] + label .check:after {
 }
 
 .main {
-  height: 100%;
+  min-height: 100%;
   left: 0;
   z-index: 1;
   position: relative;
@@ -1010,15 +1010,6 @@ input[type="radio"] + label .check:after {
   }
 }
 
-.main-content {
-  overflow: hidden;
-  position: relative;
-}
-
 .content {
-  padding-top: 3.75rem;
-}
-
-.content-inner {
-  padding: 0.9375rem;
+  padding: 3.75rem 0.9375rem 0.9375rem;
 }
