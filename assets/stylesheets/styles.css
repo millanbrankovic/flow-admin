@@ -1004,22 +1004,6 @@ input[type="radio"] + label .check:after {
   overflow: hidden;
   position: relative;
 }
-.main-content:after {
-  width: 0;
-  height: 0;
-  content: "";
-  opacity: 0;
-  top: 3.75rem;
-  z-index: 1;
-  position: absolute;
-  transition: opacity .2s ease;
-  background: rgba(68, 93, 114, 0.5);
-}
-@media (min-width: 1025px) {
-  .main-content:after {
-    display: none;
-  }
-}
 
 .content {
   height: 100%;
