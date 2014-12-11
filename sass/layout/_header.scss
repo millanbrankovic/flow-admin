@@ -1,3 +1,66 @@
 // Header
 //------------------------------------------------------------
 //
+
+
+.header {
+    top: 0;
+    left: rem-calc(-60);
+    right: 0;
+    height: rem-calc(60);
+    z-index: 2;
+    position: fixed;
+    background: #fff;
+    transition: all .2s ease;
+
+    .ico {
+        color: $base-font-color;
+    }
+}
+
+.toggle {
+    .header {
+        left: 0;
+    }
+}
+
+.brand {
+    float: left;
+    @include same-size(rem-calc(60));
+    padding: rem-calc(6 0);
+    text-align: center;
+    background: $brand-primary;
+
+    @include screen($large) {
+        width: rem-calc(270);
+    }
+
+    .logo {
+        .ico {
+            color: #fff;
+            font-size: rem-calc(19);
+            line-height: 2.4;
+
+            @include screen($large) {
+                font-size: rem-calc(50);
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.nav-toggle {
+    float: left;
+    @include same-size(rem-calc(60));
+    cursor: pointer;
+    text-align: center;
+    border-right: $base-border;
+
+    &:active {
+        background: $light-gray;
+    }
+
+    .ico {
+        line-height: 1.8;
+    }
+}

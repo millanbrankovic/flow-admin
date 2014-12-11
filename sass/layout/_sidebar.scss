@@ -9,10 +9,10 @@
     left: 0;
     bottom: 0;
     z-index: 1;
+    padding: rem-calc(60 0 0);
     overflow-y: auto;
     position: fixed;
     background: $dark-color;
-    transition: all .2s ease;
 
     @include screen($large) {
         width: rem-calc(270);
@@ -24,30 +24,6 @@
 
     .ico {
         font-size: rem-calc(20);
-    }
-}
-
-.sidebar-brand {
-    @include same-size(rem-calc(60));
-    padding: rem-calc(6 0);
-    text-align: center;
-    background: $brand-primary;
-
-    @include screen($large) {
-        width: rem-calc(270);
-    }
-
-    .logo {
-        .ico {
-            color: #fff;
-            font-size: rem-calc(19);
-            line-height: 2.4;
-
-            @include screen($large) {
-                font-size: rem-calc(50);
-                line-height: 1;
-            }
-        }
     }
 }
 

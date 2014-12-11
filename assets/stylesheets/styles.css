@@ -765,16 +765,74 @@ input[type="radio"] + label .check:after {
   background: #ee6e73;
 }
 
+.header {
+  top: 0;
+  left: -3.75rem;
+  right: 0;
+  height: 3.75rem;
+  z-index: 2;
+  position: fixed;
+  background: #fff;
+  transition: all .2s ease;
+}
+.header .ico {
+  color: #94b3cd;
+}
+
+.toggle .header {
+  left: 0;
+}
+
+.brand {
+  float: left;
+  width: 3.75rem;
+  height: 3.75rem;
+  padding: 0.375rem 0;
+  text-align: center;
+  background: #ee6e73;
+}
+@media (min-width: 1025px) {
+  .brand {
+    width: 16.875rem;
+  }
+}
+.brand .logo .ico {
+  color: #fff;
+  font-size: 1.1875rem;
+  line-height: 2.4;
+}
+@media (min-width: 1025px) {
+  .brand .logo .ico {
+    font-size: 3.125rem;
+    line-height: 1;
+  }
+}
+
+.nav-toggle {
+  float: left;
+  width: 3.75rem;
+  height: 3.75rem;
+  cursor: pointer;
+  text-align: center;
+  border-right: 1px solid #ecf0f1;
+}
+.nav-toggle:active {
+  background: #f6f8f8;
+}
+.nav-toggle .ico {
+  line-height: 1.8;
+}
+
 .sidebar {
   width: 3.75rem;
   top: 0;
   left: 0;
   bottom: 0;
   z-index: 1;
+  padding: 3.75rem 0 0;
   overflow-y: auto;
   position: fixed;
   background: #445d72;
-  transition: all .2s ease;
 }
 @media (min-width: 1025px) {
   .sidebar {
@@ -786,30 +844,6 @@ input[type="radio"] + label .check:after {
 }
 .sidebar .ico {
   font-size: 1.25rem;
-}
-
-.sidebar-brand {
-  width: 3.75rem;
-  height: 3.75rem;
-  padding: 0.375rem 0;
-  text-align: center;
-  background: #ee6e73;
-}
-@media (min-width: 1025px) {
-  .sidebar-brand {
-    width: 16.875rem;
-  }
-}
-.sidebar-brand .logo .ico {
-  color: #fff;
-  font-size: 1.1875rem;
-  line-height: 2.4;
-}
-@media (min-width: 1025px) {
-  .sidebar-brand .logo .ico {
-    font-size: 3.125rem;
-    line-height: 1;
-  }
 }
 
 .sidebar-user {
@@ -948,7 +982,8 @@ input[type="radio"] + label .check:after {
 
 .main {
   height: 100%;
-  z-index: 2;
+  left: 0;
+  z-index: 1;
   position: relative;
   background: #f6f8f8;
   transition: all .2s ease;
@@ -963,10 +998,7 @@ input[type="radio"] + label .check:after {
 }
 
 .toggle .main {
-  -moz-transform: translateX(60px);
-  -ms-transform: translateX(60px);
-  -webkit-transform: translateX(60px);
-  transform: translateX(60px);
+  left: 60px;
 }
 @media (min-width: 1025px) {
   .toggle .main {
@@ -976,39 +1008,6 @@ input[type="radio"] + label .check:after {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
-}
-
-.header {
-  top: 0;
-  width: 100%;
-  height: 3.75rem;
-  z-index: 2;
-  position: fixed;
-  background: #fff;
-  border-bottom: 1px solid #ecf0f1;
-}
-@media (min-width: 1025px) {
-  .header {
-    height: 3.8125rem;
-  }
-}
-.header .ico {
-  color: #94b3cd;
-}
-
-.nav-toggle {
-  width: 3.75rem;
-  height: 3.75rem;
-  display: block;
-  cursor: pointer;
-  text-align: center;
-  border-right: 1px solid #ecf0f1;
-}
-.nav-toggle:active {
-  background: #f6f8f8;
-}
-.nav-toggle .ico {
-  line-height: 1.8;
 }
 
 .main-content {

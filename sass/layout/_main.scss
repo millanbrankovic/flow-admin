@@ -5,7 +5,8 @@
 
 .main {
     height: 100%;
-    z-index: 2;
+    left: 0;
+    z-index: 1;
     position: relative;
     background: $light-gray;
     transition: all .2s ease;
@@ -21,46 +22,12 @@
 
 .toggle {
     .main {
-        @include transform(translateX(60px));
+        left: 60px;
 
         @include screen($large) {
             margin-left: 0;
             @include transform(translateX(0));
         }
-    }
-}
-
-.header {
-    top: 0;
-    width: 100%;
-    height: rem-calc(60);
-    z-index: 2;
-    position: fixed;
-    background: #fff;
-    border-bottom: $base-border;
-
-    @include screen($large) {
-        height: rem-calc(61);
-    }
-
-    .ico {
-        color: $base-font-color;
-    }
-}
-
-.nav-toggle {
-    @include same-size(rem-calc(60));
-    display: block;
-    cursor: pointer;
-    text-align: center;
-    border-right: $base-border;
-
-    &:active {
-        background: $light-gray;
-    }
-
-    .ico {
-        line-height: 1.8;
     }
 }
 
