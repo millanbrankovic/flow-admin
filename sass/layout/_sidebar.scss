@@ -9,6 +9,7 @@
     left: 0;
     bottom: 0;
     overflow-y: auto;
+    overflow-x: hidden;
     position: fixed;
     background: $dark-color;
     transition: all .2s ease;
