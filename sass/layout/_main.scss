@@ -81,15 +81,6 @@
     }
 }
 
-.toggle {
-    .main-content {
-        &:after {
-            @include same-size(100%);
-            opacity: 1;
-        }
-    }
-}
-
 .content {
     height: 100%;
     padding-top: rem-calc(60);
