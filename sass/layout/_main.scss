@@ -5,11 +5,6 @@
 
 .main {
     height: 100%;
-    left: 0;
-    z-index: 2;
-    overflow-x: hidden;
-    position: relative;
-    background: $light-gray;
     transition: all .2s ease;
 
     @include screen($large) {
@@ -23,11 +18,11 @@
 
 .toggle {
     .main {
-        left: 60px;
+        @include transform(translateX(60px));
 
         @include screen($large) {
-            left: 0;
             margin-left: 0;
+            @include transform(translateX(0));
         }
     }
 }
@@ -62,9 +57,47 @@
     }
 }
 
+.main-content {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+        @include same-size(0);
+        content: "";
+        opacity: 0;
+        top: rem-calc(60);
+        z-index: 1;
+        position: absolute;
+        transition: opacity .2s ease;
+        background: rgba(68, 93, 114, .5);
+
+        @include screen($large) {
+            display: none;
+        }
+    }
+}
+
+.toggle {
+    .main-content {
+        &:after {
+            @include same-size(100%);
+            opacity: 1;
+        }
+    }
+}
+
 .content {
     height: 100%;
-    padding: rem-calc(60 15 15);
+    padding-top: rem-calc(60);
+}
+
+.content-inner {
+    height: 100%;
+    padding: rem-calc(15);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
 }
 
 
