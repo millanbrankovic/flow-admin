@@ -62,7 +62,7 @@
     position: relative;
 
     &:after {
-        @include same-size(0);
+        @include same-size(auto);
         content: "";
         opacity: 0;
         top: rem-calc(60);
