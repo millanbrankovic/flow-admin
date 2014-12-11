@@ -9,6 +9,10 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+* {
+    outline: 1px solid transparent;
+}
+
 body, html {
     @include same-size(100%);
     color: $base-font-color;
