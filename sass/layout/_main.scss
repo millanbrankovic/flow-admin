@@ -5,6 +5,7 @@
 
 .main {
     height: 100%;
+    -moz-transform-origin: 0 0;
     transition: all .2s ease;
 
     @include screen($large) {
