@@ -4,7 +4,7 @@
 
 
 .sidebar {
-    width: 20%;
+    width: rem-calc(60);
     top: 0;
     left: 0;
     bottom: 0;
@@ -15,6 +15,7 @@
     @include transform(translateX(-100%));
 
     @include screen($large) {
+        width: rem-calc(270);
         @include transform(translateX(0));
     }
 
@@ -38,14 +39,13 @@
 }
 
 .sidebar-brand {
-    width: 100%;
-    height: rem-calc(60);
+    @include same-size(rem-calc(60));
     padding: rem-calc(6 0);
     text-align: center;
     background: $brand-primary;
 
     @include screen($large) {
-        width: 100%;
+        width: rem-calc(270);
     }
 
     .logo {
