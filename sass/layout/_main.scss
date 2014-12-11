@@ -47,6 +47,10 @@
     text-align: center;
     border-right: $base-border;
 
+    &:active {
+        background: $light-gray;
+    }
+
     .ico {
         line-height: 1.8;
     }

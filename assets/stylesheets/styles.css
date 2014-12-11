@@ -593,7 +593,7 @@ select {
   color: rgba(0, 0, 0, 0.75);
   font-size: 0.875rem;
   background: none #fff;
-  border: 1px solid #ecf0f1;
+  border: 1px solid #f6f8f8;
   border-radius: 3px;
   transition: all .35s ease;
   -moz-appearance: none;
@@ -640,7 +640,7 @@ label {
 fieldset {
   margin: 1.25rem 0;
   padding: 0.625rem;
-  border: 1px solid #ecf0f1;
+  border: 1px solid #f6f8f8;
   border-radius: 3px;
 }
 
@@ -670,9 +670,9 @@ legend {
   text-align: center;
   pointer-events: none;
   background: #fff;
-  border-top: 1px solid #ecf0f1;
-  border-right: 1px solid #ecf0f1;
-  border-bottom: 1px solid #ecf0f1;
+  border-top: 1px solid #f6f8f8;
+  border-right: 1px solid #f6f8f8;
+  border-bottom: 1px solid #f6f8f8;
   border-radius: 0 3px 3px 0;
 }
 .custom-inputs.select select:focus {
@@ -708,7 +708,7 @@ input[type="radio"] + label .check {
   z-index: 2;
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid #ecf0f1;
+  border: 1px solid #f6f8f8;
   border-radius: 3px;
   margin: 0 0.125rem 0 0;
   background: #fff;
@@ -859,7 +859,7 @@ input[type="radio"] + label .check:after {
   width: 1.875rem;
   height: 1.875rem;
   border-radius: 100px;
-  border: 1px solid #ecf0f1;
+  border: 1px solid #f6f8f8;
 }
 
 .user {
@@ -938,7 +938,10 @@ input[type="radio"] + label .check:after {
   display: block;
   cursor: pointer;
   text-align: center;
-  border-right: 1px solid #ecf0f1;
+  border-right: 1px solid #f6f8f8;
+}
+.nav-toggle:active {
+  background: #f6f8f8;
 }
 .nav-toggle .ico {
   line-height: 1.8;
