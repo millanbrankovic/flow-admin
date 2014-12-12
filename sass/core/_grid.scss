@@ -49,6 +49,7 @@ $col-gutter: rem-calc(15) !default;
 %panel {
     margin: rem-calc(0 0 15);
     padding: rem-calc(10);
+    position: relative;
     background: #fff;
     border-radius: $global-radius;
     box-shadow: $global-shadow;

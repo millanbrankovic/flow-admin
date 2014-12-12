@@ -234,23 +234,15 @@ th {
   position: relative;
 }
 
-.total-sales,
-.total-orders,
-.sales-analytics,
-.to-do {
+.panel {
   margin: 0 0 0.9375rem;
   padding: 0.625rem;
+  position: relative;
   background: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 0 rgba(68, 93, 114, 0.05);
 }
-.total-sales:before,
-.total-orders:before,
-.sales-analytics:before,
-.to-do:before, .total-sales:after,
-.total-orders:after,
-.sales-analytics:after,
-.to-do:after {
+.panel:before, .panel:after {
   content: "";
   display: table;
   clear: both;
@@ -375,16 +367,19 @@ h2 {
 }
 
 h3 {
-  font-size: 1.375rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: "open_sansbold";
 }
 @media (min-width: 641px) {
   h3 {
-    font-size: 1.875rem;
+    font-size: 0.8125rem;
   }
 }
 @media (min-width: 1025px) {
   h3 {
-    font-size: 2.25rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -853,6 +848,29 @@ input[type="radio"] + label .check:after {
   line-height: 1;
 }
 
+.caption {
+  margin: 0;
+}
+
+.sum {
+  margin: 1.25rem 0 0;
+  font-size: 1.875rem;
+  font-weight: 100;
+  line-height: 1;
+  font-family: "open_sanslight";
+}
+@media (min-width: 641px) {
+  .sum {
+    margin: 1.875rem 0 0;
+  }
+}
+@media (min-width: 1025px) {
+  .sum {
+    font-size: 2.25rem;
+    margin: 2.375rem 0 0;
+  }
+}
+
 .header {
   top: 0;
   left: -3.75rem;
@@ -1246,6 +1264,18 @@ input[type="radio"] + label .check:after {
     width: 33.33333%;
   }
 }
+.current-insight .ico-big {
+  top: 50%;
+  right: 0.9375rem;
+  position: absolute;
+  padding: 0.625rem;
+  border: 2px solid #d3dde5;
+  border-radius: 100px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 .sales-insight {
   padding: 0;
@@ -1255,4 +1285,53 @@ input[type="radio"] + label .check:after {
     width: 66.66667%;
     padding-left: 0.9375rem;
   }
+}
+
+.panel .ico {
+  font-size: 1.75rem;
+}
+@media (min-width: 1025px) {
+  .panel .ico {
+    font-size: 2.375rem;
+  }
+}
+.panel .ico.refresh {
+  top: 0.3125rem;
+  right: 0.3125rem;
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.125rem;
+  color: #d3dde5;
+}
+
+.total-sales .sum,
+.total-sales .ico {
+  color: #67d481;
+}
+.total-sales .ico-big {
+  border: 2px solid #67d481;
+}
+
+.total-orders .sum,
+.total-orders .ico {
+  color: #4fc5ea;
+}
+.total-orders .ico-big {
+  border: 2px solid #4fc5ea;
+}
+
+.total-customers .sum,
+.total-customers .ico {
+  color: #9b8ad8;
+}
+.total-customers .ico-big {
+  border: 2px solid #9b8ad8;
+}
+
+.total-visits .sum,
+.total-visits .ico {
+  color: #fad733;
+}
+.total-visits .ico-big {
+  border: 2px solid #fad733;
 }

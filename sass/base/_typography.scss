@@ -70,7 +70,10 @@ h2 {
 }
 
 h3 {
+    text-transform: uppercase;
     font-size: $h3-sml-size;
+    font-weight: 400;
+    font-family: $base-font-strong;
 
     @include screen($medium) {
         font-size: $h3-med-size;

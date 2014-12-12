@@ -83,6 +83,16 @@
     @include screen($medium) {
         @include col(4);
     }
+
+    .ico-big {
+        top: 50%;
+        right: rem-calc(15);
+        position: absolute;
+        padding: rem-calc(10);
+        border: 2px solid $gray-color;
+        border-radius: 100px;
+        @include transform(translateY(-50%));
+    }
 }
 
 .sales-insight {
@@ -92,6 +102,73 @@
     @include screen($medium) {
         @include col(8);
         padding-left: $col-gutter;
+    }
+}
+
+
+// Panels
+.panel {
+    @extend %panel;
+
+    .ico {
+        font-size: rem-calc(28);
+
+        @include screen($large) {
+            font-size: rem-calc(38);
+        }
+
+        &.refresh {
+            top: rem-calc(5);
+            right: rem-calc(5);
+            position: absolute;
+            cursor: pointer;
+            font-size: rem-calc(18);
+            color: $gray-color;
+        }
+    }
+}
+
+.total-sales {
+    .sum,
+    .ico {
+        color: $green-color;
+    }
+
+    .ico-big {
+        border: 2px solid $green-color;
+    }
+}
+
+.total-orders {
+    .sum,
+    .ico {
+        color: $blue-color;
+    }
+
+    .ico-big {
+        border: 2px solid $blue-color;
+    }
+}
+
+.total-customers {
+    .sum,
+    .ico {
+        color: $purple-color;
+    }
+
+    .ico-big {
+        border: 2px solid $purple-color;
+    }
+}
+
+.total-visits {
+    .sum,
+    .ico {
+        color: $yellow-color;
+    }
+
+    .ico-big {
+        border: 2px solid $yellow-color;
     }
 }
 
