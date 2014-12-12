@@ -557,10 +557,23 @@ body, html {
   font-size: 1rem;
   font-family: "open_sansregular", Helvetica, Arial, sans-serif;
   background: #f6f8f8;
+  overflow-x: hidden;
 }
 
-body {
-  overflow-x: hidden;
+.overlay {
+  opacity: 0;
+  transition: all .35s ease;
+}
+
+.toggle .overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 2;
+  position: fixed;
+  background: rgba(236, 246, 254, 0.8);
 }
 
 img {
@@ -770,7 +783,7 @@ input[type="radio"] + label .check:after {
   left: -3.75rem;
   right: 0;
   height: 3.75rem;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   background: #fff;
   transition: all .2s ease;
@@ -826,13 +839,14 @@ input[type="radio"] + label .check:after {
 .sidebar {
   width: 3.75rem;
   top: 0;
-  left: 0;
+  left: -3.75rem;
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
   padding: 3.75rem 0 0;
   overflow-y: auto;
   position: fixed;
   background: #445d72;
+  transition: all .2s ease;
 }
 @media (min-width: 1025px) {
   .sidebar {
@@ -844,6 +858,10 @@ input[type="radio"] + label .check:after {
 }
 .sidebar .ico {
   font-size: 1.25rem;
+}
+
+.toggle .sidebar {
+  left: 0;
 }
 
 .sidebar-user {

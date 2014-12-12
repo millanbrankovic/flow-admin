@@ -6,13 +6,14 @@
 .sidebar {
     width: rem-calc(60);
     top: 0;
-    left: 0;
+    left: rem-calc(-60);
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     padding: rem-calc(60 0 0);
     overflow-y: auto;
     position: fixed;
     background: $dark-color;
+    transition: all .2s ease;
 
     @include screen($large) {
         width: rem-calc(270);
@@ -24,6 +25,12 @@
 
     .ico {
         font-size: rem-calc(20);
+    }
+}
+
+.toggle {
+    .sidebar {
+        left: 0;
     }
 }
 

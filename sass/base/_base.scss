@@ -17,10 +17,25 @@ body, html {
         family: $body-font-family;
     }
     background: $light-gray;
+    overflow-x: hidden;
 }
 
-body {
-    overflow-x: hidden;
+.overlay {
+    opacity: 0;
+    transition: all .35s ease;
+}
+
+.toggle {
+    .overlay {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        z-index: 2;
+        position: fixed;
+        background: rgba($light-color, .8);
+    }
 }
 
 img {
