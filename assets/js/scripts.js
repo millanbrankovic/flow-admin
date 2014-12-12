@@ -27,9 +27,9 @@ $('.content-inner').hide();
 
 $('.ac-trigger').on('click', function(e) {
     $('.ac-trigger').removeClass('active');
-    $('.content-inner').slideUp(400);
+    $('.content-inner').slideUp(300);
     if($(this).next().is(':hidden') == true) {
         $(this).addClass('active');
-        $(this).next().slideDown(400);
+        $(this).next().slideDown(300);
     }
 });
