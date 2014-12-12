@@ -13,6 +13,10 @@
     background: #fff;
     transition: all .2s ease;
 
+    @include screen($medium) {
+        left: rem-calc(-220);
+    }
+
     @include screen($large) {
         left: 0;
     }
@@ -39,6 +43,10 @@
     text-align: center;
     background: $brand-primary;
 
+    @include screen($medium) {
+        width: rem-calc(220);
+    }
+
     @include screen($large) {
         width: rem-calc(270);
     }
@@ -46,8 +54,13 @@
     .logo {
         .ico {
             color: #fff;
-            font-size: rem-calc(22);
-            line-height: 2.2;
+            font-size: rem-calc(19);
+            line-height: 2.5;
+
+            @include screen($medium) {
+                font-size: rem-calc(40);
+                line-height: 1.25;
+            }
 
             @include screen($large) {
                 font-size: rem-calc(50);
@@ -69,6 +82,8 @@
     }
 
     .ico {
-        line-height: 1.8;
+        line-height: 1.9;
     }
 }
+
+

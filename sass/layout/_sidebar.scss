@@ -15,6 +15,11 @@
     background: $dark-color;
     transition: all .2s ease;
 
+    @include screen($medium) {
+        left: rem-calc(-220);
+        width: rem-calc(220);
+    }
+
     @include screen($large) {
         left: 0;
         width: rem-calc(270);
@@ -43,7 +48,7 @@
     padding: rem-calc(20 0);
     text-align: center;
 
-    @include screen($large) {
+    @include screen($medium) {
         padding: rem-calc(20);
     }
 
@@ -51,7 +56,7 @@
         font-size: 0;
         text-align: center;
 
-        @include screen($large) {
+        @include screen($medium) {
             margin: rem-calc(0 0 20);
         }
 
@@ -63,7 +68,7 @@
                 margin: 0;
             }
 
-            @include screen($large) {
+            @include screen($medium) {
                 display: inline-block;
                 margin: rem-calc(0 10);
 
@@ -76,6 +81,7 @@
         a {
             display: inline-block;
             @include same-size(rem-calc(30));
+            position: relative;
             border-radius: 100px;
             border: 1px solid $base-font-color;
 
@@ -110,14 +116,56 @@
 .user {
     display: none;
 
-    @include screen($large) {
-        display: inline;
+    @include screen($medium) {
+        display: inline-block;
     }
 }
 
-.avatar {
+.user-avatar {
+    display: inline-block;
     @include same-size(rem-calc(90));
+    position: relative;
+}
+
+.avatar {
     border-radius: 100px;
+}
+
+.user-status {
+    &:after {
+        content: "";
+        @include same-size(rem-calc(14));
+        bottom: rem-calc(6);
+        right: rem-calc(6);
+        position: absolute;
+        border: 2px solid #fff;
+        border-radius: 100px;
+        background: #a1a1a1;
+    }
+
+    &.online {
+        &:after {
+            background: #27c24c;
+        }
+    }
+
+    &.away {
+        &:after {
+            background: #ff920e;
+        }
+    }
+
+    &.busy {
+        &:after {
+            background: #d73f31;
+        }
+    }
+
+    &.offline {
+        &:after {
+            background: #a1a1a1;
+        }
+    }
 }
 
 .user-description {

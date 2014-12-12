@@ -60,6 +60,33 @@
     vertical-align: middle;
 }
 
+.bubble {
+    min-width: rem-calc(15);
+    height: rem-calc(15);
+    padding: rem-calc(2);
+    color: $light-color;
+    font-size: rem-calc(10);
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    top: rem-calc(-6);
+    right: rem-calc(-8);
+    position: absolute;
+    border-radius: 100px;
+}
+
+.notification {
+    .bubble {
+        background: #f0934e;
+    }
+}
+
+.mail {
+    .bubble {
+        background: #ff5757;
+    }
+}
+
 %reset-list {
     margin: 0;
     padding: 0;
