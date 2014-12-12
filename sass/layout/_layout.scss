@@ -1,0 +1,50 @@
+// Layout
+//------------------------------------------------------------
+//
+
+
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    position: fixed;
+    visibility: hidden;
+    background: rgba(68,93,114, .6);
+    transition: all .45s ease;
+
+    @include screen($large) {
+        display: none;
+    }
+}
+
+.toggle {
+    .overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.headline {
+    margin: 0;
+    line-height: 1;
+}
+
+
+// Panels
+.total-sales,
+.total-orders,
+.sales-analytics,
+.to-do {
+    @extend %panel;
+}
+
+
+
+
+
+
+

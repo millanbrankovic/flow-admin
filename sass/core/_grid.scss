@@ -47,20 +47,17 @@ $col-gutter: rem-calc(15) !default;
 // --------------------------------------------------
 
 %panel {
-    border: 1px solid darken($light-color, 20%);
     margin: rem-calc(0 0 15);
-    padding: rem-calc(15);
-    background: darken($light-color, 10%);
+    padding: rem-calc(10);
+    background: #fff;
+    border-radius: $global-radius;
+    box-shadow: $global-shadow;
 
     &:before,
     &:after {
         content: "";
         display: table;
         clear: both;
-    }
-
-    @include screen($large) {
-        margin: rem-calc(0 0 30);
     }
 }
 

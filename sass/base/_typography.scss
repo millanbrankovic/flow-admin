@@ -40,6 +40,11 @@
 // Headings
 // --------------------------------------------------
 
+h1, h2 {
+    color: $dark-color;
+    font-family: $base-font-light;
+}
+
 h1 {
     font-size: $h1-sml-size;
 

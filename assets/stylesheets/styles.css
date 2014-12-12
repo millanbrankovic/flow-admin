@@ -227,6 +227,41 @@ th {
   padding: 0;
 }
 
+.content-main, .content-side, .current-insight, .sales-insight {
+  float: left;
+  width: 100%;
+  padding: 0 0.9375rem;
+  position: relative;
+}
+
+.total-sales,
+.total-orders,
+.sales-analytics,
+.to-do {
+  margin: 0 0 0.9375rem;
+  padding: 0.625rem;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 rgba(68, 93, 114, 0.05);
+}
+.total-sales:before,
+.total-orders:before,
+.sales-analytics:before,
+.to-do:before, .total-sales:after,
+.total-orders:after,
+.sales-analytics:after,
+.to-do:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content:before, .content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .show {
   display: block;
 }
@@ -306,17 +341,22 @@ ul, ol, dl {
   font-weight: normal;
   font-style: normal;
 }
+h1, h2 {
+  color: #445d72;
+  font-family: "open_sanslight";
+}
+
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.1875rem;
 }
 @media (min-width: 641px) {
   h1 {
-    font-size: 3rem;
+    font-size: 1.3125rem;
   }
 }
 @media (min-width: 1025px) {
   h1 {
-    font-size: 3.375rem;
+    font-size: 1.4375rem;
   }
 }
 
@@ -579,31 +619,8 @@ body, html {
   color: #94b3cd;
   font-size: 1rem;
   font-family: "open_sansregular", Helvetica, Arial, sans-serif;
-  background: #f6f8f8;
+  background: #ecf0f1;
   overflow-x: hidden;
-}
-
-.overlay {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 2;
-  position: fixed;
-  visibility: hidden;
-  background: rgba(68, 93, 114, 0.6);
-  transition: all .45s ease;
-}
-@media (min-width: 1025px) {
-  .overlay {
-    display: none;
-  }
-}
-
-.toggle .overlay {
-  opacity: 1;
-  visibility: visible;
 }
 
 img {
@@ -635,7 +652,7 @@ select {
   font-size: 0.875rem;
   background: none #ecf6fe;
   border: 1px solid #ecf0f1;
-  border-radius: 3px;
+  border-radius: 2px;
   transition: all .35s ease;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -682,7 +699,7 @@ fieldset {
   margin: 1.25rem 0;
   padding: 0.625rem;
   border: 1px solid #ecf0f1;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 legend {
@@ -714,7 +731,7 @@ legend {
   border-top: 1px solid #ecf0f1;
   border-right: 1px solid #ecf0f1;
   border-bottom: 1px solid #ecf0f1;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 2px 2px 0;
 }
 .custom-inputs.select select:focus {
   box-shadow: none;
@@ -750,7 +767,7 @@ input[type="radio"] + label .check {
   display: inline-block;
   vertical-align: middle;
   border: 1px solid #ecf0f1;
-  border-radius: 3px;
+  border-radius: 2px;
   margin: 0 0.125rem 0 0;
   background: #ecf6fe;
 }
@@ -806,6 +823,34 @@ input[type="radio"] + label .check:after {
   height: 0.5rem;
   border-radius: 100px;
   background: #ee6e73;
+}
+
+.overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  position: fixed;
+  visibility: hidden;
+  background: rgba(68, 93, 114, 0.6);
+  transition: all .45s ease;
+}
+@media (min-width: 1025px) {
+  .overlay {
+    display: none;
+  }
+}
+
+.toggle .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.headline {
+  margin: 0;
+  line-height: 1;
 }
 
 .header {
@@ -892,6 +937,31 @@ input[type="radio"] + label .check:after {
   line-height: 1.9;
 }
 
+.quick-nav {
+  float: right;
+}
+.quick-nav * {
+  color: #94b3cd;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.quick-nav li {
+  float: left;
+  border-left: 1px solid #ecf0f1;
+}
+.quick-nav li > * {
+  display: block;
+  padding: 0.9375rem;
+  height: 3.75rem;
+}
+.quick-nav .ico {
+  font-size: 1.25rem;
+  margin: 0 0 0 0.3125rem;
+}
+.quick-nav .search .ico {
+  margin: 0;
+}
+
 .sidebar {
   width: 3.75rem;
   top: 0;
@@ -941,32 +1011,32 @@ input[type="radio"] + label .check:after {
     padding: 1.25rem;
   }
 }
-.sidebar-user .quick-nav {
+.sidebar-user .quick-options {
   font-size: 0;
   text-align: center;
 }
 @media (min-width: 641px) {
-  .sidebar-user .quick-nav {
+  .sidebar-user .quick-options {
     margin: 0 0 1.25rem;
   }
 }
-.sidebar-user .quick-nav li {
+.sidebar-user .quick-options li {
   display: block;
   margin: 0 0 0.625rem;
 }
-.sidebar-user .quick-nav li:last-child {
+.sidebar-user .quick-options li:last-child {
   margin: 0;
 }
 @media (min-width: 641px) {
-  .sidebar-user .quick-nav li {
+  .sidebar-user .quick-options li {
     display: inline-block;
     margin: 0 0.625rem;
   }
-  .sidebar-user .quick-nav li:last-child {
+  .sidebar-user .quick-options li:last-child {
     margin: 0 0.625rem;
   }
 }
-.sidebar-user .quick-nav a {
+.sidebar-user .quick-options a {
   display: inline-block;
   width: 1.875rem;
   height: 1.875rem;
@@ -974,10 +1044,10 @@ input[type="radio"] + label .check:after {
   border-radius: 100px;
   border: 1px solid #94b3cd;
 }
-.sidebar-user .quick-nav a:active {
+.sidebar-user .quick-options a:active {
   border-color: #244058;
 }
-.sidebar-user .quick-nav a:active .ico {
+.sidebar-user .quick-options a:active .ico {
   color: #244058;
 }
 .sidebar-user h3 {
@@ -1113,17 +1183,16 @@ input[type="radio"] + label .check:after {
   min-height: 100%;
   left: 0;
   z-index: 1;
+  padding: 3.75rem 0 0;
+  overflow-x: hidden;
   position: relative;
-  background: #f6f8f8;
+  background: #ecf0f1;
   transition: all .2s ease;
 }
 @media (min-width: 1025px) {
   .main {
     margin-left: 16.875rem;
   }
-}
-.main h1 {
-  margin-top: 0;
 }
 
 .toggle .main {
@@ -1141,7 +1210,49 @@ input[type="radio"] + label .check:after {
   }
 }
 
+.breadcrumbs {
+  padding: 0.9375rem;
+  background: #f6f8f8;
+  border-top: 1px solid #ecf0f1;
+}
+.breadcrumbs .ico {
+  color: #d3dde5;
+  font-size: 1.75rem;
+  padding-right: 0.5rem;
+}
+
 .content {
-  overflow-x: hidden;
-  padding: 3.75rem 0.9375rem 0.9375rem;
+  padding: 0.9375rem 0;
+}
+
+@media (min-width: 641px) {
+  .content-main {
+    width: 75%;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 641px) {
+  .content-side {
+    width: 25%;
+  }
+}
+
+.current-insight {
+  padding: 0;
+}
+@media (min-width: 641px) {
+  .current-insight {
+    width: 33.33333%;
+  }
+}
+
+.sales-insight {
+  padding: 0;
+}
+@media (min-width: 641px) {
+  .sales-insight {
+    width: 66.66667%;
+    padding-left: 0.9375rem;
+  }
 }
