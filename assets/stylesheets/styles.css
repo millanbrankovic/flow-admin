@@ -560,20 +560,22 @@ body, html {
   overflow-x: hidden;
 }
 
-.overlay {
-  opacity: 0;
-  transition: all .35s ease;
-}
-
-.toggle .overlay {
+body:after {
+  content: "";
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 1;
-  z-index: 2;
+  opacity: 0;
+  z-index: 1;
   position: fixed;
-  background: rgba(236, 246, 254, 0.8);
+  visibility: hidden;
+  background: rgba(68, 93, 114, 0.6);
+  transition: all .3s ease;
+}
+body.toggle:after {
+  opacity: 1;
+  visibility: visible;
 }
 
 img {
@@ -811,8 +813,8 @@ input[type="radio"] + label .check:after {
 }
 .brand .logo .ico {
   color: #fff;
-  font-size: 1.1875rem;
-  line-height: 2.4;
+  font-size: 1.375rem;
+  line-height: 2.2;
 }
 @media (min-width: 1025px) {
   .brand .logo .ico {

@@ -7,7 +7,7 @@
     $(".nav-toggle").on('click', function(e) {
         e.preventDefault();
 
-        $("body").toggleClass("toggle");
+        $("body").toggleClass("toggle active");
         return false;
     });
 

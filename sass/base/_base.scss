@@ -20,23 +20,29 @@ body, html {
     overflow-x: hidden;
 }
 
-.overlay {
-    opacity: 0;
-    transition: all .35s ease;
-}
-
-.toggle {
-    .overlay {
+body {
+    &:after {
+        content: "";
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        opacity: 1;
-        z-index: 2;
+        opacity: 0;
+        z-index: 1;
         position: fixed;
-        background: rgba($light-color, .8);
+        visibility: hidden;
+        background: rgba(68,93,114, .6);
+        transition: all .3s ease;
+    }
+
+    &.toggle {
+        &:after {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }
+
 
 img {
     max-width: 100%;
