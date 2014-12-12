@@ -848,6 +848,31 @@ input[type="radio"] + label .check:after {
   line-height: 1;
 }
 
+.ac-trigger {
+  margin: 0 0 0.9375rem;
+  padding: 0.625rem 0.9375rem;
+  font-size: 0.875rem;
+  color: #94b3cd;
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 1px solid #ecf0f1;
+}
+.ac-trigger .arrow {
+  top: 0.5rem;
+  right: 0.625rem;
+  font-size: 1.5rem;
+  color: #94b3cd;
+  position: absolute;
+  transition: all .3s ease;
+}
+.ac-trigger.active .arrow {
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
 .caption {
   margin: 0;
 }

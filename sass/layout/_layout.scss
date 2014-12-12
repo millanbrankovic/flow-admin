@@ -33,6 +33,32 @@
     line-height: 1;
 }
 
+.ac-trigger {
+    margin: rem-calc(0 0 15);
+    padding: rem-calc(10 15);
+    font-size: rem-calc(14);
+    color: $base-font-color;
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+    border-bottom: $base-border;
+
+    .arrow {
+        top: rem-calc(8);
+        right: rem-calc(10);
+        font-size: rem-calc(24);
+        color: $base-font-color;
+        position: absolute;
+        transition: all .3s ease;
+    }
+
+    &.active {
+        .arrow {
+            @include transform(rotate(-180deg));
+        }
+    }
+}
+
 .caption {
     margin: 0;
 }

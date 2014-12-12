@@ -20,3 +20,16 @@
         $(this).addClass("active");
     });
 })();
+
+
+
+$('.content-inner').hide();
+
+$('.ac-trigger').on('click', function(e) {
+    $('.ac-trigger').removeClass('active');
+    $('.content-inner').slideUp(300);
+    if($(this).next().is(':hidden') == true) {
+        $(this).addClass('active');
+        $(this).next().slideDown(300);
+    }
+});
