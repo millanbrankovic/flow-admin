@@ -50,14 +50,18 @@
 
 // Content
 .content {
-    padding: rem-calc(15 0);
     @extend %clearfix;
+
+    @include screen($medium) {
+        padding: rem-calc(15 0);
+    }
 }
 
 
 // Content-main
 .content-main {
     @extend %col;
+    padding: 0;
 
     @include screen($medium) {
         @include col(9);

@@ -33,31 +33,6 @@
     line-height: 1;
 }
 
-.ac-trigger {
-    margin: rem-calc(0 0 15);
-    padding: rem-calc(10 15);
-    font-size: rem-calc(14);
-    color: $base-font-color;
-    position: relative;
-    cursor: pointer;
-    background: #fff;
-    border-bottom: $base-border;
-
-    .arrow {
-        top: rem-calc(8);
-        right: rem-calc(10);
-        font-size: rem-calc(24);
-        color: $base-font-color;
-        position: absolute;
-        transition: all .3s ease;
-    }
-
-    &.active {
-        .arrow {
-            @include transform(rotate(-180deg));
-        }
-    }
-}
 
 .caption {
     margin: 0;
@@ -78,6 +53,42 @@
         font-size: rem-calc(36);
         margin: rem-calc(38 0 0);
     }
+}
+
+
+.ac-trigger {
+    margin: 0;
+    padding: rem-calc(12 15);
+    font-size: rem-calc(14);
+    color: $base-font-color;
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+    border-top: $base-border;
+    transition: all .3s ease;
+
+    .arrow {
+        top: rem-calc(10);
+        right: rem-calc(10);
+        font-size: rem-calc(24);
+        color: $base-font-color;
+        position: absolute;
+        transition: all .3s ease;
+    }
+
+    &.active {
+        background: $light-gray;
+
+        .arrow {
+            @include transform(rotate(-180deg));
+        }
+    }
+}
+
+.accordion {
+    top: rem-calc(15);
+    padding: rem-calc(0 15);
+    position: relative;
 }
 
 
