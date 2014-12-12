@@ -38,7 +38,6 @@
 .breadcrumbs {
     padding: rem-calc(15);
     background: $light-gray;
-    border-top: $base-border;
 
     .ico {
         color: $gray-color;
@@ -65,7 +64,7 @@
 
     @include screen($medium) {
         @include col(9);
-        padding-right: 0;
+        padding-left: rem-calc(15);
     }
 }
 
@@ -76,6 +75,15 @@
 
     @include screen($medium) {
         @include col(3);
+    }
+}
+
+
+.content-inner {
+    @include screen($medium) {
+        top: 0;
+        padding: 0;
+        display: block;
     }
 }
 

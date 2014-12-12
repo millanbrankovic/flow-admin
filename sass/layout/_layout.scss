@@ -67,6 +67,10 @@
     border-top: $base-border;
     transition: all .3s ease;
 
+    @include screen($medium) {
+        display: none;
+    }
+
     .arrow {
         top: rem-calc(10);
         right: rem-calc(10);
@@ -86,8 +90,9 @@
 }
 
 .accordion {
+    display: none;
     top: rem-calc(15);
-    padding: rem-calc(0 15);
+    padding: rem-calc(0 15 15);
     position: relative;
 }
 

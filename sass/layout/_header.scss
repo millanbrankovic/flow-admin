@@ -7,7 +7,7 @@
     top: 0;
     left: rem-calc(-60);
     right: 0;
-    height: rem-calc(60);
+    height: rem-calc(59);
     z-index: 3;
     position: fixed;
     background: #fff;
@@ -15,10 +15,30 @@
 
     @include screen($medium) {
         left: rem-calc(-220);
+        height: rem-calc(59);
     }
 
     @include screen($large) {
         left: 0;
+        height: rem-calc(60);
+    }
+
+    &:after {
+        content: "";
+        height: 1px;
+        left: rem-calc(60);
+        right: 0;
+        bottom: rem-calc(-1);
+        position: absolute;
+        background: $mid-gray;
+
+        @include screen($medium) {
+            left: rem-calc(220);
+        }
+
+        @include screen($large) {
+            left: rem-calc(270);
+        }
     }
 
     .ico {

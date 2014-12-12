@@ -882,6 +882,11 @@ input[type="radio"] + label .check:after {
   border-top: 1px solid #ecf0f1;
   transition: all .3s ease;
 }
+@media (min-width: 641px) {
+  .ac-trigger {
+    display: none;
+  }
+}
 .ac-trigger .arrow {
   top: 0.625rem;
   right: 0.625rem;
@@ -901,8 +906,9 @@ input[type="radio"] + label .check:after {
 }
 
 .accordion {
+  display: none;
   top: 0.9375rem;
-  padding: 0 0.9375rem;
+  padding: 0 0.9375rem 0.9375rem;
   position: relative;
 }
 
@@ -910,7 +916,7 @@ input[type="radio"] + label .check:after {
   top: 0;
   left: -3.75rem;
   right: 0;
-  height: 3.75rem;
+  height: 3.6875rem;
   z-index: 3;
   position: fixed;
   background: #fff;
@@ -919,11 +925,32 @@ input[type="radio"] + label .check:after {
 @media (min-width: 641px) {
   .header {
     left: -13.75rem;
+    height: 3.6875rem;
   }
 }
 @media (min-width: 1025px) {
   .header {
     left: 0;
+    height: 3.75rem;
+  }
+}
+.header:after {
+  content: "";
+  height: 1px;
+  left: 3.75rem;
+  right: 0;
+  bottom: -0.0625rem;
+  position: absolute;
+  background: #ecf0f1;
+}
+@media (min-width: 641px) {
+  .header:after {
+    left: 13.75rem;
+  }
+}
+@media (min-width: 1025px) {
+  .header:after {
+    left: 16.875rem;
   }
 }
 .header .ico {
@@ -1266,7 +1293,6 @@ input[type="radio"] + label .check:after {
 .breadcrumbs {
   padding: 0.9375rem;
   background: #f6f8f8;
-  border-top: 1px solid #ecf0f1;
 }
 .breadcrumbs .ico {
   color: #d3dde5;
@@ -1286,13 +1312,21 @@ input[type="radio"] + label .check:after {
 @media (min-width: 641px) {
   .content-main {
     width: 75%;
-    padding-right: 0;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 641px) {
   .content-side {
     width: 25%;
+  }
+}
+
+@media (min-width: 641px) {
+  .content-inner {
+    top: 0;
+    padding: 0;
+    display: block;
   }
 }
 
