@@ -16,6 +16,7 @@
     transition: all .2s ease;
 
     @include screen($large) {
+        left: 0;
         width: rem-calc(270);
     }
 
@@ -31,6 +32,10 @@
 .toggle {
     .sidebar {
         left: 0;
+
+        @include screen($large) {
+            left: rem-calc(-270);
+        }
     }
 }
 

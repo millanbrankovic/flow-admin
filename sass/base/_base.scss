@@ -20,26 +20,27 @@ body, html {
     overflow-x: hidden;
 }
 
-body {
-    &:after {
-        content: "";
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        z-index: 1;
-        position: fixed;
-        visibility: hidden;
-        background: rgba(68,93,114, .6);
-        transition: all .3s ease;
-    }
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    position: fixed;
+    visibility: hidden;
+    background: rgba(68,93,114, .6);
+    transition: all .45s ease;
 
-    &.toggle {
-        &:after {
-            opacity: 1;
-            visibility: visible;
-        }
+    @include screen($large) {
+        display: none;
+    }
+}
+
+.toggle {
+    .overlay {
+        opacity: 1;
+        visibility: visible;
     }
 }
 

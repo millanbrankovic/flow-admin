@@ -13,6 +13,10 @@
     background: #fff;
     transition: all .2s ease;
 
+    @include screen($large) {
+        left: 0;
+    }
+
     .ico {
         color: $base-font-color;
     }
@@ -21,6 +25,10 @@
 .toggle {
     .header {
         left: 0;
+
+        @include screen($large) {
+            left: rem-calc(-270);
+        }
     }
 }
 
