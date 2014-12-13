@@ -71,6 +71,61 @@ legend {
 }
 
 
+.search-form {
+    width: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease;
+
+    &.push {
+        width: 230px;
+
+        .submit {
+            z-index: 1;
+        }
+
+        .submission {
+            z-index: 2;
+        }
+    }
+}
+
+.search {
+    width: 185px;
+    height: 30px;
+    right: 30px;
+    padding: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    border-bottom: 3px solid $blue-color;
+    background: transparent;
+    position: absolute;
+}
+
+.submit {
+    width: 30px;
+    height: 30px;
+    right: 0;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submission {
+    width: 30px;
+    height: 30px;
+    right: 0;
+    text-indent: -10000px;
+    z-index: 1;
+    border: none;
+    background: rgba(#000, .2);
+    position: absolute;
+}
+
+
 // Custom Inputs
 // --------------------------------------------------
 

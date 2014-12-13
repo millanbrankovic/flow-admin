@@ -189,3 +189,105 @@
     }
 }
 
+
+.processes {
+    margin: rem-calc(35 0);
+
+    @include screen($medium) {
+        margin: rem-calc(60 0);
+        line-height: 1;
+    }
+
+    li {
+        margin: rem-calc(0 0 20);
+        padding: rem-calc(0 5);
+
+        @include screen($medium) {
+            margin: rem-calc(0 0 35);
+            padding: rem-calc(0 25 0 20);
+        }
+
+        .text {
+            font-size: rem-calc(10);
+            font-family: $base-font-light;
+
+            @include screen($medium) {
+                font-size: rem-calc(14);
+            }
+        }
+
+        .result {
+            position: relative;
+            font-family: $base-font-regular;
+            font-weight: 700;
+
+            @include screen($medium) {
+                float: right;
+                top: rem-calc(1);
+            }
+        }
+    }
+
+    .process {
+        height: rem-calc(3);
+        margin: rem-calc(5 0 0);
+        position: relative;
+        background: #354b5e;
+        border-radius: 2px;
+
+        @include screen($medium) {
+            margin: rem-calc(15 0 0);
+        }
+    }
+
+    .process-progress {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        border-radius: 2px;
+    }
+
+    .orders-completed {
+        .process-progress {
+            width: 82%;
+            background: $green-color;
+        }
+    }
+
+    .orders-processing {
+        .process-progress {
+            width: 47%;
+            background: $brand-primary;
+        }
+    }
+
+    .orders-waiting {
+        .process-progress {
+            width: 69%;
+            background: $blue-color;
+        }
+    }
+
+    .other-statuses {
+        .process-progress {
+            width: 100%;
+            background: $purple-color;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

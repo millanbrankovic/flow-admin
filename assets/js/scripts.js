@@ -31,4 +31,31 @@
         }
     });
 
+    $(".submit").on('click', function(e) {
+        e.stopPropagation();
+
+        $(".search-form").addClass("push");
+
+        $(document).on('click touchmove', function() {
+            $(".search-form").removeClass("push");
+        });
+    });
+
+
+    // $(".submit").on('click', function(e) {
+    //     e.stopPropagation();
+    //     $(".search-form").addClass("push");
+    // });
+
+    // $(document).on('click', function(e) {
+    //     e.stopPropagation();
+    //     if(e.target.className!="submit")
+    //     $(".search-form").removeClass("push");
+    // });
+
 })();
+
+
+
+
+

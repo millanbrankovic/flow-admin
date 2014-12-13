@@ -703,6 +703,57 @@ legend {
   font-weight: bold;
 }
 
+.search-form {
+  width: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+.search-form.push {
+  width: 230px;
+}
+.search-form.push .submit {
+  z-index: 1;
+}
+.search-form.push .submission {
+  z-index: 2;
+}
+
+.search {
+  width: 185px;
+  height: 30px;
+  right: 30px;
+  padding: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  border-bottom: 3px solid #4fc5ea;
+  background: transparent;
+  position: absolute;
+}
+
+.submit {
+  width: 30px;
+  height: 30px;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submission {
+  width: 30px;
+  height: 30px;
+  right: 0;
+  text-indent: -10000px;
+  z-index: 1;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
 .custom-inputs {
   position: relative;
   display: inline-block;
@@ -1203,6 +1254,80 @@ input[type="radio"] + label .check:after {
   display: block;
   color: #ef4238;
   font-size: 1.125rem;
+}
+
+.processes {
+  margin: 2.1875rem 0;
+}
+@media (min-width: 641px) {
+  .processes {
+    margin: 3.75rem 0;
+    line-height: 1;
+  }
+}
+.processes li {
+  margin: 0 0 1.25rem;
+  padding: 0 0.3125rem;
+}
+@media (min-width: 641px) {
+  .processes li {
+    margin: 0 0 2.1875rem;
+    padding: 0 1.5625rem 0 1.25rem;
+  }
+}
+.processes li .text {
+  font-size: 0.625rem;
+  font-family: "open_sanslight";
+}
+@media (min-width: 641px) {
+  .processes li .text {
+    font-size: 0.875rem;
+  }
+}
+.processes li .result {
+  position: relative;
+  font-family: "open_sansregular";
+  font-weight: 700;
+}
+@media (min-width: 641px) {
+  .processes li .result {
+    float: right;
+    top: 0.0625rem;
+  }
+}
+.processes .process {
+  height: 0.1875rem;
+  margin: 0.3125rem 0 0;
+  position: relative;
+  background: #354b5e;
+  border-radius: 2px;
+}
+@media (min-width: 641px) {
+  .processes .process {
+    margin: 0.9375rem 0 0;
+  }
+}
+.processes .process-progress {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 2px;
+}
+.processes .orders-completed .process-progress {
+  width: 82%;
+  background: #67d481;
+}
+.processes .orders-processing .process-progress {
+  width: 47%;
+  background: #ee6e73;
+}
+.processes .orders-waiting .process-progress {
+  width: 69%;
+  background: #4fc5ea;
+}
+.processes .other-statuses .process-progress {
+  width: 100%;
+  background: #9b8ad8;
 }
 
 .main-nav li {

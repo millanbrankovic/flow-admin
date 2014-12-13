@@ -21,9 +21,11 @@
         <div class="quick-nav">
             <ul>
                 <li>
-                    <div class="search">
-                        <span class="ico ico-search"></span>
-                    </div>
+                    <form action="" class="search-form" autocomplete="on">
+                        <input type="text" placeholder="Search" name="search" class="search">
+                        <span class="submit ico ico-search"></span>
+                        <input type="submit" class="submission">
+                    </form>
                 </li>
                 <li>
                     <div class="calendar">
@@ -139,6 +141,53 @@
                 </li>
             </ul>
         </nav>
+
+        <ul class="processes">
+            <li class="orders-completed">
+                <span class="text">
+                    Orders Completed
+                </span>
+                <span class="text result">
+                    82%
+                </span>
+                <div class="process">
+                    <span class="process-progress"></span>
+                </div>
+            </li>
+            <li class="orders-processing">
+                <span class="text">
+                    Orders Processing
+                </span>
+                <span class="text result">
+                    47%
+                </span>
+                <div class="process">
+                    <span class="process-progress"></span>
+                </div>
+            </li>
+            <li class="orders-waiting">
+                <span class="text">
+                    Orders Waiting
+                </span>
+                <span class="text result">
+                    69%
+                </span>
+                <div class="process">
+                    <span class="process-progress"></span>
+                </div>
+            </li>
+            <li class="other-statuses">
+                <span class="text">
+                    Other Statuses
+                </span>
+                <span class="text result">
+                    100%
+                </span>
+                <div class="process">
+                    <span class="process-progress"></span>
+                </div>
+            </li>
+        </ul>
 
     </aside>
 
