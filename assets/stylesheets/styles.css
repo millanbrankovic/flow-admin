@@ -705,12 +705,19 @@ legend {
 
 .search-form {
   width: 0;
+  min-width: 1.875rem;
+  height: 1.875rem;
   position: relative;
   overflow: hidden;
-  transition: all .3s ease;
+  transition: all .35s ease;
 }
 .search-form.push {
-  width: 230px;
+  width: 7.9375rem;
+}
+@media (min-width: 641px) {
+  .search-form.push {
+    width: 14.375rem;
+  }
 }
 .search-form.push .submit {
   z-index: 1;
@@ -718,40 +725,53 @@ legend {
 .search-form.push .submission {
   z-index: 2;
 }
-
-.search {
-  width: 185px;
-  height: 30px;
-  right: 30px;
+.search-form .search {
   padding: 0;
+  margin: 0;
+  width: 5.75rem;
+  height: 1.875rem;
+  right: 2.1875rem;
+  border-radius: 0;
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  border-radius: 0;
-  border-bottom: 3px solid #4fc5ea;
+  border-bottom: 2px solid #ee6e73;
   background: transparent;
   position: absolute;
 }
-
-.submit {
-  width: 30px;
-  height: 30px;
+@media (min-width: 641px) {
+  .search-form .search {
+    width: 12.1875rem;
+  }
+}
+.search-form .search:focus {
+  opacity: .7;
+  box-shadow: none;
+  border-color: #fad3d5;
+  background: transparent;
+}
+.search-form .submit {
+  margin: 0;
   right: 0;
+  width: 1.875rem;
+  height: 1.875rem;
   z-index: 2;
   position: absolute;
   cursor: pointer;
   text-align: center;
+  line-height: 1.4;
 }
-
-.submission {
-  width: 30px;
-  height: 30px;
+.search-form .submission {
+  margin: 0;
+  padding: 0;
   right: 0;
-  text-indent: -10000px;
+  width: 1.875rem;
+  height: 1.875rem;
   z-index: 1;
   border: none;
-  background: rgba(0, 0, 0, 0.2);
   position: absolute;
+  text-indent: -10000px;
+  background: transparent;
 }
 
 .custom-inputs {
@@ -1078,19 +1098,33 @@ input[type="radio"] + label .check:after {
 }
 .quick-nav li {
   float: left;
+  padding: 0.9375rem 0.625rem;
+  height: 3.75rem;
   border-left: 1px solid #ecf0f1;
 }
-.quick-nav li > * {
-  display: block;
-  padding: 0.9375rem;
-  height: 3.75rem;
+@media (min-width: 641px) {
+  .quick-nav li {
+    padding: 0.9375rem;
+  }
 }
 .quick-nav .ico {
+  width: 1.875rem;
+  height: 1.875rem;
   font-size: 1.25rem;
-  margin: 0 0 0 0.3125rem;
+  text-align: center;
 }
-.quick-nav .search .ico {
-  margin: 0;
+@media (min-width: 641px) {
+  .quick-nav .ico {
+    margin: 0 0 0 0.3125rem;
+  }
+}
+.quick-nav .text {
+  display: none;
+}
+@media (min-width: 641px) {
+  .quick-nav .text {
+    display: inline-block;
+  }
 }
 
 .sidebar {

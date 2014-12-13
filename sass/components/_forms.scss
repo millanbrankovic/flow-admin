@@ -73,12 +73,18 @@ legend {
 
 .search-form {
     width: 0;
+    min-width: rem-calc(30);
+    height: rem-calc(30);
     position: relative;
     overflow: hidden;
-    transition: all .3s ease;
+    transition: all .35s ease;
 
     &.push {
-        width: 230px;
+        width: rem-calc(127);
+
+        @include screen($medium) {
+            width: rem-calc(230);
+        }
 
         .submit {
             z-index: 1;
@@ -88,41 +94,57 @@ legend {
             z-index: 2;
         }
     }
-}
 
-.search {
-    width: 185px;
-    height: 30px;
-    right: 30px;
-    padding: 0;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
-    border-bottom: 3px solid $blue-color;
-    background: transparent;
-    position: absolute;
-}
+    .search {
+        padding: 0;
+        margin: 0;
+        width: rem-calc(92);
+        height: rem-calc(30);
+        right: rem-calc(35);
+        border-radius: 0;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 2px solid $brand-primary;
+        background: transparent;
+        position: absolute;
 
-.submit {
-    width: 30px;
-    height: 30px;
-    right: 0;
-    z-index: 2;
-    position: absolute;
-    cursor: pointer;
-    text-align: center;
-}
+        @include screen($medium) {
+            width: rem-calc(195);
+        }
 
-.submission {
-    width: 30px;
-    height: 30px;
-    right: 0;
-    text-indent: -10000px;
-    z-index: 1;
-    border: none;
-    background: rgba(#000, .2);
-    position: absolute;
+        &:focus {
+            opacity: .7;
+            box-shadow: none;
+            border-color: #fad3d5;
+            background: transparent;
+        }
+    }
+
+    .submit {
+        margin: 0;
+        right: 0;
+        width: rem-calc(30);
+        height: rem-calc(30);
+        z-index: 2;
+        position: absolute;
+        cursor: pointer;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .submission {
+        margin: 0;
+        padding: 0;
+        right: 0;
+        width: rem-calc(30);
+        height: rem-calc(30);
+        z-index: 1;
+        border: none;
+        position: absolute;
+        text-indent: -10000px;
+        background: transparent;
+    }
 }
 
 
