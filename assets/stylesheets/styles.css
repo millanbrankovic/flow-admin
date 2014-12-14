@@ -985,24 +985,36 @@ input[type="radio"] + label .check:after {
 
 .header {
   top: 0;
-  left: -3.75rem;
-  right: 0;
+  left: 0;
+  right: -3.75rem;
   height: 3.6875rem;
   z-index: 3;
   position: fixed;
   background: #fff;
   transition: all .2s ease;
+  -moz-transform: translateX(-3.75rem);
+  -ms-transform: translateX(-3.75rem);
+  -webkit-transform: translateX(-3.75rem);
+  transform: translateX(-3.75rem);
 }
 @media (min-width: 641px) {
   .header {
-    left: -13.75rem;
     height: 3.6875rem;
+    right: -13.75rem;
+    -moz-transform: translateX(-13.75rem);
+    -ms-transform: translateX(-13.75rem);
+    -webkit-transform: translateX(-13.75rem);
+    transform: translateX(-13.75rem);
   }
 }
 @media (min-width: 1025px) {
   .header {
-    left: 0;
+    right: 0;
     height: 3.75rem;
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 .header:after {
@@ -1029,7 +1041,18 @@ input[type="radio"] + label .check:after {
 }
 
 .toggle .header {
-  left: 0;
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+@media (min-width: 641px) {
+  .toggle .header {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 @media (min-width: 1025px) {
   .toggle .header {
@@ -1435,17 +1458,27 @@ input[type="radio"] + label .check:after {
 }
 
 .toggle .main {
-  left: 3.75rem;
+  -moz-transform: translateX(3.75rem);
+  -ms-transform: translateX(3.75rem);
+  -webkit-transform: translateX(3.75rem);
+  transform: translateX(3.75rem);
 }
 @media (min-width: 641px) {
   .toggle .main {
-    left: 13.75rem;
+    -moz-transform: translateX(13.75rem);
+    -ms-transform: translateX(13.75rem);
+    -webkit-transform: translateX(13.75rem);
+    transform: translateX(13.75rem);
   }
 }
 @media (min-width: 1025px) {
   .toggle .main {
     left: 0;
     margin-left: 0;
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 

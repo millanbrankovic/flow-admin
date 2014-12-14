@@ -5,22 +5,25 @@
 
 .header {
     top: 0;
-    left: rem-calc(-60);
-    right: 0;
+    left: 0;
+    right: rem-calc(-60);
     height: rem-calc(59);
     z-index: 3;
     position: fixed;
     background: #fff;
     transition: all .2s ease;
+    @include transform(translateX(rem-calc(-60px)));
 
     @include screen($medium) {
-        left: rem-calc(-220);
         height: rem-calc(59);
+        right: rem-calc(-220);
+        @include transform(translateX(rem-calc(-220px)));
     }
 
     @include screen($large) {
-        left: 0;
+        right: 0;
         height: rem-calc(60);
+        @include transform(translateX(0));
     }
 
     &:after {
@@ -48,7 +51,11 @@
 
 .toggle {
     .header {
-        left: 0;
+        @include transform(translateX(0));
+
+        @include screen($medium) {
+            @include transform(translateX(0));
+        }
 
         @include screen($large) {
             left: rem-calc(-270);

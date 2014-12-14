@@ -20,15 +20,16 @@
 
 .toggle {
     .main {
-        left: rem-calc(60);
+        @include transform(translateX(rem-calc(60px)));
 
         @include screen($medium) {
-            left: rem-calc(220);
+            @include transform(translateX(rem-calc(220px)));
         }
 
         @include screen($large) {
             left: 0;
             margin-left: 0;
+            @include transform(translateX(0));
         }
     }
 }
