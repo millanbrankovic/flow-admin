@@ -52,7 +52,7 @@ $btn-default-color: #fff;
     }
 }
 
-@mixin btn($btn-bg: $btn-brand-color, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false, $btn-radius: false) {
+@mixin btn($btn-bg: transparent, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false, $btn-radius: false) {
     padding: $btn-padding;
     font-size: $btn-font-size;
     background: $btn-bg;

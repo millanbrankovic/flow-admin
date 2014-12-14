@@ -235,6 +235,20 @@ th {
   position: relative;
 }
 
+.login-form {
+  margin: 0 0 0.9375rem;
+  padding: 0.625rem;
+  position: relative;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 rgba(68, 93, 114, 0.05);
+}
+.login-form:before, .login-form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .content:before, .panel:before, .content:after, .panel:after {
   content: "";
   display: table;
@@ -1585,7 +1599,7 @@ input[type="radio"] + label .check:after {
   color: #94b3cd;
 }
 .panel .date .ico-calendar {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   margin: 0 0 0 0.3125rem;
 }
 .panel .date .ico-arrow-down {
@@ -1627,4 +1641,77 @@ input[type="radio"] + label .check:after {
 .sales-analytics-chart,
 .global-market-chart {
   height: 190px;
+}
+
+#login {
+  border-top: 5px solid #ee6e73;
+  border-bottom: 5px solid #ee6e73;
+}
+
+.login-form {
+  top: 50%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 641px) {
+  .login-form {
+    width: 25rem;
+  }
+}
+.login-form fieldset {
+  margin: 0;
+  border: 1px solid #ee6e73;
+}
+.login-form .ico-logo {
+  color: #ee6e73;
+  font-size: 2.75rem;
+}
+@media (min-width: 641px) {
+  .login-form .ico-logo {
+    font-size: 3.5625rem;
+  }
+}
+@media (min-width: 1025px) {
+  .login-form .ico-logo {
+    font-size: 3.9375rem;
+  }
+}
+.login-form li {
+  position: relative;
+  margin: 1.5625rem 0;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 0.3125rem 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 1px 0 #ee6e73;
+  background: transparent;
+}
+.login-form input[type="text"]:active, .login-form input[type="text"]:focus,
+.login-form input[type="password"]:active,
+.login-form input[type="password"]:focus {
+  box-shadow: 0 3px 0 #fad3d5;
+  background: transparent;
+}
+.login-form input[type="text"]:active ~ label, .login-form input[type="text"]:focus ~ label,
+.login-form input[type="password"]:active ~ label,
+.login-form input[type="password"]:focus ~ label {
+  bottom: 1.75rem;
+  font-size: 0.75rem;
+}
+.login-form label {
+  margin: 0;
+  left: 0;
+  cursor: text;
+  color: #94b3cd;
+  bottom: 0.3125rem;
+  position: absolute;
+  transition: all .2s ease;
 }

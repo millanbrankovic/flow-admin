@@ -1,0 +1,80 @@
+// Login
+//------------------------------------------------------------
+//
+
+
+#login {
+    border-top: 5px solid $brand-primary;
+    border-bottom: 5px solid $brand-primary;
+}
+
+.login-form {
+    @extend %box;
+    top: 50%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @include transform(translateY(-50%));
+
+    @include screen($medium) {
+        width: rem-calc(400);
+    }
+
+    fieldset {
+        margin: 0;
+        border: 1px solid $brand-primary;
+    }
+
+    .ico-logo {
+        color: $brand-primary;
+        font-size: rem-calc(44);
+
+        @include screen($medium) {
+            font-size: rem-calc(57);
+        }
+
+        @include screen($large) {
+            font-size: rem-calc(63);
+        }
+    }
+
+    li {
+        position: relative;
+        margin: rem-calc(25 0);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: rem-calc(5 0);
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0 1px 0 $brand-primary;
+        background: transparent;
+
+        &:active,
+        &:focus {
+            box-shadow: 0 3px 0 #fad3d5;
+            background: transparent;
+
+            ~ label {
+                bottom: rem-calc(28);
+                font-size: rem-calc(12);
+            }
+        }
+    }
+
+    label {
+        margin: 0;
+        left: 0;
+        cursor: text;
+        color: $base-font-color;
+        bottom: rem-calc(5);
+        position: absolute;
+        transition: all .2s ease;
+    }
+}
+
+
+
+
