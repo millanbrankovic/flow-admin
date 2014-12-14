@@ -107,7 +107,8 @@
     }
 }
 
-.sales-insight {
+.sales-insight,
+.global-insight {
     @extend %col;
     padding: 0;
 
@@ -120,7 +121,13 @@
 
 // Panels
 .panel {
-    @extend %panel;
+    margin: rem-calc(0 0 15);
+    padding: rem-calc(10);
+    position: relative;
+    background: #fff;
+    border-radius: $global-radius;
+    box-shadow: $global-shadow;
+    @extend %clearfix;
 
     .ico {
         font-size: rem-calc(28);
@@ -138,8 +145,50 @@
             color: $gray-color;
         }
     }
+
+    .title {
+        display: none;
+
+        @include screen($medium) {
+            display: inline-block;
+        }
+
+        .ico {
+            font-size: rem-calc(26);
+            margin: rem-calc(0 5 0 0);
+
+            @include screen($large) {
+                font-size: rem-calc(30);
+            }
+        }
+    }
+
+    .date {
+        float: right;
+        margin: rem-calc(6 0 0);
+        padding: rem-calc(2 2 2 10);
+        cursor: pointer;
+        font-size: rem-calc(13);
+        background: $light-gray;
+        border-radius: $global-radius;
+
+        .ico {
+            color: $base-font-color;
+        }
+
+        .ico-calendar {
+            font-size: rem-calc(22);
+            margin: rem-calc(0 0 0 5);
+        }
+
+        .ico-arrow-down {
+            font-size: rem-calc(18);
+        }
+    }
 }
 
+
+// Current Insight
 .total-sales {
     .sum,
     .ico {
@@ -185,12 +234,11 @@
 }
 
 
-
-
-
-
-
-
+// TODO: Delete later
+.sales-analytics-chart,
+.global-market-chart {
+    height: 190px;
+}
 
 
 

@@ -46,7 +46,7 @@ $col-gutter: rem-calc(15) !default;
 // Placeholder Helper for styling content inside columns
 // --------------------------------------------------
 
-%panel {
+%box {
     margin: rem-calc(0 0 15);
     padding: rem-calc(10);
     position: relative;

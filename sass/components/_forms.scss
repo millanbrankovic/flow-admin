@@ -83,6 +83,10 @@ legend {
         width: rem-calc(127);
 
         @include screen($medium) {
+            width: rem-calc(170);
+        }
+
+        @include screen($large) {
             width: rem-calc(230);
         }
 
@@ -110,11 +114,15 @@ legend {
         position: absolute;
 
         @include screen($medium) {
+            width: rem-calc(135);
+        }
+
+        @include screen($large) {
             width: rem-calc(195);
         }
 
         &:focus {
-            opacity: .7;
+            opacity: .6;
             box-shadow: none;
             border-color: #fad3d5;
             background: transparent;
