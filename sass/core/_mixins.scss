@@ -111,3 +111,19 @@ $icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
     }
 }
 
+
+// Flex Mixin
+// --------------------------------------------------
+
+@mixin display-flex {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+
+@mixin flex ($grow, $shrink, $basis) {
+    -webkit-flex: $grow $shrink $basis;
+    -ms-flex: $grow $shrink $basis;
+    flex: $grow $shrink $basis;
+}
+

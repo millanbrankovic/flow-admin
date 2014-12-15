@@ -1,0 +1,26 @@
+// Tabs
+//------------------------------------------------------------
+//
+
+
+.tabs-links {
+    font-size: 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        font-size: rem-calc(16);
+    }
+
+    a {
+        display: block;
+    }
+}
+
+.tab {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

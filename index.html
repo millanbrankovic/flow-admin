@@ -14,18 +14,31 @@
             </legend>
             <ul>
                 <li>
-                    <input type="text" id="username">
+                    <input type="text" id="username" class="login-form-inputs">
                     <label for="username">Username</label>
                 </li>
                 <li>
-                    <input type="password" id="password">
+                    <input type="password" id="password" class="login-form-inputs">
                     <label for="password">Password</label>
                 </li>
                 <li>
+                    <div class="custom-inputs">
+                        <input id="remember" type="checkbox" value="" name="checkbox">
+                        <label for="remember">
+                            <span class="check">
+                                <span class="ico ico-check"></span>
+                            </span>
+                            <span class="text">Remember Me</span>
+                        </label>
+                        <a href="#" class="password-reset">Forgot Password?</a>
+                    </div>
                     <input type="submit" value="Log in">
                 </li>
             </ul>
         </fieldset>
     </form>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/scripts.js" type="text/javascript"></script>
 </body>
 </html>

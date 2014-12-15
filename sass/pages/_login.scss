@@ -22,7 +22,6 @@
 
     fieldset {
         margin: 0;
-        border: 1px solid $brand-primary;
     }
 
     .ico-logo {
@@ -41,6 +40,23 @@
     li {
         position: relative;
         margin: rem-calc(25 0);
+        @extend %clearfix;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.active {
+            input {
+                box-shadow: 0 3px 0 #fad3d5;
+                background: transparent;
+            }
+
+            label {
+                bottom: rem-calc(28);
+                font-size: rem-calc(12);
+            }
+        }
     }
 
     input[type="text"],
@@ -51,17 +67,6 @@
         border-radius: 0;
         box-shadow: 0 1px 0 $brand-primary;
         background: transparent;
-
-        &:active,
-        &:focus {
-            box-shadow: 0 3px 0 #fad3d5;
-            background: transparent;
-
-            ~ label {
-                bottom: rem-calc(28);
-                font-size: rem-calc(12);
-            }
-        }
     }
 
     label {
@@ -73,8 +78,21 @@
         position: absolute;
         transition: all .2s ease;
     }
+
+    input[type="submit"] {
+        margin: rem-calc(15 0 10);
+
+        @include screen($medium) {
+            float: right;
+            width: auto;
+            margin: rem-calc(10 0 0);
+        }
+    }
+
+    .password-reset {
+        display: block;
+        font-size: rem-calc(14);
+        margin: rem-calc(12 0 0);
+    }
 }
-
-
-
 

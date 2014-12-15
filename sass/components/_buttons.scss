@@ -6,17 +6,17 @@
 // Buttons Variables
 // --------------------------------------------------
 
-$btn-tny: rem-calc(6 10);
-$btn-sml: rem-calc(8 12);
-$btn-med: rem-calc(12 14);
-$btn-lrg: rem-calc(16 20);
+$btn-tny: rem-calc(4 12);
+$btn-sml: rem-calc(6 14);
+$btn-med: rem-calc(8 16);
+$btn-lrg: rem-calc(10 18);
 
-$btn-tny-font-size: rem-calc(12);
+$btn-tny-font-size: rem-calc(13);
 $btn-sml-font-size: rem-calc(15);
 $btn-med-font-size: rem-calc(18);
 $btn-lrg-font-size: rem-calc(22);
 
-$btn-brand-color: #078fd8;
+$btn-brand-color: #ee6e73;
 $btn-default-color: #fff;
 
 
@@ -31,6 +31,7 @@ $btn-default-color: #fff;
     cursor: pointer;
     border: none;
     line-height: 1;
+    border-radius: $global-radius;
     transition: all .35s ease;
     @include user-select(none);
 
@@ -50,13 +51,19 @@ $btn-default-color: #fff;
     &:focus {
         outline: none;
     }
+
+    .ico {
+        color: #fff;
+        font-size: rem-calc(16) !important;
+        margin: rem-calc(0 5 0 0);
+    }
 }
 
-@mixin btn($btn-bg: transparent, $btn-color: false, $btn-font-size: rem-calc(16), $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false, $btn-radius: false) {
+@mixin btn($btn-bg: $btn-brand-color, $btn-color: #fff, $btn-font-size: $btn-med-font-size, $btn-border-color: false, $btn-padding: $btn-med, $btn-margin: false, $btn-width: false, $btn-radius: false) {
     padding: $btn-padding;
     font-size: $btn-font-size;
     background: $btn-bg;
-    @include match-colors($btn-bg, $btn-color);
+    // @include match-colors($btn-bg, $btn-color);
 
     @if ($btn-width) {
         width: $btn-width;
@@ -86,7 +93,14 @@ $btn-default-color: #fff;
 
     &:active,
     &:focus {
+        border: 1px solid darken($btn-bg, 9%);
         background: darken($btn-bg, 8%);
     }
+}
+
+button,
+input[type="submit"] {
+    @extend %btn;
+    @include btn;
 }
 

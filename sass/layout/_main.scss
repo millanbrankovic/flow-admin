@@ -69,16 +69,6 @@
 }
 
 
-// Content-side
-.content-side {
-    @extend %col;
-
-    @include screen($medium) {
-        @include col(3);
-    }
-}
-
-
 .content-inner {
     @include screen($medium) {
         top: 0;
@@ -239,4 +229,126 @@
 .global-market-chart {
     height: 190px;
 }
+
+
+// Content-side
+.content-side {
+    @extend %col;
+    padding: 0;
+
+    @include screen($medium) {
+        @include col(3);
+        padding-left: rem-calc(15);
+        padding-right: rem-calc(15);
+    }
+}
+
+
+.to-do-list {
+    @extend %col;
+    padding: 0;
+
+    button {
+        @include btn($btn-padding: $btn-tny, $btn-margin: rem-calc(4 0 0), $btn-font-size: $btn-tny-font-size);
+        float: right;
+    }
+}
+
+.to-do {
+    .tabs {
+        overflow: auto;
+        height: rem-calc(175);
+        margin: rem-calc(15 0 0);
+    }
+
+    .tabs-links {
+        width: 100%;
+        @include display-flex;
+        border-bottom: $base-border;
+
+        li {
+            @include flex(1, 1, auto);
+            top: rem-calc(1);
+            position: relative;
+
+            &.active {
+                border-bottom: 1px solid $blue-color;
+
+                &:before {
+                    content: "";
+                    left: 50%;
+                    bottom: -8px;
+                    border-top: 7px solid $blue-color;
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    position: absolute;
+                    @include transform(translateX(-50%));
+                }
+
+                &:after {
+                    content: "";
+                    left: 50%;
+                    bottom: -6px;
+                    border-top: 6px solid #fff;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    position: absolute;
+                    @include transform(translateX(-50%));
+                }
+
+                a {
+                    color: $dark-color;
+                }
+            }
+        }
+
+        a {
+            padding: rem-calc(10);
+            font-size: rem-calc(12);
+            font-weight: 700;
+            color: $base-font-color;
+        }
+    }
+
+    .tab-content {
+        li {
+            padding: rem-calc(10);
+            position: relative;
+            border-bottom: $base-border;
+        }
+
+        .custom-inputs {
+            height: rem-calc(22);
+            vertical-align: middle;
+        }
+    }
+
+    .to-do-title {
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .time {
+        top: rem-calc(4);
+        right: rem-calc(10);
+        font-size: rem-calc(10);
+        position: absolute;
+
+        .ico {
+            font-size: rem-calc(11);
+        }
+    }
+
+    .actions {
+        right: rem-calc(10);
+        bottom: rem-calc(4);
+        position: absolute;
+
+        .ico {
+            font-size: rem-calc(11);
+        }
+    }
+}
+
 
