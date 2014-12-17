@@ -228,7 +228,7 @@ th {
 }
 
 .content-main, .current-insight, .sales-insight,
-.global-insight, .content-side, .to-do-list {
+.global-insight, .content-side, .to-do-list, .user-accounts-list {
   float: left;
   width: 100%;
   padding: 0 0.9375rem;
@@ -249,7 +249,7 @@ th {
   clear: both;
 }
 
-.content:before, .panel:before, .login-form li:before, .content:after, .panel:after, .login-form li:after {
+.content:before, .panel:before, .user-accounts-list .users-header:before, .user-accounts-list .users-footer:before, .login-form li:before, .content:after, .panel:after, .user-accounts-list .users-header:after, .user-accounts-list .users-footer:after, .login-form li:after {
   content: "";
   display: table;
   clear: both;
@@ -311,6 +311,12 @@ ul, ol, dl {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.to-do .tab-content li, .user-accounts-list .users-list li {
+  padding: 0.625rem;
+  position: relative;
+  border-bottom: 1px solid #ecf0f1;
 }
 
 @font-face {
@@ -1018,6 +1024,12 @@ input[type="radio"] + label .check:after {
 .title {
   margin: 0;
   font-weight: 100;
+}
+
+.tiny-title {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .caption {
@@ -1732,6 +1744,19 @@ input[type="radio"] + label .check:after {
     padding-right: 0.9375rem;
   }
 }
+.content-side .custom-inputs {
+  height: 1.375rem;
+}
+.content-side .custom-inputs label {
+  margin: 0;
+}
+.content-side .custom-inputs .check {
+  margin: 0 0.3125rem 0 0;
+}
+.content-side .actions .ico {
+  cursor: pointer;
+  margin-left: 0.3125rem;
+}
 
 .to-do-list {
   padding: 0;
@@ -1755,6 +1780,8 @@ input[type="radio"] + label .check:after {
 
 .to-do .tabs {
   overflow: auto;
+  float: left;
+  width: 100%;
   height: 10.9375rem;
   margin: 0.9375rem 0 0;
 }
@@ -1806,23 +1833,9 @@ input[type="radio"] + label .check:after {
 }
 .to-do .tabs-links a {
   padding: 0.625rem;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   color: #94b3cd;
-}
-.to-do .tab-content li {
-  padding: 0.625rem;
-  position: relative;
-  border-bottom: 1px solid #ecf0f1;
-}
-.to-do .tab-content .custom-inputs {
-  height: 1.375rem;
-  vertical-align: middle;
-}
-.to-do .to-do-title {
-  margin: 0;
-  display: inline-block;
-  vertical-align: middle;
 }
 .to-do .time {
   top: 0.25rem;
@@ -1840,9 +1853,95 @@ input[type="radio"] + label .check:after {
   position: absolute;
 }
 .to-do .actions .ico {
-  cursor: pointer;
   font-size: 0.875rem;
-  margin-left: 0.3125rem;
+}
+
+.user-accounts-list {
+  padding: 0;
+}
+.user-accounts-list button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8125rem;
+  background: #67d481;
+  color: #fff;
+  border: 1px solid #43ca63;
+  float: left;
+}
+.user-accounts-list button:hover {
+  background: #87dd9b;
+}
+.user-accounts-list button:active, .user-accounts-list button:focus {
+  border: 1px solid #43ca63;
+  background: #47cb67;
+}
+.user-accounts-list .users-header {
+  margin: 0.625rem 0 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+.user-accounts-list .users-header > span {
+  float: left;
+  padding: 0.625rem;
+  font-weight: 700;
+  font-size: 0.6875rem;
+}
+.user-accounts-list .users-header > span:last-child {
+  float: right;
+}
+.user-accounts-list .user-mail {
+  display: block;
+  margin: 0.1875rem 0;
+  font-size: 0.625rem;
+  color: #94b3cd;
+}
+.user-accounts-list .actions {
+  top: 50%;
+  right: 0.625rem;
+  position: absolute;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.user-accounts-list .actions .ico {
+  font-size: 1.125rem;
+}
+.user-accounts-list .users-footer {
+  padding: 0.9375rem 0.625rem 0.3125rem;
+}
+.user-accounts-list .pagination {
+  float: right;
+  font-size: 0;
+  text-align: center;
+  border: 1px solid #ecf0f1;
+  border-radius: 2px;
+}
+.user-accounts-list .pagination * {
+  color: #94b3cd;
+}
+.user-accounts-list .pagination li {
+  display: inline-block;
+  border-left: 1px solid #ecf0f1;
+}
+.user-accounts-list .pagination li:first-child {
+  border-left: none;
+}
+.user-accounts-list .pagination a {
+  display: block;
+  height: 1.5rem;
+  line-height: 1.4;
+  padding: 0.1875rem 0.4375rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.user-accounts-list .pagination a.active, .user-accounts-list .pagination a:active {
+  background: #eff4f8;
+}
+.user-accounts-list .pagination .direction {
+  padding: 0.1875rem 0;
+}
+.user-accounts-list .pagination .ico {
+  line-height: 0;
+  font-size: 1.125rem;
 }
 
 #login {

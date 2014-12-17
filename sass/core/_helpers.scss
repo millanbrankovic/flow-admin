@@ -99,3 +99,9 @@
     white-space: nowrap;
 }
 
+%block-list {
+    padding: rem-calc(10);
+    position: relative;
+    border-bottom: $base-border;
+}
+
