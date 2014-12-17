@@ -332,11 +332,12 @@
     .time {
         top: rem-calc(4);
         right: rem-calc(10);
-        font-size: rem-calc(10);
+        color: $gray-color;
+        font-size: rem-calc(9);
         position: absolute;
 
         .ico {
-            font-size: rem-calc(11);
+            font-size: rem-calc(12);
         }
     }
 
@@ -346,7 +347,9 @@
         position: absolute;
 
         .ico {
-            font-size: rem-calc(11);
+            cursor: pointer;
+            font-size: rem-calc(14);
+            margin-left: rem-calc(5);
         }
     }
 }

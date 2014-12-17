@@ -441,14 +441,14 @@ p {
 }
 
 @font-face {
-  font-family: 'flex';
-  src: url("../../assets/fonts/flex.eot?x36k8r");
-  src: url("../../assets/fonts/flex.eot?#iefixx36k8r") format("embedded-opentype"), url("../../assets/fonts/flex.woff?x36k8r") format("woff"), url("../../assets/fonts/flex.ttf?x36k8r") format("truetype"), url("../../assets/fonts/flex.svg?x36k8r#flex") format("svg");
+  font-family: 'flow';
+  src: url("../../assets/fonts/flow.eot?l522qd");
+  src: url("../../assets/fonts/flow.eot?#iefixl522qd") format("embedded-opentype"), url("../../assets/fonts/flow.woff?l522qd") format("woff"), url("../../assets/fonts/flow.ttf?l522qd") format("truetype"), url("../../assets/fonts/flow.svg?l522qd#flow") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 .ico {
-  font-family: 'flex';
+  font-family: 'flow';
   speak: none;
   font-size: 1.875rem;
   font-style: normal;
@@ -461,10 +461,6 @@ p {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-logo:before {
-  content: "\e622";
 }
 
 .ico-arrow-down:before {
@@ -527,80 +523,96 @@ p {
   content: "\e60e";
 }
 
-.ico-labels:before {
+.ico-flexy:before {
   content: "\e60f";
 }
 
-.ico-logout:before {
+.ico-labels:before {
   content: "\e610";
 }
 
-.ico-mail:before {
+.ico-logo:before {
   content: "\e611";
 }
 
-.ico-map:before {
+.ico-logout:before {
   content: "\e612";
 }
 
-.ico-menu:before {
+.ico-mail:before {
   content: "\e613";
 }
 
-.ico-minus:before {
+.ico-map:before {
   content: "\e614";
 }
 
-.ico-note:before {
+.ico-menu:before {
   content: "\e615";
 }
 
-.ico-notifications:before {
+.ico-minus:before {
   content: "\e616";
 }
 
-.ico-plus:before {
+.ico-note:before {
   content: "\e617";
 }
 
-.ico-preferences:before {
+.ico-notifications:before {
   content: "\e618";
 }
 
-.ico-refresh:before {
+.ico-plus:before {
   content: "\e619";
 }
 
-.ico-search:before {
+.ico-preferences:before {
   content: "\e61a";
 }
 
-.ico-settings:before {
+.ico-recycle:before {
   content: "\e61b";
 }
 
-.ico-shopping:before {
+.ico-refresh:before {
   content: "\e61c";
 }
 
-.ico-swap:before {
+.ico-search:before {
   content: "\e61d";
 }
 
-.ico-tools:before {
+.ico-settings:before {
   content: "\e61e";
 }
 
-.ico-user:before {
+.ico-shopping:before {
   content: "\e61f";
 }
 
-.ico-visibility:before {
+.ico-swap:before {
   content: "\e620";
 }
 
-.ico-world:before {
+.ico-tools:before {
   content: "\e621";
+}
+
+.ico-user:before {
+  content: "\e622";
+}
+
+.ico-visibility:before {
+  content: "\e623";
+}
+
+.ico-world:before {
+  content: "\e624";
+}
+
+.ico-write:before {
+  content: "\e625";
 }
 
 *, *:before, *:after {
@@ -1153,8 +1165,8 @@ input[type="radio"] + label .check:after {
 }
 .brand .logo .ico {
   color: #fff;
-  font-size: 1.1875rem;
-  line-height: 2.5;
+  font-size: 1.375rem;
+  line-height: 2.1;
 }
 @media (min-width: 641px) {
   .brand .logo .ico {
@@ -1164,7 +1176,7 @@ input[type="radio"] + label .check:after {
 }
 @media (min-width: 1025px) {
   .brand .logo .ico {
-    font-size: 3.125rem;
+    font-size: 3.0625rem;
     line-height: 1;
   }
 }
@@ -1815,11 +1827,12 @@ input[type="radio"] + label .check:after {
 .to-do .time {
   top: 0.25rem;
   right: 0.625rem;
-  font-size: 0.625rem;
+  color: #d3dde5;
+  font-size: 0.5625rem;
   position: absolute;
 }
 .to-do .time .ico {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
 }
 .to-do .actions {
   right: 0.625rem;
@@ -1827,7 +1840,9 @@ input[type="radio"] + label .check:after {
   position: absolute;
 }
 .to-do .actions .ico {
-  font-size: 0.6875rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-left: 0.3125rem;
 }
 
 #login {
@@ -1855,16 +1870,16 @@ input[type="radio"] + label .check:after {
 }
 .login-form .ico-logo {
   color: #ee6e73;
-  font-size: 2.75rem;
+  font-size: 2.875rem;
 }
 @media (min-width: 641px) {
   .login-form .ico-logo {
-    font-size: 3.5625rem;
+    font-size: 3.625rem;
   }
 }
 @media (min-width: 1025px) {
   .login-form .ico-logo {
-    font-size: 3.9375rem;
+    font-size: 4rem;
   }
 }
 .login-form li {

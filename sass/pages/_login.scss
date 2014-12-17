@@ -26,14 +26,14 @@
 
     .ico-logo {
         color: $brand-primary;
-        font-size: rem-calc(44);
+        font-size: rem-calc(46);
 
         @include screen($medium) {
-            font-size: rem-calc(57);
+            font-size: rem-calc(58);
         }
 
         @include screen($large) {
-            font-size: rem-calc(63);
+            font-size: rem-calc(64);
         }
     }
 
