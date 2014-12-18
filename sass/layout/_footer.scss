@@ -1,3 +1,30 @@
 // Footer
 //------------------------------------------------------------
 //
+
+
+.footer {
+    left: 0;
+    padding: rem-calc(20 15);
+    position: relative;
+    transition: all .2s ease;
+
+    @include screen($large) {
+        margin-left: rem-calc(270);
+    }
+}
+
+.toggle {
+    .footer {
+        left: rem-calc(60);
+
+        @include screen($medium) {
+            left: rem-calc(220);
+        }
+
+        @include screen($large) {
+            left: 0;
+            margin-left: 0;
+        }
+    }
+}

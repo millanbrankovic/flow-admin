@@ -72,8 +72,8 @@
 
 .ac-trigger {
     margin: 0;
-    padding: rem-calc(12 15);
-    font-size: rem-calc(14);
+    padding: rem-calc(15);
+    font-size: rem-calc(15);
     color: $base-font-color;
     position: relative;
     cursor: pointer;
@@ -86,7 +86,7 @@
     }
 
     .arrow {
-        top: rem-calc(10);
+        top: rem-calc(13);
         right: rem-calc(10);
         font-size: rem-calc(24);
         color: $base-font-color;

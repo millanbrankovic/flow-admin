@@ -227,8 +227,15 @@ th {
   padding: 0;
 }
 
-.content-main, .current-insight, .sales-insight,
-.global-insight, .content-side, .to-do-list, .user-accounts-list {
+.content-main,
+.current-insight,
+.sales-insight,
+.global-insight,
+.revenues-insight,
+.content-side,
+.to-do-list,
+.user-accounts-list,
+.account-balance-list {
   float: left;
   width: 100%;
   padding: 0 0.9375rem;
@@ -249,7 +256,7 @@ th {
   clear: both;
 }
 
-.content:before, .panel:before, .user-accounts-list .users-header:before, .user-accounts-list .users-footer:before, .login-form li:before, .content:after, .panel:after, .user-accounts-list .users-header:after, .user-accounts-list .users-footer:after, .login-form li:after {
+.content:before, .panel:before, .user-accounts-list .users-header:before, .user-accounts-list .users-footer:before, .account-list li:before, .login-form li:before, .content:after, .panel:after, .user-accounts-list .users-header:after, .user-accounts-list .users-footer:after, .account-list li:after, .login-form li:after {
   content: "";
   display: table;
   clear: both;
@@ -307,14 +314,14 @@ th {
   background: #ff5757;
 }
 
-ul, ol, dl {
+ul, ol, li, dl, dt, dd {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .to-do .tab-content li, .user-accounts-list .users-list li {
-  padding: 0.625rem;
+  padding: 0.75rem 0.625rem;
   position: relative;
   border-bottom: 1px solid #ecf0f1;
 }
@@ -1057,8 +1064,8 @@ input[type="radio"] + label .check:after {
 
 .ac-trigger {
   margin: 0;
-  padding: 0.75rem 0.9375rem;
-  font-size: 0.875rem;
+  padding: 0.9375rem;
+  font-size: 0.9375rem;
   color: #94b3cd;
   position: relative;
   cursor: pointer;
@@ -1072,7 +1079,7 @@ input[type="radio"] + label .check:after {
   }
 }
 .ac-trigger .arrow {
-  top: 0.625rem;
+  top: 0.8125rem;
   right: 0.625rem;
   font-size: 1.5rem;
   color: #94b3cd;
@@ -1542,7 +1549,7 @@ input[type="radio"] + label .check:after {
   min-height: 100%;
   left: 0;
   z-index: 1;
-  padding: 3.75rem 0 0;
+  margin: 3.75rem 0 0;
   overflow-x: hidden;
   position: relative;
   background: #ecf0f1;
@@ -1585,13 +1592,28 @@ input[type="radio"] + label .check:after {
   }
 }
 
-.content-main {
+.content-main,
+.current-insight,
+.sales-insight,
+.global-insight,
+.revenues-insight,
+.content-side,
+.to-do-list,
+.user-accounts-list,
+.account-balance-list {
   padding: 0;
 }
+
 @media (min-width: 641px) {
+  .content-main {
+    padding: 0 0.9375rem;
+  }
+}
+@media (min-width: 1025px) {
   .content-main {
     width: 75%;
     padding-left: 0.9375rem;
+    padding-right: 0;
   }
 }
 
@@ -1603,9 +1625,6 @@ input[type="radio"] + label .check:after {
   }
 }
 
-.current-insight {
-  padding: 0;
-}
 @media (min-width: 641px) {
   .current-insight {
     width: 33.33333%;
@@ -1624,10 +1643,6 @@ input[type="radio"] + label .check:after {
   transform: translateY(-50%);
 }
 
-.sales-insight,
-.global-insight {
-  padding: 0;
-}
 @media (min-width: 641px) {
   .sales-insight,
   .global-insight {
@@ -1730,14 +1745,17 @@ input[type="radio"] + label .check:after {
 }
 
 .sales-analytics-chart,
-.global-market-chart {
+.global-market-chart,
+.revenues-chart {
   height: 190px;
 }
 
-.content-side {
-  padding: 0;
-}
 @media (min-width: 641px) {
+  .content-side {
+    padding: 0 0.9375rem;
+  }
+}
+@media (min-width: 1025px) {
   .content-side {
     width: 25%;
     padding-left: 0.9375rem;
@@ -1745,26 +1763,21 @@ input[type="radio"] + label .check:after {
   }
 }
 .content-side .custom-inputs {
-  height: 1.375rem;
-}
-.content-side .custom-inputs label {
-  margin: 0;
+  vertical-align: middle;
 }
 .content-side .custom-inputs .check {
-  margin: 0 0.3125rem 0 0;
+  margin: 0 0.5rem 0 0;
 }
 .content-side .actions .ico {
   cursor: pointer;
   margin-left: 0.3125rem;
 }
 
-.to-do-list {
-  padding: 0;
-}
 .to-do-list button {
   padding: 0.25rem 0.75rem;
   font-size: 0.8125rem;
   background: #ee6e73;
+  width: auto;
   margin: 0.25rem 0 0;
   color: #fff;
   border: 1px solid #e9454b;
@@ -1782,8 +1795,13 @@ input[type="radio"] + label .check:after {
   overflow: auto;
   float: left;
   width: 100%;
-  height: 10.9375rem;
+  height: 12.5rem;
   margin: 0.9375rem 0 0;
+}
+@media (min-width: 1025px) {
+  .to-do .tabs {
+    height: 10.9375rem;
+  }
 }
 .to-do .tabs-links {
   width: 100%;
@@ -1805,7 +1823,7 @@ input[type="radio"] + label .check:after {
 .to-do .tabs-links li.active:before {
   content: "";
   left: 50%;
-  bottom: -8px;
+  bottom: -7px;
   border-top: 7px solid #4fc5ea;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
@@ -1818,7 +1836,7 @@ input[type="radio"] + label .check:after {
 .to-do .tabs-links li.active:after {
   content: "";
   left: 50%;
-  bottom: -6px;
+  bottom: -5px;
   border-top: 6px solid #fff;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -1838,7 +1856,7 @@ input[type="radio"] + label .check:after {
   color: #94b3cd;
 }
 .to-do .time {
-  top: 0.25rem;
+  top: 0.3125rem;
   right: 0.625rem;
   color: #d3dde5;
   font-size: 0.5625rem;
@@ -1853,16 +1871,19 @@ input[type="radio"] + label .check:after {
   position: absolute;
 }
 .to-do .actions .ico {
-  font-size: 0.875rem;
+  font-size: 1.0625rem;
+}
+@media (min-width: 641px) {
+  .to-do .actions .ico {
+    font-size: 0.9375rem;
+  }
 }
 
-.user-accounts-list {
-  padding: 0;
-}
 .user-accounts-list button {
   padding: 0.25rem 0.75rem;
   font-size: 0.8125rem;
   background: #67d481;
+  width: auto;
   color: #fff;
   border: 1px solid #43ca63;
   float: left;
@@ -1888,8 +1909,13 @@ input[type="radio"] + label .check:after {
   float: right;
 }
 .user-accounts-list .user-mail {
+  width: 8.75rem;
   display: block;
   margin: 0.1875rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.2;
   font-size: 0.625rem;
   color: #94b3cd;
 }
@@ -1940,8 +1966,64 @@ input[type="radio"] + label .check:after {
   padding: 0.1875rem 0;
 }
 .user-accounts-list .pagination .ico {
+  margin: 0 0 0.125rem;
   line-height: 0;
   font-size: 1.125rem;
+}
+
+.account-list {
+  margin: 1.25rem 0 0;
+}
+.account-list li {
+  padding: 0 0 0.3125rem;
+  margin: 0 0 1.25rem;
+  border-bottom: 1px solid #ecf0f1;
+}
+.account-list li:last-child {
+  margin: 0 0 0.3125rem;
+}
+.account-list .info {
+  float: left;
+  font-weight: 700;
+  color: #94b3cd;
+  font-size: 0.75rem;
+}
+.account-list .value {
+  float: right;
+  max-width: 8.125rem;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #ee6e73;
+  font-size: 0.8125rem;
+}
+
+.footer {
+  left: 0;
+  padding: 1.25rem 0.9375rem;
+  position: relative;
+  transition: all .2s ease;
+}
+@media (min-width: 1025px) {
+  .footer {
+    margin-left: 16.875rem;
+  }
+}
+
+.toggle .footer {
+  left: 3.75rem;
+}
+@media (min-width: 641px) {
+  .toggle .footer {
+    left: 13.75rem;
+  }
+}
+@media (min-width: 1025px) {
+  .toggle .footer {
+    left: 0;
+    margin-left: 0;
+  }
 }
 
 #login {

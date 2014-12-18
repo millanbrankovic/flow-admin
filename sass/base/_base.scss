@@ -44,7 +44,7 @@ a {
 }
 
 
-ul, ol, dl {
+ul, ol, li, dl, dt, dd {
     @extend %reset-list;
 }
 

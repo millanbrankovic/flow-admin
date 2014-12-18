@@ -7,7 +7,7 @@
     min-height: 100%;
     left: 0;
     z-index: 1;
-    padding: rem-calc(60 0 0);
+    margin: rem-calc(60 0 0);
     overflow-x: hidden;
     position: relative;
     background: $mid-gray;
@@ -57,14 +57,30 @@
 }
 
 
-// Content-main
-.content-main {
+.content-main,
+.current-insight,
+.sales-insight,
+.global-insight,
+.revenues-insight,
+.content-side,
+.to-do-list,
+.user-accounts-list,
+.account-balance-list {
     @extend %col;
     padding: 0;
+}
 
+
+// Content-main
+.content-main {
     @include screen($medium) {
+        padding: 0 $col-gutter;
+    }
+
+    @include screen($large) {
         @include col(9);
-        padding-left: rem-calc(15);
+        padding-left: $col-gutter;
+        padding-right: 0;
     }
 }
 
@@ -79,9 +95,6 @@
 
 
 .current-insight {
-    @extend %col;
-    padding: 0;
-
     @include screen($medium) {
         @include col(4);
     }
@@ -99,9 +112,6 @@
 
 .sales-insight,
 .global-insight {
-    @extend %col;
-    padding: 0;
-
     @include screen($medium) {
         @include col(8);
         padding-left: $col-gutter;
@@ -226,31 +236,29 @@
 
 // TODO: Delete later
 .sales-analytics-chart,
-.global-market-chart {
+.global-market-chart,
+.revenues-chart {
     height: 190px;
 }
 
 
 // Content-side
 .content-side {
-    @extend %col;
-    padding: 0;
-
     @include screen($medium) {
+        padding: 0 $col-gutter;
+    }
+
+    @include screen($large) {
         @include col(3);
-        padding-left: rem-calc(15);
-        padding-right: rem-calc(15);
+        padding-left: $col-gutter;
+        padding-right: $col-gutter;
     }
 
     .custom-inputs {
-        height: rem-calc(22);
-
-        label {
-            margin: 0;
-        }
+        vertical-align: middle;
 
         .check {
-            margin: rem-calc(0 5 0 0);
+            margin: rem-calc(0 8 0 0);
         }
     }
 
@@ -265,11 +273,8 @@
 
 // To-do
 .to-do-list {
-    @extend %col;
-    padding: 0;
-
     button {
-        @include btn($btn-padding: $btn-tny, $btn-margin: rem-calc(4 0 0), $btn-font-size: $btn-tny-font-size);
+        @include btn($btn-width: auto, $btn-padding: $btn-tny, $btn-margin: rem-calc(4 0 0), $btn-font-size: $btn-tny-font-size);
         float: right;
     }
 }
@@ -279,8 +284,12 @@
         overflow: auto;
         float: left;
         width: 100%;
-        height: rem-calc(175);
+        height: rem-calc(200);
         margin: rem-calc(15 0 0);
+
+        @include screen($large) {
+            height: rem-calc(175);
+        }
     }
 
     .tabs-links {
@@ -299,7 +308,7 @@
                 &:before {
                     content: "";
                     left: 50%;
-                    bottom: -8px;
+                    bottom: -7px;
                     border-top: 7px solid $blue-color;
                     border-left: 7px solid transparent;
                     border-right: 7px solid transparent;
@@ -310,7 +319,7 @@
                 &:after {
                     content: "";
                     left: 50%;
-                    bottom: -6px;
+                    bottom: -5px;
                     border-top: 6px solid #fff;
                     border-left: 6px solid transparent;
                     border-right: 6px solid transparent;
@@ -339,7 +348,7 @@
     }
 
     .time {
-        top: rem-calc(4);
+        top: rem-calc(5);
         right: rem-calc(10);
         color: $gray-color;
         font-size: rem-calc(9);
@@ -356,7 +365,11 @@
         position: absolute;
 
         .ico {
-            font-size: rem-calc(14);
+            font-size: rem-calc(17);
+
+            @include screen($medium) {
+                font-size: rem-calc(15);
+            }
         }
     }
 }
@@ -364,11 +377,8 @@
 
 // User Accounts
 .user-accounts-list {
-    @extend %col;
-    padding: 0;
-
     button {
-        @include btn($btn-bg: $green-color, $btn-padding: $btn-tny, $btn-font-size: $btn-tny-font-size);
+        @include btn($btn-width: auto, $btn-bg: $green-color, $btn-padding: $btn-tny, $btn-font-size: $btn-tny-font-size);
         float: left;
     }
 
@@ -396,8 +406,13 @@
     }
 
     .user-mail {
+        width: rem-calc(140);
         display: block;
         margin: rem-calc(3 0);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 1.2;
         font-size: rem-calc(10);
         color: $base-font-color;
     }
@@ -457,9 +472,45 @@
         }
 
         .ico {
+            margin: rem-calc(0 0 2);
             line-height: 0;
             font-size: rem-calc(18);
         }
+    }
+}
+
+
+// Account Balance
+.account-list {
+    margin: rem-calc(20 0 0);
+
+    li {
+        @extend %clearfix;
+        padding: rem-calc(0 0 5);
+        margin: rem-calc(0 0 20);
+        border-bottom: $base-border;
+
+        &:last-child {
+            margin: rem-calc(0 0 5);
+        }
+    }
+
+    .info {
+        float: left;
+        font-weight: 700;
+        color: $base-font-color;
+        font-size: rem-calc(12);
+    }
+
+    .value {
+        float: right;
+        max-width: rem-calc(130);
+        text-align: right;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $brand-primary;
+        font-size: rem-calc(13);
     }
 }
 
