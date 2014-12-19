@@ -227,8 +227,8 @@
 
         // internationalization
         i18n: {
-            previousMonth : 'Previous Month',
-            nextMonth     : 'Next Month',
+            previousMonth : '',
+            nextMonth     : '',
             months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
             weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
             weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
@@ -270,7 +270,7 @@
             arr.push('is-selected');
         }
         return '<td data-day="' + d + '" class="' + arr.join(' ') + '">' +
-                 '<button class="pika-button pika-day" type="button" ' +
+                 '<button class="datepicker-button datepicker-day" type="button" ' +
                     'data-pika-year="' + y + '" data-pika-month="' + m + '" data-pika-day="' + d + '">' +
                         d +
                  '</button>' +
@@ -302,7 +302,7 @@
             opts = instance._o,
             isMinYear = year === opts.minYear,
             isMaxYear = year === opts.maxYear,
-            html = '<div class="pika-title">',
+            html = '<div class="datepicker-title">',
             monthHtml,
             yearHtml,
             prev = true,
@@ -314,7 +314,7 @@
                 ((isMinYear && i < opts.minMonth) || (isMaxYear && i > opts.maxMonth) ? 'disabled' : '') + '>' +
                 opts.i18n.months[i] + '</option>');
         }
-        monthHtml = '<div class="pika-label">' + opts.i18n.months[month] + '<select class="pika-select pika-select-month">' + arr.join('') + '</select></div>';
+        monthHtml = '<div class="datepicker-label">' + opts.i18n.months[month] + '<select class="datepicker-select datepicker-select-month">' + arr.join('') + '</select></div>';
 
         if (isArray(opts.yearRange)) {
             i = opts.yearRange[0];
@@ -329,7 +329,7 @@
                 arr.push('<option value="' + i + '"' + (i === year ? ' selected': '') + '>' + (i) + '</option>');
             }
         }
-        yearHtml = '<div class="pika-label">' + year + opts.yearSuffix + '<select class="pika-select pika-select-year">' + arr.join('') + '</select></div>';
+        yearHtml = '<div class="datepicker-label">' + year + opts.yearSuffix + '<select class="datepicker-select datepicker-select-year">' + arr.join('') + '</select></div>';
 
         if (opts.showMonthAfterYear) {
             html += yearHtml + monthHtml;
@@ -346,10 +346,10 @@
         }
 
         if (c === 0) {
-            html += '<button class="pika-prev' + (prev ? '' : ' is-disabled') + '" type="button">' + opts.i18n.previousMonth + '</button>';
+            html += '<button class="datepicker-prev' + (prev ? '' : ' is-disabled') + '" type="button">' + opts.i18n.previousMonth + '<span class="ico ico-arrow-left"></button>';
         }
         if (c === (instance._o.numberOfMonths - 1) ) {
-            html += '<button class="pika-next' + (next ? '' : ' is-disabled') + '" type="button">' + opts.i18n.nextMonth + '</button>';
+            html += '<button class="datepicker-next' + (next ? '' : ' is-disabled') + '" type="button">' + opts.i18n.nextMonth + '<span class="ico ico-arrow-right"></button>';
         }
 
         return html += '</div>';
@@ -357,7 +357,7 @@
 
     renderTable = function(opts, data)
     {
-        return '<table cellpadding="0" cellspacing="0" class="pika-table">' + renderHead(opts) + renderBody(data) + '</table>';
+        return '<table cellpadding="0" cellspacing="0" class="datepicker-table">' + renderHead(opts) + renderBody(data) + '</table>';
     },
 
 
@@ -381,7 +381,7 @@
             }
 
             if (!hasClass(target, 'is-disabled')) {
-                if (hasClass(target, 'pika-button') && !hasClass(target, 'is-empty')) {
+                if (hasClass(target, 'datepicker-button') && !hasClass(target, 'is-empty')) {
                     self.setDate(new Date(target.getAttribute('data-pika-year'), target.getAttribute('data-pika-month'), target.getAttribute('data-pika-day')));
                     if (opts.bound) {
                         sto(function() {
@@ -393,14 +393,14 @@
                     }
                     return;
                 }
-                else if (hasClass(target, 'pika-prev')) {
+                else if (hasClass(target, 'datepicker-prev')) {
                     self.prevMonth();
                 }
-                else if (hasClass(target, 'pika-next')) {
+                else if (hasClass(target, 'datepicker-next')) {
                     self.nextMonth();
                 }
             }
-            if (!hasClass(target, 'pika-select')) {
+            if (!hasClass(target, 'datepicker-select')) {
                 if (e.preventDefault) {
                     e.preventDefault();
                 } else {
@@ -419,10 +419,10 @@
             if (!target) {
                 return;
             }
-            if (hasClass(target, 'pika-select-month')) {
+            if (hasClass(target, 'datepicker-select-month')) {
                 self.gotoMonth(target.value);
             }
-            else if (hasClass(target, 'pika-select-year')) {
+            else if (hasClass(target, 'datepicker-select-year')) {
                 self.gotoYear(target.value);
             }
         };
@@ -475,14 +475,14 @@
             if (!target) {
                 return;
             }
-            if (!hasEventListeners && hasClass(target, 'pika-select')) {
+            if (!hasEventListeners && hasClass(target, 'datepicker-select')) {
                 if (!target.onchange) {
                     target.setAttribute('onchange', 'return;');
                     addEvent(target, 'change', self._onChange);
                 }
             }
             do {
-                if (hasClass(pEl, 'pika-single')) {
+                if (hasClass(pEl, 'datepicker-single')) {
                     return;
                 }
             }
@@ -493,7 +493,7 @@
         };
 
         self.el = document.createElement('div');
-        self.el.className = 'pika-single' + (opts.isRTL ? ' is-rtl' : '');
+        self.el.className = 'datepicker-single' + (opts.isRTL ? ' is-rtl' : '');
 
         addEvent(self.el, 'mousedown', self._onMouseDown, true);
         addEvent(self.el, 'change', self._onChange);
@@ -805,7 +805,7 @@
             }
 
             for (var c = 0; c < opts.numberOfMonths; c++) {
-                html += '<div class="pika-lendar">' + renderTitle(this, c, this.calendars[c].year, this.calendars[c].month, this.calendars[0].year) + this.render(this.calendars[c].year, this.calendars[c].month) + '</div>';
+                html += '<div class="datepicker-holder">' + renderTitle(this, c, this.calendars[c].year, this.calendars[c].month, this.calendars[0].year) + this.render(this.calendars[c].year, this.calendars[c].month) + '</div>';
             }
 
             this.el.innerHTML = html;

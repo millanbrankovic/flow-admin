@@ -157,17 +157,22 @@
 
     .calendar {
         position: relative;
+        width: rem-calc(30);
 
         @include screen($medium) {
-            min-width: rem-calc(240);
+            width: rem-calc(240);
         }
 
         .ico {
             top: rem-calc(1);
-            right: rem-calc(-7);
+            right: 0;
             cursor: pointer;
             pointer-events: none;
             position: absolute;
+
+            @include screen($medium) {
+                right: rem-calc(-7);
+            }
         }
     }
 }
