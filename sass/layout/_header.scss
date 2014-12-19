@@ -120,6 +120,7 @@
     float: right;
 
     * {
+        display: inline-block;
         color: $base-font-color;
         font-size: rem-calc(14);
         line-height: 1.4;
@@ -151,6 +152,22 @@
 
         @include screen($medium) {
             display: inline-block;
+        }
+    }
+
+    .calendar {
+        position: relative;
+
+        @include screen($medium) {
+            min-width: rem-calc(240);
+        }
+
+        .ico {
+            top: rem-calc(1);
+            right: rem-calc(-7);
+            cursor: pointer;
+            pointer-events: none;
+            position: absolute;
         }
     }
 }

@@ -108,5 +108,9 @@
     top: rem-calc(15);
     padding: rem-calc(0 15 15);
     position: relative;
+
+    @include screen($medium) {
+        display: block !important;
+    }
 }
 
