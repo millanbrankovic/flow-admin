@@ -1325,9 +1325,35 @@ input[type="radio"] + label .check:after {
   }
 }
 
+.morris-hover {
+  position: absolute;
+  z-index: 1000;
+}
+
+.morris-hover.morris-default-style {
+  border-radius: 10px;
+  padding: 6px;
+  color: #666;
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 2px rgba(230, 230, 230, 0.8);
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.morris-hover.morris-default-style .morris-hover-row-label {
+  font-weight: bold;
+  margin: 0.25em 0;
+}
+
+.morris-hover.morris-default-style .morris-hover-point {
+  white-space: nowrap;
+  margin: 0.1em 0;
+}
+
 .header {
   top: 0;
-  left: -3.75rem;
+  left: -5rem;
   right: 0;
   height: 3.6875rem;
   z-index: 3;
@@ -1350,7 +1376,7 @@ input[type="radio"] + label .check:after {
 .header:after {
   content: "";
   height: 1px;
-  left: 3.75rem;
+  left: 5rem;
   right: 0;
   bottom: -0.0625rem;
   position: absolute;
@@ -1372,7 +1398,7 @@ input[type="radio"] + label .check:after {
 
 .toggle .header {
   left: 0;
-  right: -3.75rem;
+  right: -5rem;
 }
 @media (min-width: 641px) {
   .toggle .header {
@@ -1388,7 +1414,7 @@ input[type="radio"] + label .check:after {
 
 .brand {
   float: left;
-  width: 3.75rem;
+  width: 5rem;
   height: 3.75rem;
   padding: 0.375rem 0;
   text-align: center;
@@ -1406,8 +1432,8 @@ input[type="radio"] + label .check:after {
 }
 .brand .logo .ico {
   color: #fff;
-  font-size: 1.375rem;
-  line-height: 2.1;
+  font-size: 1.625rem;
+  line-height: 1.8;
 }
 @media (min-width: 641px) {
   .brand .logo .ico {
@@ -1499,9 +1525,9 @@ input[type="radio"] + label .check:after {
 }
 
 .sidebar {
-  width: 3.75rem;
+  width: 5rem;
   top: 0;
-  left: -3.75rem;
+  left: -5rem;
   bottom: 0;
   z-index: 2;
   padding: 3.75rem 0 0;
@@ -1806,7 +1832,7 @@ input[type="radio"] + label .check:after {
 }
 
 .toggle .main {
-  left: 3.75rem;
+  left: 5rem;
 }
 @media (min-width: 641px) {
   .toggle .main {
@@ -1992,6 +2018,43 @@ input[type="radio"] + label .check:after {
 .global-market-chart,
 .revenues-chart {
   height: 190px;
+}
+
+#analytics-chart {
+  float: left;
+  width: 85%;
+  height: 190px;
+}
+
+.sales-analytics .piecharts {
+  float: right;
+}
+.sales-analytics .piecharts .chart {
+  width: 5rem;
+  height: 5rem;
+  display: block;
+  margin: 0 0 0.9375rem;
+  position: relative;
+}
+.sales-analytics .piecharts .percent {
+  top: 50%;
+  left: 50%;
+  margin: -0.75rem 0 0 0;
+  position: absolute;
+  font-family: "open_sanslight";
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.sales-analytics .piecharts .percent:after {
+  content: "%";
+}
+.sales-analytics .piecharts .green .percent {
+  color: #67d481;
+}
+.sales-analytics .piecharts .blue .percent {
+  color: #4fc5ea;
 }
 
 @media (min-width: 641px) {
@@ -2256,7 +2319,7 @@ input[type="radio"] + label .check:after {
 }
 
 .toggle .footer {
-  left: 3.75rem;
+  left: 5rem;
 }
 @media (min-width: 641px) {
   .toggle .footer {

@@ -16,7 +16,7 @@
 
 .toggle {
     .footer {
-        left: rem-calc(60);
+        left: rem-calc(80);
 
         @include screen($medium) {
             left: rem-calc(220);

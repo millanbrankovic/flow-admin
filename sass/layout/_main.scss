@@ -20,7 +20,7 @@
 
 .toggle {
     .main {
-        left: rem-calc(60);
+        left: rem-calc(80);
 
         @include screen($medium) {
             left: rem-calc(220);
@@ -241,8 +241,53 @@
     height: 190px;
 }
 
+#analytics-chart {
+    float: left;
+    width: 85%;
+    height: 190px;
+}
 
-// Content-side
+// Sales Insight
+.sales-analytics {
+    .piecharts {
+        float: right;
+
+        .chart {
+            @include same-size(rem-calc(80));
+            display: block;
+            margin: rem-calc(0 0 15);
+            position: relative;
+        }
+
+        .percent {
+            top: 50%;
+            left: 50%;
+            margin: rem-calc(-12 0 0 0);
+            position: absolute;
+            font-family: $base-font-light;
+            @include transform(translateX(-50%));
+
+            &:after {
+                content: "%";
+            }
+        }
+
+        .green {
+            .percent {
+                color: $green-color;
+            }
+        }
+
+        .blue {
+            .percent {
+                color: $blue-color;
+            }
+        }
+    }
+}
+
+
+// Content Side
 .content-side {
     @include screen($medium) {
         padding: 0 $col-gutter;

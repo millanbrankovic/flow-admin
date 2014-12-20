@@ -5,7 +5,7 @@
 
 .header {
     top: 0;
-    left: rem-calc(-60);
+    left: rem-calc(-80);
     right: 0;
     height: rem-calc(59);
     z-index: 3;
@@ -26,7 +26,7 @@
     &:after {
         content: "";
         height: 1px;
-        left: rem-calc(60);
+        left: rem-calc(80);
         right: 0;
         bottom: rem-calc(-1);
         position: absolute;
@@ -49,7 +49,7 @@
 .toggle {
     .header {
         left: 0;
-        right: rem-calc(-60);
+        right: rem-calc(-80);
 
         @include screen($medium) {
             right: rem-calc(-220);
@@ -65,7 +65,8 @@
 
 .brand {
     float: left;
-    @include same-size(rem-calc(60));
+    width: rem-calc(80);
+    height: rem-calc(60);
     padding: rem-calc(6 0);
     text-align: center;
     background: $brand-primary;
@@ -81,8 +82,8 @@
     .logo {
         .ico {
             color: #fff;
-            font-size: rem-calc(22);
-            line-height: 2.1;
+            font-size: rem-calc(26);
+            line-height: 1.8;
 
             @include screen($medium) {
                 font-size: rem-calc(40);
