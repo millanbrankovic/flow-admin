@@ -1,0 +1,95 @@
+// Sales Insight
+//------------------------------------------------------------
+//
+
+
+.sales-insight {
+    @include screen($medium) {
+        @include col(8);
+        padding-left: $col-gutter;
+    }
+}
+
+.sales-analytics {
+    .sales-analytics-chart {
+        @extend %clearfix;
+
+        @include screen($large) {
+            min-height: rem-calc(200);
+        }
+    }
+
+    .analytics-chart {
+        float: left;
+        width: 100%;
+        margin: rem-calc(20 0 0);
+
+        @include screen($medium) {
+            width: 70%;
+        }
+
+        @include screen($large) {
+            width: 73%;
+        }
+    }
+
+    .piecharts {
+        float: left;
+        width: 100%;
+        text-align: center;
+
+        @include screen($medium) {
+            width: auto;
+            margin: rem-calc(20 0 0 15);
+            text-align-last: auto;
+        }
+
+        .chart {
+            @include same-size(rem-calc(80));
+            margin: rem-calc(10 50 10 0);
+            display: inline-block;
+            position: relative;
+
+            @include screen($medium) {
+                display: block;
+                margin: rem-calc(10 0);
+            }
+        }
+
+        .percent {
+            top: 50%;
+            left: 50%;
+            margin: rem-calc(-12 0 0 0);
+            position: absolute;
+            font-family: $base-font-light;
+            @include transform(translateX(-50%));
+
+            &:after {
+                content: "%";
+            }
+        }
+
+        .green {
+            .percent {
+                color: $green-color;
+            }
+        }
+
+        .blue {
+            .percent {
+                color: $blue-color;
+            }
+        }
+
+        .label {
+            top: 50%;
+            left: rem-calc(80);
+            color: $base-font-color;
+            font-weight: 700;
+            font-size: rem-calc(12);
+            position: absolute;
+            @include transform(translateY(-50%));
+        }
+    }
+}
+

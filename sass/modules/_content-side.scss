@@ -1,0 +1,38 @@
+// Content Side
+//------------------------------------------------------------
+//
+
+
+.content-side {
+    @include screen($medium) {
+        padding: 0 $col-gutter;
+    }
+
+    @include screen($large) {
+        @include col(3);
+        padding-left: $col-gutter;
+        padding-right: $col-gutter;
+    }
+
+    .custom-inputs {
+        vertical-align: middle;
+
+        .check {
+            margin: rem-calc(0 8 0 0);
+        }
+    }
+
+    .tiny-title {
+        width: 60%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .actions {
+        .ico {
+            cursor: pointer;
+            margin-left: rem-calc(5);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+// Global Insight
+//------------------------------------------------------------
+//
+
+
+.global-insight {
+    @include screen($medium) {
+        @include col(8);
+        padding-left: $col-gutter;
+    }
+}
+
+
+// TODO: Delete later
+.global-market-chart {
+    height: 219px;
+}

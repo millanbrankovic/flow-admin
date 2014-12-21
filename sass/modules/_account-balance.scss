@@ -1,0 +1,37 @@
+// Account Balance
+//------------------------------------------------------------
+//
+
+
+.account-list {
+    margin: rem-calc(20 0 0);
+
+    li {
+        @extend %clearfix;
+        padding: rem-calc(0 0 5);
+        margin: rem-calc(0 0 20);
+        border-bottom: $base-border;
+
+        &:last-child {
+            margin: rem-calc(0 0 5);
+        }
+    }
+
+    .info {
+        float: left;
+        font-weight: 700;
+        color: $base-font-color;
+        font-size: rem-calc(12);
+    }
+
+    .value {
+        float: right;
+        max-width: rem-calc(130);
+        text-align: right;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $brand-primary;
+        font-size: rem-calc(13);
+    }
+}

@@ -1,0 +1,99 @@
+// Current Insight
+//------------------------------------------------------------
+//
+
+
+.current-insight {
+    @include screen($medium) {
+        @include col(4);
+    }
+
+    .ico-big {
+        top: 50%;
+        right: rem-calc(15);
+        position: absolute;
+        padding: rem-calc(10);
+        border: 2px solid $gray-color;
+        border-radius: 100px;
+        @include transform(translateY(-50%));
+    }
+
+    .sum {
+        margin: 0;
+        padding: rem-calc(20 0 0);
+        font-size: rem-calc(30);
+        font-weight: 100;
+        line-height: 1;
+        font-family: $base-font-light;
+
+        @include screen($medium) {
+            padding: rem-calc(40 0 0);
+        }
+
+        @include screen($medium, $portrait) {
+            padding: rem-calc(33 0 0);
+        }
+
+        @include screen($large) {
+            font-size: rem-calc(36);
+            padding: rem-calc(30 0 0);
+        }
+    }
+}
+
+
+.total-sales {
+    .sum,
+    .ico {
+        color: $green-color;
+    }
+
+    .ico-big {
+        border: 2px solid $green-color;
+    }
+}
+
+.total-orders {
+    .sum,
+    .ico {
+        color: $blue-color;
+    }
+
+    .ico-big {
+        border: 2px solid $blue-color;
+    }
+}
+
+.total-customers {
+    .sum,
+    .ico {
+        color: $purple-color;
+    }
+
+    .ico-big {
+        border: 2px solid $purple-color;
+    }
+}
+
+.total-visits {
+    .sum,
+    .ico {
+        color: $yellow-color;
+    }
+
+    .ico-big {
+        border: 2px solid $yellow-color;
+    }
+}
+
+.total-users {
+    .sum,
+    .ico {
+        color: $orange-color;
+    }
+
+    .ico-big {
+        border: 2px solid $orange-color;
+    }
+}
+

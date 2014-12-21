@@ -1,0 +1,21 @@
+// Revenues Insight
+//------------------------------------------------------------
+//
+
+
+
+.revenues-insight {
+    .revenues-charts {
+        @extend %clearfix;
+    }
+
+    .revenue-chart {
+        float: right;
+        width: 65%;
+        margin: rem-calc(10 0 0);
+    }
+
+    canvas {
+
+    }
+}

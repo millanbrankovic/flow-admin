@@ -1,0 +1,107 @@
+// User Accounts
+//------------------------------------------------------------
+//
+
+
+.user-accounts-list {
+    button {
+        @include btn($btn-width: auto, $btn-bg: $green-color, $btn-padding: $btn-tny, $btn-font-size: $btn-tny-font-size);
+        float: left;
+    }
+
+    .users-header {
+        @extend %clearfix;
+        margin: rem-calc(10 0 0);
+        border-bottom: $base-border;
+
+        > span {
+            float: left;
+            padding: rem-calc(10);
+            font-weight: 700;
+            font-size: rem-calc(11);
+
+            &:last-child {
+                float: right;
+            }
+        }
+    }
+
+    .users-list {
+        li {
+            @extend %block-list;
+        }
+    }
+
+    .user-mail {
+        display: block;
+        margin: rem-calc(3 0);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 1.2;
+        font-size: rem-calc(10);
+        color: $base-font-color;
+    }
+
+    .actions {
+        top: 50%;
+        right: rem-calc(10);
+        position: absolute;
+        @include transform(translateY(-50%));
+
+        .ico {
+            font-size: rem-calc(18);
+        }
+    }
+
+    .users-footer {
+        @extend %clearfix;
+        padding: rem-calc(15 10 5);
+    }
+
+    .pagination {
+        float: right;
+        font-size: 0;
+        text-align: center;
+        border: $base-border;
+        border-radius: $global-radius;
+
+        * {
+            color: $base-font-color;
+        }
+
+        li {
+            display: inline-block;
+            border-left: $base-border;
+
+            &:first-child {
+                border-left: none;
+            }
+        }
+
+        a {
+            display: block;
+            height: rem-calc(24);
+            line-height: 1.4;
+            padding: rem-calc(3 7);
+            font-size: rem-calc(12);
+            font-weight: 700;
+
+            &.active,
+            &:active {
+                background: #eff4f8;
+            }
+        }
+
+        .direction {
+            padding: rem-calc(3 0);
+        }
+
+        .ico {
+            margin: rem-calc(0 0 2);
+            line-height: 0;
+            font-size: rem-calc(18);
+        }
+    }
+}
+

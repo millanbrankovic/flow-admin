@@ -1,0 +1,110 @@
+// To-do
+//------------------------------------------------------------
+//
+
+
+.to-do-list {
+    button {
+        @include btn($btn-width: auto, $btn-padding: $btn-tny, $btn-margin: rem-calc(4 0 0), $btn-font-size: $btn-tny-font-size);
+        float: right;
+    }
+}
+
+.to-do {
+    .tabs {
+        float: left;
+        width: 100%;
+        margin: rem-calc(15 0 0);
+    }
+
+    .tab-content {
+        overflow: auto;
+        height: rem-calc(200);
+
+        @include screen($large) {
+            height: rem-calc(174);
+        }
+    }
+
+    .tabs-links {
+        width: 100%;
+        @include display-flex;
+        border-bottom: $base-border;
+
+        li {
+            @include flex(1, 1, auto);
+            top: rem-calc(1);
+            position: relative;
+
+            &.active {
+                border-bottom: 1px solid $blue-color;
+
+                &:before {
+                    content: "";
+                    left: 50%;
+                    bottom: -7px;
+                    border-top: 7px solid $blue-color;
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    position: absolute;
+                    @include transform(translateX(-50%));
+                }
+
+                &:after {
+                    content: "";
+                    left: 50%;
+                    bottom: -5px;
+                    border-top: 6px solid #fff;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    position: absolute;
+                    @include transform(translateX(-50%));
+                }
+
+                a {
+                    color: $dark-color;
+                }
+            }
+        }
+
+        a {
+            padding: rem-calc(10);
+            font-size: rem-calc(11);
+            font-weight: 700;
+            color: $base-font-color;
+        }
+    }
+
+    .tab-content {
+        li {
+            @extend %block-list;
+        }
+    }
+
+    .time {
+        top: rem-calc(5);
+        right: rem-calc(10);
+        color: $gray-color;
+        font-size: rem-calc(9);
+        position: absolute;
+
+        .ico {
+            font-size: rem-calc(12);
+        }
+    }
+
+    .actions {
+        right: rem-calc(10);
+        bottom: rem-calc(4);
+        position: absolute;
+
+        .ico {
+            font-size: rem-calc(17);
+
+            @include screen($medium) {
+                font-size: rem-calc(15);
+            }
+        }
+    }
+}
+

@@ -49,24 +49,7 @@
 
 .caption {
     margin: 0;
-}
-
-
-.sum {
-    margin: rem-calc(20 0 0);
-    font-size: rem-calc(30);
-    font-weight: 100;
-    line-height: 1;
-    font-family: $base-font-light;
-
-    @include screen($medium) {
-        margin: rem-calc(30 0 0);
-    }
-
-    @include screen($large) {
-        font-size: rem-calc(36);
-        margin: rem-calc(38 0 0);
-    }
+    color: $base-font-color;
 }
 
 
