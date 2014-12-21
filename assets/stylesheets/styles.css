@@ -2002,6 +2002,9 @@ input[type="radio"] + label .check:after {
     width: 73%;
   }
 }
+.sales-analytics .analytics-chart canvas {
+  width: 100% !important;
+}
 .sales-analytics .piecharts {
   float: left;
   width: 100%;

@@ -263,6 +263,10 @@
         @include screen($large) {
             width: 73%;
         }
+
+        canvas {
+            width: 100% !important;
+        }
     }
 
     .piecharts {
