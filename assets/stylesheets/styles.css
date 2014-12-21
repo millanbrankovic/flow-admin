@@ -1982,6 +1982,11 @@ input[type="radio"] + label .check:after {
   height: 190px;
 }
 
+@media (min-width: 1025px) {
+  .sales-analytics .sales-analytics-chart {
+    min-height: 12.5rem;
+  }
+}
 .sales-analytics .analytics-chart {
   float: left;
   width: 100%;
@@ -1995,7 +2000,6 @@ input[type="radio"] + label .check:after {
 @media (min-width: 1025px) {
   .sales-analytics .analytics-chart {
     width: 73%;
-    min-height: 12.5rem;
   }
 }
 .sales-analytics .piecharts {

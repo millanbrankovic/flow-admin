@@ -245,6 +245,10 @@
 .sales-analytics {
     .sales-analytics-chart {
         @extend %clearfix;
+
+        @include screen($large) {
+            min-height: rem-calc(200);
+        }
     }
 
     .analytics-chart {
@@ -258,7 +262,6 @@
 
         @include screen($large) {
             width: 73%;
-            min-height: rem-calc(200);
         }
     }
 
