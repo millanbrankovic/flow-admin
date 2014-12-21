@@ -169,17 +169,17 @@ Licensed under the BSD-2-Clause License.
       dateFormat: null,
       axes: true,
       grid: true,
-      gridLineColor: '#aaa',
+      gridLineColor: '#e4ebef',
       gridStrokeWidth: 0.5,
-      gridTextColor: '#888',
-      gridTextSize: 12,
-      gridTextFamily: 'sans-serif',
-      gridTextWeight: 'normal',
-      hideHover: false,
+      gridTextColor: '#94b3cd',
+      gridTextSize: 10,
+      gridTextFamily: 'open_sanslight',
+      gridTextWeight: '100',
+      hideHover: true,
       yLabelFormat: null,
       xLabelAngle: 0,
       numLines: 5,
-      padding: 25,
+      padding: 12,
       parseTime: true,
       postUnits: '',
       preUnits: '',
@@ -738,17 +738,17 @@ Licensed under the BSD-2-Clause License.
     };
 
     Line.prototype.defaults = {
-      lineWidth: 3,
+      lineWidth: 1,
       pointSize: 4,
-      lineColors: ['#0b62a4', '#7A92A3', '#4da74d', '#afd8f8', '#edc240', '#cb4b4b', '#9440ed'],
-      pointStrokeWidths: [1],
+      lineColors: ['#67d481', '#4fc5ea', '#4da74d', '#afd8f8', '#edc240', '#cb4b4b', '#9440ed'],
+      pointStrokeWidths: [1.5],
       pointStrokeColors: ['#ffffff'],
-      pointFillColors: [],
+      pointFillColors: ['#1d9f3c', '#008cee'],
       smooth: true,
       xLabels: 'auto',
       xLabelFormat: null,
       xLabelMargin: 24,
-      hideHover: false
+      hideHover: true
     };
 
     Line.prototype.calc = function() {

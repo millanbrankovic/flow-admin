@@ -256,7 +256,7 @@ th {
   clear: both;
 }
 
-.datepicker-single:before, .content:before, .panel:before, .user-accounts-list .users-header:before, .user-accounts-list .users-footer:before, .account-list li:before, .login-form li:before, .datepicker-single:after, .content:after, .panel:after, .user-accounts-list .users-header:after, .user-accounts-list .users-footer:after, .account-list li:after, .login-form li:after {
+.content:before, .panel:before, .user-accounts-list .users-header:before, .user-accounts-list .users-footer:before, .account-list li:before, .login-form li:before, .content:after, .panel:after, .user-accounts-list .users-header:after, .user-accounts-list .users-footer:after, .account-list li:after, .login-form li:after {
   content: "";
   display: table;
   clear: both;
@@ -1000,221 +1000,211 @@ input[type="radio"] + label .check:after {
   display: block;
 }
 
-.datepicker {
-  padding: 0;
-  margin: 0;
-  height: 1.875rem;
-  border: none;
-  cursor: pointer;
-  text-align: right;
-  padding-right: 1.875rem;
-  display: inline-block;
-  vertical-align: middle;
-  background: transparent;
-}
-.datepicker:active, .datepicker:focus {
-  box-shadow: none;
-  background: transparent;
-}
-
-.datepicker-single {
-  top: 3.6875rem !important;
-  left: auto !important;
-  right: 3.125rem !important;
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+.pika-single {
   z-index: 9999;
   display: block;
   position: relative;
-  color: #94b3cd;
+  color: #333;
   background: #fff;
-  border: 1px solid #d3dde5;
-  border-radius: 2px;
-}
-@media (min-width: 641px) {
-  .datepicker-single {
-    right: 7.125rem !important;
-  }
-}
-@media (min-width: 1025px) {
-  .datepicker-single {
-    top: 3.75rem !important;
-  }
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.datepicker-single.is-hidden {
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+  content: " ";
+  display: table;
+}
+
+.pika-single:after {
+  clear: both;
+}
+
+.pika-single {
+  *zoom: 1;
+}
+
+.pika-single.is-hidden {
   display: none;
 }
 
-.datepicker-single.is-bound {
+.pika-single.is-bound {
   position: absolute;
   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
-.datepicker-holder {
+.pika-lendar {
   float: left;
-  width: 15rem;
-  margin: 0.5rem;
+  width: 240px;
+  margin: 8px;
 }
 
-.datepicker-title {
+.pika-title {
   position: relative;
   text-align: center;
 }
-.datepicker-title select {
-  margin: 0;
-  top: 0.3125rem;
-  left: 0;
-  opacity: 0;
-  z-index: 9998;
-  cursor: pointer;
-  position: absolute;
-}
 
-.datepicker-label {
-  margin: 0;
-  padding: 0.3125rem 0.1875rem;
+.pika-label {
   display: inline-block;
+  *display: inline;
   position: relative;
   z-index: 9999;
   overflow: hidden;
-  font-size: 0.875rem;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
   line-height: 20px;
-  font-weight: 700;
-  background: #fff;
+  font-weight: bold;
+  background-color: #fff;
 }
 
-.datepicker-prev,
-.datepicker-next {
+.pika-title select {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9998;
+  margin: 0;
+  left: 0;
+  top: 5px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.pika-prev,
+.pika-next {
   display: block;
   cursor: pointer;
   position: relative;
   outline: none;
   border: 0;
   padding: 0;
-  width: 1.25rem;
-  height: 1.875rem;
-  background: transparent;
-}
-.datepicker-prev .ico,
-.datepicker-next .ico {
-  margin: 0;
-  width: 1.875rem;
-  color: #d3dde5;
-  font-size: 1.625rem !important;
-  position: relative;
-}
-
-.datepicker-prev .ico {
-  left: -0.375rem;
+  width: 20px;
+  height: 30px;
+  /* hide text using text-indent trick, using width value (it's enough) */
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  opacity: .5;
+  *position: absolute;
+  *top: 0;
 }
 
-.datepicker-next .ico {
-  right: 0.25rem;
+.pika-prev:hover,
+.pika-next:hover {
+  opacity: 1;
 }
 
-.datepicker-prev:hover,
-.datepicker-next:hover {
-  background: transparent;
-}
-
-.datepicker-prev,
-.is-rtl .datepicker-next {
+.pika-prev,
+.is-rtl .pika-next {
   float: left;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");
+  *left: 0;
 }
 
-.datepicker-next,
-.is-rtl .datepicker-prev {
+.pika-next,
+.is-rtl .pika-prev {
   float: right;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");
+  *right: 0;
 }
 
-.datepicker-prev.is-disabled,
-.datepicker-next.is-disabled {
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
   cursor: default;
   opacity: .2;
 }
 
-.datepicker-select {
+.pika-select {
   display: inline-block;
+  *display: inline;
 }
 
-.datepicker-table {
+.pika-table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   border: 0;
 }
 
-.datepicker-table th,
-.datepicker-table td {
+.pika-table th,
+.pika-table td {
   width: 14.285714285714286%;
   padding: 0;
 }
 
-.datepicker-table th {
+.pika-table th {
   color: #999;
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 25px;
   font-weight: bold;
   text-align: center;
 }
 
-.datepicker-button {
+.pika-button {
   cursor: pointer;
   display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   outline: none;
   border: 0;
   margin: 0;
   width: 100%;
-  padding: 0.3125rem;
-  color: #94b3cd;
-  font-size: 0.75rem;
+  padding: 5px;
+  color: #666;
+  font-size: 12px;
   line-height: 15px;
-  text-align: center;
-  background: transparent;
-  border-radius: 0;
+  text-align: right;
+  background: #f5f5f5;
 }
 
-.datepicker-week {
-  font-size: 0.6875rem;
+.pika-week {
+  font-size: 11px;
   color: #999;
 }
 
-.is-today .datepicker-button {
+.is-today .pika-button {
   color: #33aaff;
   font-weight: bold;
 }
 
-.is-selected .datepicker-button {
+.is-selected .pika-button {
   color: #fff;
   font-weight: bold;
-  background: #ee6e73;
+  background: #33aaff;
+  box-shadow: inset 0 1px 3px #178fe5;
+  border-radius: 3px;
 }
 
-.is-selected .datepicker-button:hover {
-  background: #ee6e73;
-}
-
-.is-disabled .datepicker-button {
+.is-disabled .pika-button {
   pointer-events: none;
   cursor: default;
   color: #999;
   opacity: .3;
 }
 
-.datepicker-button:hover {
-  background: #ecf0f1;
-  box-shadow: none;
-}
-
-.datepicker-button:active,
-.datepicker-button:focus {
-  border: none;
+.pika-button:hover {
+  color: #fff !important;
+  background: #ff8000 !important;
+  box-shadow: none !important;
+  border-radius: 3px !important;
 }
 
 /* styling for abbr */
-.datepicker-table abbr {
-  cursor: default;
-  color: #445d72;
+.pika-table abbr {
   border-bottom: none;
+  cursor: help;
 }
 
 .overlay {
@@ -1323,32 +1313,6 @@ input[type="radio"] + label .check:after {
   .accordion {
     display: block !important;
   }
-}
-
-.morris-hover {
-  position: absolute;
-  z-index: 1000;
-}
-
-.morris-hover.morris-default-style {
-  border-radius: 10px;
-  padding: 6px;
-  color: #666;
-  background: rgba(255, 255, 255, 0.8);
-  border: solid 2px rgba(230, 230, 230, 0.8);
-  font-family: sans-serif;
-  font-size: 12px;
-  text-align: center;
-}
-
-.morris-hover.morris-default-style .morris-hover-row-label {
-  font-weight: bold;
-  margin: 0.25em 0;
-}
-
-.morris-hover.morris-default-style .morris-hover-point {
-  white-space: nowrap;
-  margin: 0.1em 0;
 }
 
 .header {
@@ -2014,26 +1978,25 @@ input[type="radio"] + label .check:after {
   border: 2px solid #fad733;
 }
 
-.sales-analytics-chart,
 .global-market-chart,
 .revenues-chart {
   height: 190px;
 }
 
 #analytics-chart {
-  float: left;
-  width: 85%;
+  width: 100%;
   height: 190px;
 }
 
 .sales-analytics .piecharts {
-  float: right;
+  float: left;
+  margin: 0 0 0 0.3125rem;
 }
 .sales-analytics .piecharts .chart {
   width: 5rem;
   height: 5rem;
+  margin: 0.625rem 0;
   display: block;
-  margin: 0 0 0.9375rem;
   position: relative;
 }
 .sales-analytics .piecharts .percent {
@@ -2055,6 +2018,18 @@ input[type="radio"] + label .check:after {
 }
 .sales-analytics .piecharts .blue .percent {
   color: #4fc5ea;
+}
+.sales-analytics .piecharts .label {
+  top: 50%;
+  left: 5rem;
+  color: #94b3cd;
+  font-weight: 700;
+  font-size: 0.75rem;
+  position: absolute;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (min-width: 641px) {

@@ -3,230 +3,204 @@
 //
 
 
-.datepicker {
-    padding: 0;
-    margin: 0;
-    height: rem-calc(30);
-    border: none;
-    cursor: pointer;
-    text-align: right;
-    padding-right: rem-calc(30);
-    display: inline-block;
-    vertical-align: middle;
-    background: transparent;
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
 
-    &:active,
-    &:focus {
-        box-shadow: none;
-        background: transparent;
-    }
-}
-
-.datepicker-single {
-    top: rem-calc(59) !important;
-    left: auto !important;
-    right: rem-calc(50) !important;
+.pika-single {
     z-index: 9999;
     display: block;
     position: relative;
-    color: $base-font-color;
+    color: #333;
     background: #fff;
-    border: 1px solid $gray-color;
-    border-radius: $global-radius;
-    @extend %clearfix;
-
-    @include screen($medium) {
-        right: rem-calc(114) !important;
-    }
-
-    @include screen($large) {
-        top: rem-calc(60) !important;
-    }
+    border: 1px solid #ccc;
+    border-bottom-color: #bbb;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.datepicker-single {
-    &.is-hidden {
-        display: none;
-    }
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+    content: " ";
+    display: table;
+}
+.pika-single:after { clear: both }
+.pika-single { *zoom: 1 }
+
+.pika-single.is-hidden {
+    display: none;
 }
 
-.datepicker-single {
-    &.is-bound {
-        position: absolute;
-        box-shadow: 0 5px 15px -5px rgba(#000, .5);
-    }
+.pika-single.is-bound {
+    position: absolute;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
 }
 
-.datepicker-holder {
+.pika-lendar {
     float: left;
-    width: rem-calc(240);
-    margin: rem-calc(8);
+    width: 240px;
+    margin: 8px;
 }
 
-.datepicker-title {
+.pika-title {
     position: relative;
     text-align: center;
-
-    select {
-        margin: 0;
-        top: rem-calc(5);
-        left: 0;
-        opacity: 0;
-        z-index: 9998;
-        cursor: pointer;
-        position: absolute;
-    }
 }
 
-.datepicker-label {
-    margin: 0;
-    padding: rem-calc(5 3);
+.pika-label {
     display: inline-block;
+    *display: inline;
     position: relative;
     z-index: 9999;
     overflow: hidden;
-    font-size: rem-calc(14);
+    margin: 0;
+    padding: 5px 3px;
+    font-size: 14px;
     line-height: 20px;
-    font-weight: 700;
-    background: #fff;
+    font-weight: bold;
+    background-color: #fff;
+}
+.pika-title select {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9998;
+    margin: 0;
+    left: 0;
+    top: 5px;
+    filter: alpha(opacity=0);
+    opacity: 0;
 }
 
-.datepicker-prev,
-.datepicker-next {
+.pika-prev,
+.pika-next {
     display: block;
     cursor: pointer;
     position: relative;
     outline: none;
     border: 0;
     padding: 0;
-    width: rem-calc(20);
-    height: rem-calc(30);
-    background: transparent;
-
-    .ico {
-        margin: 0;
-        width: rem-calc(30);
-        color: $gray-color;
-        font-size: rem-calc(26)!important;
-        position: relative;
-    }
+    width: 20px;
+    height: 30px;
+    /* hide text using text-indent trick, using width value (it's enough) */
+    text-indent: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    opacity: .5;
+    *position: absolute;
+    *top: 0;
 }
 
-.datepicker-prev {
-    .ico {
-        left: rem-calc(-6);
-    }
+.pika-prev:hover,
+.pika-next:hover {
+    opacity: 1;
 }
 
-.datepicker-next {
-    .ico {
-        right: rem-calc(4);
-    }
-}
-
-.datepicker-prev:hover,
-.datepicker-next:hover {
-    background: transparent;
-}
-
-.datepicker-prev,
-.is-rtl .datepicker-next {
+.pika-prev,
+.is-rtl .pika-next {
     float: left;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+    *left: 0;
 }
 
-.datepicker-next,
-.is-rtl .datepicker-prev {
+.pika-next,
+.is-rtl .pika-prev {
     float: right;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+    *right: 0;
 }
 
-.datepicker-prev.is-disabled,
-.datepicker-next.is-disabled {
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
     cursor: default;
     opacity: .2;
 }
 
-.datepicker-select {
+.pika-select {
     display: inline-block;
+    *display: inline;
 }
 
-.datepicker-table {
+.pika-table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     border: 0;
 }
 
-.datepicker-table th,
-.datepicker-table td {
+.pika-table th,
+.pika-table td {
     width: 14.285714285714286%;
     padding: 0;
 }
 
-.datepicker-table th {
+.pika-table th {
     color: #999;
-    font-size: rem-calc(12);
+    font-size: 12px;
     line-height: 25px;
     font-weight: bold;
     text-align: center;
 }
 
-.datepicker-button {
+.pika-button {
     cursor: pointer;
     display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
     outline: none;
     border: 0;
     margin: 0;
     width: 100%;
-    padding: rem-calc(5);
-    color: $base-font-color;
-    font-size: rem-calc(12);
+    padding: 5px;
+    color: #666;
+    font-size: 12px;
     line-height: 15px;
-    text-align: center;
-    background: transparent;
-    border-radius: 0;
+    text-align: right;
+    background: #f5f5f5;
 }
 
-.datepicker-week {
-    font-size: rem-calc(11);
+.pika-week {
+    font-size: 11px;
     color: #999;
 }
 
-.is-today .datepicker-button {
+.is-today .pika-button {
     color: #33aaff;
     font-weight: bold;
 }
 
-.is-selected .datepicker-button {
+.is-selected .pika-button {
     color: #fff;
     font-weight: bold;
-    background: $brand-primary;
+    background: #33aaff;
+    box-shadow: inset 0 1px 3px #178fe5;
+    border-radius: 3px;
 }
 
-.is-selected .datepicker-button:hover {
-    background: $brand-primary;
-}
-
-.is-disabled .datepicker-button {
+.is-disabled .pika-button {
     pointer-events: none;
     cursor: default;
     color: #999;
     opacity: .3;
 }
 
-.datepicker-button:hover {
-    background: $mid-gray;
-    box-shadow: none;
-}
-
-.datepicker-button:active,
-.datepicker-button:focus {
-    border: none;
+.pika-button:hover {
+    color: #fff !important;
+    background: #ff8000 !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
 }
 
 /* styling for abbr */
-.datepicker-table abbr {
-    cursor: default;
-    color: $dark-color;
+.pika-table abbr {
     border-bottom: none;
+    cursor: help;
 }
 

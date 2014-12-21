@@ -111,36 +111,36 @@
 
 
 
-    Morris.Line({
-      element: 'analytics-chart',
-      data: [
-        { y: '2004', a: 14, b: 18 },
-        { y: '2006', a: 58, b: 24 },
-        { y: '2008', a: 32, b: 51 },
-        { y: '2010', a: 61, b: 42 },
-        { y: '2012', a: 63, b: 87 },
-        { y: '2014', a: 82, b: 58 }
-      ],
-      xkey: 'y',
-      ykeys: ['a', 'b'],
-      labels: ['Sales', 'Orders']
+    // Morris.Line({
+    //   element: 'analytics-chart',
+    //   data: [
+    //     { y: '2004', a: 12, b: 20 },
+    //     { y: '2006', a: 58, b: 28 },
+    //     { y: '2008', a: 32, b: 51 },
+    //     { y: '2010', a: 61, b: 42 },
+    //     { y: '2012', a: 63, b: 87 },
+    //     { y: '2014', a: 82, b: 58 }
+    //   ],
+    //   xkey: 'y',
+    //   ykeys: ['a', 'b'],
+    //   labels: ['Sales', 'Orders']
+    // });
+
+
+
+    var picker = new Pikaday(
+    {
+        field: document.getElementById('datepicker'),
+        firstDay: 1,
+        minDate: new Date('2000-01-01'),
+        maxDate: new Date('2020-12-31'),
+        yearRange: [2000,2020],
+        onSelect: function() {
+            var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
+        }
     });
 
-
-
-    var picker = new Datepicker (
-        {
-            field: $('.datepicker')[0],
-            firstDay: 1,
-            minDate: new Date('2000-01-01'),
-            maxDate: new Date('2020-12-31'),
-            yearRange: [2000,2020],
-            onSelect: function() {
-                var date = document.createTextNode(this.getMoment().format('Do MMMM YYYY') + ' ');
-            }
-        });
-
-        picker.setMoment(moment().dayOfYear(366));
+    picker.setMoment(moment().dayOfYear(366));
 
 
 })();
