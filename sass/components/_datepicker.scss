@@ -74,6 +74,7 @@
         opacity: 0;
         z-index: 9998;
         cursor: pointer;
+        visibility: hidden;
         position: absolute;
     }
 }
@@ -94,18 +95,22 @@
 .pika-prev,
 .pika-next {
     padding: 0;
+    top: rem-calc(-4);
     width: rem-calc(20);
-    height: rem-calc(30);
+    height: rem-calc(34);
     display: block;
     cursor: pointer;
     position: relative;
     outline: none;
-    border: 0;
+    border: none;
     color: $gray-color;
-    font-size: rem-calc(26);
+    font-size: rem-calc(22);
     background: transparent;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
+        border: none;
         background: transparent;
     }
 }

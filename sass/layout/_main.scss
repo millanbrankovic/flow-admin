@@ -240,50 +240,48 @@
     height: 190px;
 }
 
-#analytics-chart {
-    // float: left;
-    // width: 76%;
-    width: 100%;
-    height: 190px;
-
-    // .morris-hover {
-    //     z-index: 1000;
-    //     position: absolute;
-
-    //     &.morris-default-style {
-    //         color: $base-font-color;
-    //         padding: rem-calc(5 10);
-    //         border-radius: $global-radius;
-    //         font-family: $base-font-regular;
-    //         font-size: rem-calc(12);
-    //         text-align:center;
-    //         background: rgba(#fff, .95);
-    //         border: solid 2px $gray-color;
-
-    //         .morris-hover-row-label {
-    //             margin: rem-calc(0 0 5 0);
-    //             font-weight: 700;
-    //         }
-
-    //         .morris-hover-point {
-    //             margin: rem-calc(2 0);
-    //             white-space: nowrap;
-    //         }
-    //     }
-    // }
-}
 
 // Sales Insight
 .sales-analytics {
+    .sales-analytics-chart {
+        @extend %clearfix;
+    }
+
+    .analytics-chart {
+        float: left;
+        width: 100%;
+        margin: rem-calc(20 0 0);
+
+        @include screen($medium) {
+            width: 70%;
+        }
+
+        @include screen($large) {
+            width: 73%;
+        }
+    }
+
     .piecharts {
         float: left;
-        margin: rem-calc(0 0 0 5);
+        width: 100%;
+        text-align: center;
+
+        @include screen($medium) {
+            width: auto;
+            margin: rem-calc(20 0 0 15);
+            text-align-last: auto;
+        }
 
         .chart {
             @include same-size(rem-calc(80));
-            margin: rem-calc(10 0);
-            display: block;
+            margin: rem-calc(10 50 10 0);
+            display: inline-block;
             position: relative;
+
+            @include screen($medium) {
+                display: block;
+                margin: rem-calc(10 0);
+            }
         }
 
         .percent {

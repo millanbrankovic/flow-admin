@@ -7,6 +7,7 @@
 
 
 
+    // Nav Toggle
     $(".nav-toggle").on('click', function(e) {
         e.preventDefault();
 
@@ -16,17 +17,22 @@
 
 
 
+    // Overlay
     $(".overlay").on('click touchmove', function() {
         $('body').removeClass('toggle');
     });
 
 
 
+    // Toggle
     $(".main-nav a").on('click', function() {
         $('a').removeClass('active');
         $(this).addClass('active');
     });
 
+
+
+    // Accordion
     $(".ac-trigger").on('click', function() {
         $(".ac-trigger").removeClass('active');
         $(".accordion").slideUp(400);
@@ -39,6 +45,7 @@
 
 
 
+    // Search Form
     var removeClass = true;
     $(".submit").on('click', function() {
         $(".search-form").addClass('push');
@@ -58,6 +65,7 @@
 
 
 
+    // Login Form
     $(".login-form-inputs").on('focus', function(e){
         $(this).parent().addClass('active');
     });
@@ -76,6 +84,7 @@
 
 
 
+    // Tabs
     $(".tabs-links a").on('click', function(e)  {
         var currentAttrValue = $(this).attr('href');
 
@@ -88,6 +97,7 @@
 
 
 
+    // Easypiechart
     $('.chart.blue').easyPieChart({
         barColor: '#4fc5ea',
 
@@ -111,23 +121,45 @@
 
 
 
-    // Morris.Line({
-    //   element: 'analytics-chart',
-    //   data: [
-    //     { y: '2004', a: 12, b: 20 },
-    //     { y: '2006', a: 58, b: 28 },
-    //     { y: '2008', a: 32, b: 51 },
-    //     { y: '2010', a: 61, b: 42 },
-    //     { y: '2012', a: 63, b: 87 },
-    //     { y: '2014', a: 82, b: 58 }
-    //   ],
-    //   xkey: 'y',
-    //   ykeys: ['a', 'b'],
-    //   labels: ['Sales', 'Orders']
-    // });
+    // Analytics Chart
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var lineChartData = {
+    labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
+    datasets : [
+        {
+            label: "Sales",
+            fillColor : "rgba(103, 212, 129, 0.3)",
+            strokeColor : "#67d481",
+            pointColor : "#1d9f3c",
+            pointStrokeColor : "#fff",
+            pointHighlightFill : "#67d481",
+            pointHighlightStroke : "#1d9f3c",
+            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        },
+        {
+            label: "Orders",
+            fillColor : "rgba(79, 197, 234, 0.3)",
+            strokeColor : "#4fc5ea",
+            pointColor : "#008cee",
+            pointStrokeColor : "#fff",
+            pointHighlightFill : "$4fc5ea",
+            pointHighlightStroke : "#008cee",
+            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        }
+    ]
+
+    }
+
+        window.onload = function(){
+        var ctx = document.getElementById("analytics-chart").getContext("2d");
+        window.myLine = new Chart(ctx).Line(lineChartData, {
+            responsive: true
+        });
+    }
 
 
 
+    // Datepicker
     var picker = new Pikaday(
     {
         field: document.getElementById('datepicker'),
