@@ -256,7 +256,7 @@ th {
   clear: both;
 }
 
-.pika-single:before, .content:before, .panel:before, .sales-analytics .sales-analytics-chart:before, .user-accounts-list .users-header:before, .user-accounts-list .users-footer:before, .account-list li:before, .login-form li:before, .pika-single:after, .content:after, .panel:after, .sales-analytics .sales-analytics-chart:after, .user-accounts-list .users-header:after, .user-accounts-list .users-footer:after, .account-list li:after, .login-form li:after {
+.pika-single:before, .content:before, .panel:before, .sales-analytics .sales-analytics-chart:before, .revenues-insight .revenues-charts:before, .user-accounts-list .users-header:before, .user-accounts-list .users-footer:before, .account-list li:before, .login-form li:before, .pika-single:after, .content:after, .panel:after, .sales-analytics .sales-analytics-chart:after, .revenues-insight .revenues-charts:after, .user-accounts-list .users-header:after, .user-accounts-list .users-footer:after, .account-list li:after, .login-form li:after {
   content: "";
   display: table;
   clear: both;
@@ -648,6 +648,12 @@ img {
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
+}
+
+canvas {
+  width: 100% !important;
+  max-width: 56.25rem;
+  height: auto !important;
 }
 
 a {
@@ -1858,32 +1864,6 @@ input[type="radio"] + label .check:after {
   }
 }
 
-@media (min-width: 641px) {
-  .current-insight {
-    width: 33.33333%;
-  }
-}
-.current-insight .ico-big {
-  top: 50%;
-  right: 0.9375rem;
-  position: absolute;
-  padding: 0.625rem;
-  border: 2px solid #d3dde5;
-  border-radius: 100px;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-@media (min-width: 641px) {
-  .sales-insight,
-  .global-insight {
-    width: 66.66667%;
-    padding-left: 0.9375rem;
-  }
-}
-
 .panel {
   margin: 0 0 0.9375rem;
   padding: 0.625rem;
@@ -1945,6 +1925,32 @@ input[type="radio"] + label .check:after {
   font-size: 1.125rem;
 }
 
+@media (min-width: 641px) {
+  .current-insight {
+    width: 33.33333%;
+  }
+}
+.current-insight .ico-big {
+  top: 50%;
+  right: 0.9375rem;
+  position: absolute;
+  padding: 0.625rem;
+  border: 2px solid #d3dde5;
+  border-radius: 100px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (min-width: 641px) {
+  .sales-insight,
+  .global-insight {
+    width: 66.66667%;
+    padding-left: 0.9375rem;
+  }
+}
+
 .total-sales .sum,
 .total-sales .ico {
   color: #67d481;
@@ -1977,8 +1983,7 @@ input[type="radio"] + label .check:after {
   border: 2px solid #fad733;
 }
 
-.global-market-chart,
-.revenues-chart {
+.global-market-chart {
   height: 190px;
 }
 
@@ -2001,9 +2006,6 @@ input[type="radio"] + label .check:after {
   .sales-analytics .analytics-chart {
     width: 73%;
   }
-}
-.sales-analytics .analytics-chart canvas {
-  width: 100% !important;
 }
 .sales-analytics .piecharts {
   float: left;
@@ -2061,6 +2063,11 @@ input[type="radio"] + label .check:after {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.revenues-insight .revenue-chart {
+  float: right;
+  width: 70%;
 }
 
 @media (min-width: 641px) {

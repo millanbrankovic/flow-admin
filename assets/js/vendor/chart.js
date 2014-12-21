@@ -1958,19 +1958,19 @@
 		scaleShowGridLines : true,
 
 		//String - Colour of the grid lines
-		scaleGridLineColor : "rgba(0,0,0,.05)",
+		scaleGridLineColor : "#e9eff3",
 
 		//Number - Width of the grid lines
 		scaleGridLineWidth : 1,
 
 		//Boolean - If there is a stroke on each bar
-		barShowStroke : true,
+		barShowStroke : false,
 
 		//Number - Pixel width of the bar stroke
 		barStrokeWidth : 2,
 
 		//Number - Spacing between each of the X value sets
-		barValueSpacing : 5,
+		barValueSpacing : 15,
 
 		//Number - Spacing between data sets within X values
 		barDatasetSpacing : 1,

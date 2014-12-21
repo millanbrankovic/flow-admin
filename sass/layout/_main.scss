@@ -34,6 +34,7 @@
 }
 
 
+
 // Breadcrumbs
 .breadcrumbs {
     padding: rem-calc(15);
@@ -45,6 +46,7 @@
         padding-right: rem-calc(8);
     }
 }
+
 
 
 // Content
@@ -93,30 +95,6 @@
     }
 }
 
-
-.current-insight {
-    @include screen($medium) {
-        @include col(4);
-    }
-
-    .ico-big {
-        top: 50%;
-        right: rem-calc(15);
-        position: absolute;
-        padding: rem-calc(10);
-        border: 2px solid $gray-color;
-        border-radius: 100px;
-        @include transform(translateY(-50%));
-    }
-}
-
-.sales-insight,
-.global-insight {
-    @include screen($medium) {
-        @include col(8);
-        padding-left: $col-gutter;
-    }
-}
 
 
 // Panels
@@ -188,6 +166,36 @@
 }
 
 
+
+// Current Insight
+.current-insight {
+    @include screen($medium) {
+        @include col(4);
+    }
+
+    .ico-big {
+        top: 50%;
+        right: rem-calc(15);
+        position: absolute;
+        padding: rem-calc(10);
+        border: 2px solid $gray-color;
+        border-radius: 100px;
+        @include transform(translateY(-50%));
+    }
+}
+
+
+
+.sales-insight,
+.global-insight {
+    @include screen($medium) {
+        @include col(8);
+        padding-left: $col-gutter;
+    }
+}
+
+
+
 // Current Insight
 .total-sales {
     .sum,
@@ -234,11 +242,12 @@
 }
 
 
+
 // TODO: Delete later
-.global-market-chart,
-.revenues-chart {
+.global-market-chart {
     height: 190px;
 }
+
 
 
 // Sales Insight
@@ -262,10 +271,6 @@
 
         @include screen($large) {
             width: 73%;
-        }
-
-        canvas {
-            width: 100% !important;
         }
     }
 
@@ -330,6 +335,25 @@
 }
 
 
+
+// Revenues Insight
+.revenues-insight {
+    .revenues-charts {
+        @extend %clearfix;
+    }
+
+    .revenue-chart {
+        float: right;
+        width: 70%;
+    }
+
+    canvas {
+
+    }
+}
+
+
+
 // Content Side
 .content-side {
     @include screen($medium) {
@@ -357,6 +381,7 @@
         }
     }
 }
+
 
 
 // To-do
@@ -463,6 +488,7 @@
 }
 
 
+
 // User Accounts
 .user-accounts-list {
     button {
@@ -566,6 +592,7 @@
         }
     }
 }
+
 
 
 // Account Balance

@@ -123,39 +123,58 @@
 
     // Analytics Chart
     var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
-    var lineChartData = {
-    labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
-    datasets : [
-        {
-            label: "Sales",
-            fillColor : "rgba(103, 212, 129, 0.3)",
-            strokeColor : "#67d481",
-            pointColor : "#1d9f3c",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#67d481",
-            pointHighlightStroke : "#1d9f3c",
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-        },
-        {
-            label: "Orders",
-            fillColor : "rgba(79, 197, 234, 0.3)",
-            strokeColor : "#4fc5ea",
-            pointColor : "#008cee",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "$4fc5ea",
-            pointHighlightStroke : "#008cee",
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        var lineChartData = {
+            labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
+            datasets : [
+                {
+                    label: "Sales",
+                    fillColor : "rgba(103, 212, 129, 0.3)",
+                    strokeColor : "#67d481",
+                    pointColor : "#1d9f3c",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#67d481",
+                    pointHighlightStroke : "#1d9f3c",
+                    data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+                },
+                {
+                    label: "Orders",
+                    fillColor : "rgba(79, 197, 234, 0.3)",
+                    strokeColor : "#4fc5ea",
+                    pointColor : "#008cee",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "$4fc5ea",
+                    pointHighlightStroke : "#008cee",
+                    data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+                }
+            ]
         }
-    ]
 
-    }
 
-        window.onload = function(){
-        var ctx = document.getElementById("analytics-chart").getContext("2d");
-        window.myLine = new Chart(ctx).Line(lineChartData, {
+    // Revenues Chart
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+        var barChartData = {
+            labels : ["January","February","March","April","May","June","July"],
+            datasets : [
+                {
+                    fillColor : "rgba(79, 197, 234, .5)",
+                    highlightFill: "rgba(79, 197, 234, .8)",
+                    data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+                }
+            ]
+        }
+
+    // Load Charts
+    window.onload = function() {
+        var ctxLineChart = document.getElementById("analytics-chart").getContext("2d");
+        window.myLine = new Chart(ctxLineChart).Line(lineChartData, {
             responsive: true
         });
+        var ctxBarChart = document.getElementById("revenue-chart").getContext("2d");
+        window.myBar = new Chart(ctxBarChart).Bar(barChartData, {
+            responsive : true
+        });
     }
+
 
 
 

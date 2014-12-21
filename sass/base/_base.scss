@@ -28,6 +28,13 @@ img {
 }
 
 
+canvas {
+    width: 100% !important;
+    max-width: rem-calc(900);
+    height: auto !important;
+}
+
+
 a {
     line-height: 1;
     color: $brand-primary;
