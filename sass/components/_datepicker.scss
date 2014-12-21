@@ -3,119 +3,123 @@
 //
 
 
-/*!
- * Pikaday
- * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
- */
+.datepicker {
+    padding: 0;
+    margin: 0;
+    height: rem-calc(30);
+    border: none;
+    cursor: pointer;
+    text-align: right;
+    padding-right: rem-calc(30);
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+
+    &:active,
+    &:focus {
+        box-shadow: none;
+        background: transparent;
+    }
+}
 
 .pika-single {
+    top: rem-calc(59) !important;
+    left: auto !important;
+    right: rem-calc(50) !important;
     z-index: 9999;
     display: block;
     position: relative;
-    color: #333;
+    color: $base-font-color;
     background: #fff;
-    border: 1px solid #ccc;
-    border-bottom-color: #bbb;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: 1px solid $gray-color;
+    border-radius: $global-radius;
+    @extend %clearfix;
+
+    @include screen($medium) {
+        right: rem-calc(114) !important;
+    }
+
+    @include screen($large) {
+        top: rem-calc(60) !important;
+    }
 }
 
-/*
-clear child float (pika-lendar), using the famous micro clearfix hack
-http://nicolasgallagher.com/micro-clearfix-hack/
-*/
-.pika-single:before,
-.pika-single:after {
-    content: " ";
-    display: table;
-}
-.pika-single:after { clear: both }
-.pika-single { *zoom: 1 }
-
-.pika-single.is-hidden {
-    display: none;
+.pika-single {
+    &.is-hidden {
+        display: none;
+    }
 }
 
-.pika-single.is-bound {
-    position: absolute;
-    box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+.pika-single {
+    &.is-bound {
+        position: absolute;
+        box-shadow: 0 5px 15px -5px rgba(#000, .5);
+    }
 }
 
 .pika-lendar {
     float: left;
-    width: 240px;
-    margin: 8px;
+    width: rem-calc(240);
+    margin: rem-calc(8);
 }
 
 .pika-title {
     position: relative;
     text-align: center;
+
+    select {
+        margin: 0;
+        top: rem-calc(5);
+        left: 0;
+        opacity: 0;
+        z-index: 9998;
+        cursor: pointer;
+        position: absolute;
+    }
 }
 
 .pika-label {
+    margin: 0;
+    padding: rem-calc(5 3);
     display: inline-block;
-    *display: inline;
     position: relative;
     z-index: 9999;
     overflow: hidden;
-    margin: 0;
-    padding: 5px 3px;
-    font-size: 14px;
+    font-size: rem-calc(14);
     line-height: 20px;
-    font-weight: bold;
-    background-color: #fff;
-}
-.pika-title select {
-    cursor: pointer;
-    position: absolute;
-    z-index: 9998;
-    margin: 0;
-    left: 0;
-    top: 5px;
-    filter: alpha(opacity=0);
-    opacity: 0;
+    font-weight: 700;
+    background: #fff;
 }
 
 .pika-prev,
 .pika-next {
+    padding: 0;
+    width: rem-calc(20);
+    height: rem-calc(30);
     display: block;
     cursor: pointer;
     position: relative;
     outline: none;
     border: 0;
-    padding: 0;
-    width: 20px;
-    height: 30px;
-    /* hide text using text-indent trick, using width value (it's enough) */
-    text-indent: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    background-color: transparent;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 75% 75%;
-    opacity: .5;
-    *position: absolute;
-    *top: 0;
-}
+    color: $gray-color;
+    font-size: rem-calc(26);
+    background: transparent;
 
-.pika-prev:hover,
-.pika-next:hover {
-    opacity: 1;
+    &:hover {
+        background: transparent;
+    }
 }
 
 .pika-prev,
 .is-rtl .pika-next {
     float: left;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
-    *left: 0;
 }
 
 .pika-next,
 .is-rtl .pika-prev {
     float: right;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
-    *right: 0;
 }
+
 
 .pika-prev.is-disabled,
 .pika-next.is-disabled {
@@ -125,7 +129,6 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .pika-select {
     display: inline-block;
-    *display: inline;
 }
 
 .pika-table {
@@ -137,13 +140,13 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 
 .pika-table th,
 .pika-table td {
-    width: 14.285714285714286%;
     padding: 0;
+    width: 14.285714285714286%;
 }
 
 .pika-table th {
     color: #999;
-    font-size: 12px;
+    font-size: rem-calc(12);
     line-height: 25px;
     font-weight: bold;
     text-align: center;
@@ -152,23 +155,22 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .pika-button {
     cursor: pointer;
     display: block;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
     outline: none;
     border: 0;
     margin: 0;
     width: 100%;
-    padding: 5px;
-    color: #666;
-    font-size: 12px;
+    padding: rem-calc(5);
+    color: $base-font-color;
+    font-size: rem-calc(12);
     line-height: 15px;
-    text-align: right;
-    background: #f5f5f5;
+    text-align: center;
+    background: transparent;
+    border-radius: 0;
 }
 
 .pika-week {
-    font-size: 11px;
     color: #999;
+    font-size: rem-calc(11);
 }
 
 .is-today .pika-button {
@@ -179,9 +181,11 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .is-selected .pika-button {
     color: #fff;
     font-weight: bold;
-    background: #33aaff;
-    box-shadow: inset 0 1px 3px #178fe5;
-    border-radius: 3px;
+    background: $brand-primary;
+}
+
+.is-selected .pika-button:hover {
+    background: $brand-primary;
 }
 
 .is-disabled .pika-button {
@@ -192,15 +196,18 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 
 .pika-button:hover {
-    color: #fff !important;
-    background: #ff8000 !important;
-    box-shadow: none !important;
-    border-radius: 3px !important;
+    background: $mid-gray;
+    box-shadow: none;
 }
 
-/* styling for abbr */
+.pika-button:active,
+.pika-button:focus {
+    border: none;
+}
+
 .pika-table abbr {
+    cursor: default;
+    color: $dark-color;
     border-bottom: none;
-    cursor: help;
 }
 
