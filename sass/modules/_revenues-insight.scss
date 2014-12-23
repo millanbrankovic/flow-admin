@@ -6,6 +6,7 @@
 
 .revenues-insight {
     .revenues-charts {
+        margin: rem-calc(15 0 0);
         @extend %clearfix;
     }
 
