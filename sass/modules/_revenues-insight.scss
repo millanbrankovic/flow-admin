@@ -11,10 +11,66 @@
     }
 
     .revenue-chart {
+        margin: rem-calc(20 0 0);
+
         @include screen($medium) {
             float: right;
-            width: 65%;
+            width: 75%;
+            margin: 0;
+        }
+    }
+
+    .all-revenues {
+        text-align: center;
+        padding: rem-calc(10 0);
+        background: #f4f7f9;
+
+        @include screen($medium) {
+            float: left;
+            width: 20%;
+            padding: rem-calc(15);
+        }
+
+        h3 {
             margin: rem-calc(10 0 0);
+            color: $blue-color;
+            font: {
+                weight: 400;
+                size: rem-calc(20);
+            }
+            line-height: 1;
+
+            span {
+                display: block;
+                font: {
+                    weight: 100;
+                    size: rem-calc(12);
+                    family: $base-font-regular;
+                }
+                text-transform: none;
+            }
+        }
+
+        .chart {
+            display: inline-block;
+            margin: rem-calc(8);
+
+            @include screen($medium) {
+                display: block;
+                margin: rem-calc(20 0);
+            }
         }
     }
 }
+
+
+.jqstooltip {
+    padding: rem-calc(5 20 15 10) !important;
+    font-family: $base-font-regular;
+    padding: rem-calc(10 20);
+    background: #000;
+    text-align: center !important;
+}
+
+
+

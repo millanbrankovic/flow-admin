@@ -209,5 +209,17 @@
     });
 
 
+
+    $(function() {
+        var salesRevenueChart = [2,4,7,5,6,8,6,10];
+        $('.sales-revenue-chart').sparkline(salesRevenueChart, {type: 'bar', barColor: '#9db3c5'} );
+        var earningsRevenueChart = [5,8,10,6,4,3,4,3];
+        $('.earnings-revenue-chart').sparkline(earningsRevenueChart, {type: 'bar', barColor: '#9db3c5'} );
+        var referalsRevenueChart = [3,4,10,6,7,3,8,4];
+        $('.referals-revenue-chart').sparkline(referalsRevenueChart, {type: 'bar', barColor: '#9db3c5'} );
+    });
+
+
+
 })();
 

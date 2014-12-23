@@ -8,6 +8,12 @@
         @include col(8);
         padding-left: $col-gutter;
     }
+
+    canvas {
+        width: 100% !important;
+        max-width: rem-calc(900);
+        height: auto !important;
+    }
 }
 
 .sales-analytics {
