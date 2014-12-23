@@ -1,0 +1,52 @@
+// World Map
+//------------------------------------------------------------
+//
+
+
+.world-map {
+    width: 100%;
+    height: 100%;
+}
+
+.jqvmap-label {
+    display: none;
+    padding: rem-calc(2 4);
+    color: #fff;
+    font-size: rem-calc(12);
+    position: absolute;
+    background: #000;
+    border-radius: $global-radius;
+}
+
+.jqvmap-zoomin,
+.jqvmap-zoomout {
+    bottom: 0;
+    @include same-size(rem-calc(22));
+    padding: rem-calc(5);
+    font-size: rem-calc(20);
+    color: #fff;
+    cursor: pointer;
+    line-height: .5;
+    text-align: center;
+    position: absolute;
+    background: #000;
+}
+
+.jqvmap-zoomin {
+    bottom: rem-calc(23);
+    border-radius: $global-radius $global-radius 0 0;
+}
+
+.jqvmap-zoomout {
+    border-radius:  0 0 $global-radius $global-radius;
+}
+
+.jqvmap-region {
+    cursor: pointer;
+}
+
+.jqvmap-ajax_response {
+    width: 100%;
+    height: 500px;
+}
+

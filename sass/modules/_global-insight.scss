@@ -10,8 +10,93 @@
     }
 }
 
-
-// TODO: Delete later
-.global-market-chart {
-    height: 219px;
+.global-market {
+    @include screen($large) {
+        height: rem-calc(270);
+    }
 }
+
+.global-market-users {
+    @extend %clearfix;
+    font-size: 0;
+    margin: rem-calc(13 0 0);
+}
+
+.global-market-map {
+    height: rem-calc(205);
+
+    @include screen($medium) {
+        float: left;
+        width: 70%;
+    }
+
+    @include screen($large) {
+        width: 72%;
+    }
+}
+
+.global-market-visitors {
+    margin: rem-calc(15 0 0);
+
+    @include screen($medium) {
+        float: right;
+        width: 27%;
+        margin: 0;
+        top: rem-calc(-40);
+        position: relative;
+    }
+
+    .caption {
+        text-align: right;
+
+        .ico {
+            font-size: rem-calc(18);
+            color: $base-font-color;
+        }
+    }
+
+    .visitors-header {
+        @extend %clearfix;
+        margin: rem-calc(10 0 0);
+        border-bottom: $base-border;
+
+        > span {
+            float: left;
+            padding: rem-calc(10);
+            font-weight: 700;
+            font-size: rem-calc(11);
+
+            &:last-child {
+                float: right;
+            }
+        }
+    }
+
+    .visitors-list {
+        margin: rem-calc(4 0 0);
+
+        li {
+            @extend %clearfix;
+            padding: rem-calc(6 10);
+            border-bottom: $base-border;
+            font-size: rem-calc(11);
+        }
+
+        .country {
+            float: left;
+            color: $base-font-color;
+        }
+
+        .value {
+            float: right;
+            max-width: rem-calc(130);
+            text-align: right;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: $brand-primary;
+        }
+    }
+}
+
+

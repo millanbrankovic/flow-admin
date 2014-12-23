@@ -102,7 +102,7 @@
 			tooltipEvents: ["mousemove", "touchstart", "touchmove", "mouseout"],
 
 			// String - Tooltip background colour
-			tooltipFillColor: "rgba(0,0,0,0.8)",
+			tooltipFillColor: "#000000",
 
 			// String - Tooltip label font declaration for the scale label
 			tooltipFontFamily: "'open_sansregular', 'Helvetica', 'Arial', sans-serif",
@@ -138,7 +138,7 @@
 			tooltipCaretSize: 8,
 
 			// Number - Pixel radius of the tooltip border
-			tooltipCornerRadius: 6,
+			tooltipCornerRadius: 2,
 
 			// Number - Pixel offset from point x to tooltip edge
 			tooltipXOffset: 10,
@@ -1970,7 +1970,7 @@
 		barStrokeWidth : 2,
 
 		//Number - Spacing between each of the X value sets
-		barValueSpacing : 15,
+		barValueSpacing : 5,
 
 		//Number - Spacing between data sets within X values
 		barDatasetSpacing : 1,

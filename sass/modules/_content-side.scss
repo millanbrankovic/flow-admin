@@ -4,6 +4,8 @@
 
 
 .content-side {
+    @extend %col;
+
     @include screen($medium) {
         padding: 0 $col-gutter;
     }

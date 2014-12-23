@@ -10,12 +10,10 @@
     }
 
     .revenue-chart {
-        float: right;
-        width: 65%;
-        margin: rem-calc(10 0 0);
-    }
-
-    canvas {
-
+        @include screen($medium) {
+            float: right;
+            width: 65%;
+            margin: rem-calc(10 0 0);
+        }
     }
 }

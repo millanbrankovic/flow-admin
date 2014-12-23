@@ -4,8 +4,11 @@
 
 
 .current-insight {
+    margin: rem-calc(15 0 0);
+
     @include screen($medium) {
         @include col(4);
+        margin: 0;
     }
 
     .ico-big {
@@ -27,11 +30,11 @@
         font-family: $base-font-light;
 
         @include screen($medium) {
-            padding: rem-calc(40 0 0);
+            padding: rem-calc(41 0 0);
         }
 
         @include screen($medium, $portrait) {
-            padding: rem-calc(33 0 0);
+            padding: rem-calc(34 0 0);
         }
 
         @include screen($large) {

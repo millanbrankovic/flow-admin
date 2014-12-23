@@ -6,7 +6,6 @@
 .main {
     min-height: 100%;
     left: 0;
-    z-index: 1;
     margin: rem-calc(60 0 0);
     overflow-x: hidden;
     position: relative;
@@ -45,12 +44,12 @@
 }
 
 
-.content-main,
+
+
 .current-insight,
 .sales-insight,
 .global-insight,
 .revenues-insight,
-.content-side,
 .to-do-list,
 .user-accounts-list,
 .account-balance-list {
@@ -62,6 +61,8 @@
 
 // Content Main
 .content-main {
+    @extend %col;
+
     @include screen($medium) {
         padding: 0 $col-gutter;
     }
@@ -77,11 +78,11 @@
 
 // Content Inner
 .content-inner {
-    @include screen($medium) {
-        top: 0;
-        padding: 0;
-        display: block;
-    }
+    // @include screen($medium) {
+    //     top: 0;
+    //     padding: 0;
+    //     display: block;
+    // }
 }
 
 
@@ -114,11 +115,7 @@
     }
 
     .title {
-        display: none;
-
-        @include screen($medium) {
-            display: inline-block;
-        }
+        display: inline-block;
 
         .ico {
             font-size: rem-calc(26);

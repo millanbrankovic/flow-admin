@@ -177,7 +177,6 @@
 
 
 
-
     // Datepicker
     var picker = new Pikaday(
     {
@@ -192,6 +191,22 @@
     });
 
     picker.setMoment(moment().dayOfYear(366));
+
+
+
+    // Map
+    $('#world-map').vectorMap({
+        map: 'world_en',
+        backgroundColor: 'transparent',
+        color: '#ffffff',
+        hoverOpacity: 0.7,
+        selectedColor: '#666666',
+        enableZoom: true,
+        showTooltip: true,
+        values: sample_data,
+        scaleColors: ['#b5babb', '#d7e5ea', '#c5cfd2'],
+        normalizeFunction: 'polynomial'
+    });
 
 
 })();
