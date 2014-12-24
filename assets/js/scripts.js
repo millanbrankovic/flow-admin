@@ -32,10 +32,6 @@
 
 
 
-    // Breadcrumbs
-
-
-
     // DropDown
     $(".has-drop-down > a").on('click', function(e) {
         e.preventDefault();
@@ -47,6 +43,22 @@
     $(document).on('click touchmove', function() {
         $(".has-drop-down").removeClass("open");
     });
+
+
+
+    // Sales Insight DropDown
+    $(".period > a").on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(".period").toggleClass("open");
+    });
+
+    $(document).on('click touchmove', function() {
+        $(".period").removeClass("open");
+    });
+
+
 
     // Accordion
     $(".ac-trigger").on('click', function() {

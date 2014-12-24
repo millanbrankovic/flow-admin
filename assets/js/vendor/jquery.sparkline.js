@@ -232,7 +232,7 @@
                 fillColor: '#cdf',
                 defaultPixelsPerValue: 3,
                 width: 'auto',
-                height: 'auto',
+                height: '35px',
                 composite: false,
                 tagValuesAttribute: 'values',
                 tagOptionsPrefix: 'spark',
