@@ -19,11 +19,7 @@
 
     .tab-content {
         overflow: auto;
-        height: rem-calc(200);
-
-        @include screen($large) {
-            height: rem-calc(174);
-        }
+        height: rem-calc(210);
     }
 
     .tabs-links {

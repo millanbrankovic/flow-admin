@@ -7,9 +7,50 @@
     padding: rem-calc(15);
     background: $light-gray;
 
+    h1 {
+        display: inline-block;
+    }
+
     .ico {
         color: $gray-color;
         font-size: rem-calc(28);
         padding-right: rem-calc(8);
     }
 }
+
+.breadcrumbs-links {
+    float: right;
+    font-size: 0;
+    margin: rem-calc(6 0);
+
+    li {
+        display: inline-block;
+        font-size: rem-calc(10);
+
+        @include screen($medium) {
+            font-size: rem-calc(12);
+        }
+
+        &:before {
+            content: "/";
+            margin: rem-calc(0 5 0 8);
+            display: inline-block;
+        }
+
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    a {
+        color: $base-font-color;
+
+        &.active {
+            cursor: text;
+            color: $brand-primary;
+        }
+    }
+}
+

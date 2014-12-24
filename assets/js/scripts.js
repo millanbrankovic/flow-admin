@@ -32,6 +32,15 @@
 
 
 
+    // Breadcrumbs
+    $(".breadcrumbs-links a").on('click', function(e) {
+        e.preventDefault();
+        $('a').removeClass('active');
+        $(this).addClass('active');
+    });
+
+
+
     // Accordion
     $(".ac-trigger").on('click', function() {
         $(".ac-trigger").removeClass('active');
