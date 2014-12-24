@@ -5,11 +5,11 @@
 
 @font-face {
     font-family: 'flow';
-    src:url('../../assets/fonts/flow.eot?l522qd');
-    src:url('../../assets/fonts/flow.eot?#iefixl522qd') format('embedded-opentype'),
-        url('../../assets/fonts/flow.woff?l522qd') format('woff'),
-        url('../../assets/fonts/flow.ttf?l522qd') format('truetype'),
-        url('../../assets/fonts/flow.svg?l522qd#flow') format('svg');
+    src:url('../../assets/fonts/flow.eot?b6y8x');
+    src:url('../../assets/fonts/flow.eot?#iefixb6y8x') format('embedded-opentype'),
+        url('../../assets/fonts/flow.woff?b6y8x') format('woff'),
+        url('../../assets/fonts/flow.ttf?b6y8x') format('truetype'),
+        url('../../assets/fonts/flow.svg?b6y8x#flow') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,7 +29,9 @@
     @include font-smoothing;
 }
 
-
+.ico-show:before {
+    content: "\e60f";
+}
 .ico-arrow-down:before {
     content: "\e600";
 }
@@ -74,9 +76,6 @@
 }
 .ico-favorite:before {
     content: "\e60e";
-}
-.ico-flexy:before {
-    content: "\e60f";
 }
 .ico-labels:before {
     content: "\e610";

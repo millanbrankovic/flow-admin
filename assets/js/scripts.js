@@ -33,13 +33,20 @@
 
 
     // Breadcrumbs
-    $(".breadcrumbs-links a").on('click', function(e) {
+
+
+
+    // DropDown
+    $(".has-drop-down > a").on('click', function(e) {
         e.preventDefault();
-        $('a').removeClass('active');
-        $(this).addClass('active');
+        e.stopPropagation();
+
+        $(".has-drop-down").toggleClass("open");
     });
 
-
+    $(document).on('click touchmove', function() {
+        $(".has-drop-down").removeClass("open");
+    });
 
     // Accordion
     $(".ac-trigger").on('click', function() {

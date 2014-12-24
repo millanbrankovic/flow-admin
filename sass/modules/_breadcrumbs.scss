@@ -21,36 +21,106 @@
 .breadcrumbs-links {
     float: right;
     font-size: 0;
-    margin: rem-calc(6 0);
+
+    @include screen($medium) {
+        margin: rem-calc(6 0);
+    }
 
     li {
-        display: inline-block;
         font-size: rem-calc(10);
+        position: relative;
 
         @include screen($medium) {
             font-size: rem-calc(12);
         }
-
-        &:before {
-            content: "/";
-            margin: rem-calc(0 5 0 8);
-            display: inline-block;
-        }
-
-        &:first-child {
-            &:before {
-                display: none;
-            }
-        }
     }
 
     a {
+        display: block;
         color: $base-font-color;
+
+        @include screen($medium) {
+            display: inline-block;
+        }
 
         &.active {
             cursor: text;
             color: $brand-primary;
         }
     }
+
+    .ico {
+        padding: 0;
+        right: rem-calc(-12);
+        position: relative;
+    }
+
+    .has-drop-down {
+        > a {
+            @include screen($medium) {
+                display: none;
+            }
+        }
+    }
+
+    .drop-down {
+        display: none;
+        top: rem-calc(43);
+        right: 0;
+        z-index: 10;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 6px 6px -4px rgba(#000, .5);
+        border-radius: 0 0 $global-radius $global-radius;
+
+        @include screen($medium) {
+            display: block;
+            top: auto;
+            position: relative;
+            box-shadow: none;
+            background: transparent;
+        }
+
+        li {
+            display: block;
+
+            &:before {
+                display: none;
+            }
+
+            @include screen($medium) {
+                display: inline-block;
+
+                &:before {
+                    content: "/";
+                    margin: rem-calc(0 5 0 8);
+                    display: inline-block;
+                }
+
+                &:first-child {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        a {
+            padding: rem-calc(10);
+
+            @include screen($medium) {
+                padding: 0;
+            }
+        }
+    }
 }
+
+.open {
+    .drop-down {
+        display: block;
+    }
+}
+
+
+
 
