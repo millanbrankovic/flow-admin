@@ -44,7 +44,6 @@
         right: 0;
         z-index: 2;
         min-width: rem-calc(100);
-        padding: rem-calc(5 0);
         position: absolute;
         background: #fff;
         box-shadow: 0 6px 6px -4px rgba(#000, .5);
@@ -53,6 +52,14 @@
         a {
             display: block;
             padding: rem-calc(8 10);
+
+            &:hover {
+                background: $light-gray;
+            }
+
+            &:active {
+                background: $mid-gray;
+            }
         }
     }
 }
