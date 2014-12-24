@@ -39,6 +39,8 @@
 // Content
 .content {
     @extend %clearfix;
+    position: relative;
+    -webkit-transform: translateZ(0);
 
     @include screen($medium) {
         padding: rem-calc(15 0);
