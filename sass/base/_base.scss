@@ -10,7 +10,7 @@
 }
 
 body, html {
-    @include same-size(100%);
+    // @include same-size(100%);
     color: $base-font-color;
     font: {
         size: $base-font-size;
