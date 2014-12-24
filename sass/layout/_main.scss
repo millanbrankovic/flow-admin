@@ -4,15 +4,12 @@
 
 
 .main {
-    // min-height: 100%;
     left: 0;
     margin: rem-calc(60 0 0);
     overflow-x: hidden;
-    // overflow-y: scroll;
     position: relative;
     background: $mid-gray;
     transition: all .2s ease;
-    // -webkit-overflow-scrolling: touch;
 
     @include screen($large) {
         margin-left: rem-calc(270);
