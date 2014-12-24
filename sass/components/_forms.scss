@@ -217,7 +217,7 @@ input[type="radio"] {
         @include user-select(none);
 
         * {
-            transition: all .35s ease;
+            transition: all .25s ease;
         }
 
         .check {

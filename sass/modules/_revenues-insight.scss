@@ -28,7 +28,7 @@
         @include screen($medium) {
             float: left;
             width: 20%;
-            padding: rem-calc(15);
+            padding: rem-calc(20 15);
         }
 
         h3 {

@@ -81,25 +81,6 @@
 
 
 
-    // Login Form
-    $(".login-form-inputs").on('focus', function(e){
-        $(this).parent().addClass('active');
-    });
-
-    $(".login-form-inputs").on('blur', function(e){
-        if (!$(this).val()){
-            $(this).parent().removeClass('active');
-        }
-    });
-
-    $(".login-form-inputs").each(function(i, item){
-        if($(item).val()){
-            $(this).parent().addClass('active');
-        }
-    });
-
-
-
     // Tabs
     $(".tabs-links a").on('click', function(e)  {
         var currentAttrValue = $(this).attr('href');
@@ -194,7 +175,7 @@
 
 
     // Datepicker
-    var picker = new Pikaday(
+    var picker = new Pikaday (
     {
         field: document.getElementById('datepicker'),
         firstDay: 1,

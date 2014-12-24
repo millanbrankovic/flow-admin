@@ -27,12 +27,8 @@
     }
 
     li {
-        font-size: rem-calc(10);
+        font-size: rem-calc(12);
         position: relative;
-
-        @include screen($medium) {
-            font-size: rem-calc(12);
-        }
     }
 
     a {
