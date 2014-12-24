@@ -8,11 +8,9 @@
     min-height: 100%;
     margin: rem-calc(60 0 0);
     overflow-x: hidden;
-    overflow-y: scroll;
     position: relative;
     background: $mid-gray;
     transition: all .2s ease;
-    -webkit-overflow-scrolling: touch;
 
     @include screen($large) {
         margin-left: rem-calc(270);
@@ -39,8 +37,8 @@
 // Content
 .content {
     @extend %clearfix;
-    position: relative;
-    -webkit-transform: translateZ(0);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 
     @include screen($medium) {
         padding: rem-calc(15 0);
