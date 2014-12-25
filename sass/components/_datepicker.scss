@@ -143,18 +143,21 @@
     border: 0;
 }
 
-.pika-table th,
-.pika-table td {
-    padding: 0;
-    width: 14.285714285714286%;
+.pika-table {
+    th, td {
+        padding: 0;
+        width: 14.285714285714286%;
+    }
 }
 
-.pika-table th {
-    color: #999;
-    font-size: rem-calc(12);
-    line-height: 25px;
-    font-weight: bold;
-    text-align: center;
+.pika-table {
+    th {
+        color: #999;
+        font-size: rem-calc(12);
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
 }
 
 .pika-button {
@@ -178,41 +181,57 @@
     font-size: rem-calc(11);
 }
 
-.is-today .pika-button {
-    color: #33aaff;
-    font-weight: bold;
+.is-today {
+    .pika-button {
+        color: #33aaff;
+        font-weight: bold;
+    }
 }
 
-.is-selected .pika-button {
-    color: #fff;
-    font-weight: bold;
-    background: $brand-primary;
+.is-selected {
+    .pika-button {
+        color: #fff;
+        font-weight: bold;
+        background: $brand-primary;
+    }
 }
 
-.is-selected .pika-button:hover {
-    background: $brand-primary;
+.is-selected {
+    .pika-button {
+        &:hover {
+            background: $brand-primary;
+        }
+    }
 }
 
-.is-disabled .pika-button {
-    pointer-events: none;
-    cursor: default;
-    color: #999;
-    opacity: .3;
+.is-disabled {
+    .pika-button {
+        pointer-events: none;
+        cursor: default;
+        color: #999;
+        opacity: .3;
+    }
 }
 
-.pika-button:hover {
-    background: $mid-gray;
-    box-shadow: none;
+.pika-button {
+    &:hover {
+        background: $mid-gray;
+        box-shadow: none;
+    }
 }
 
-.pika-button:active,
-.pika-button:focus {
-    border: none;
+.pika-button {
+    &:active,
+    &:focus {
+        border: none;
+    }
 }
 
-.pika-table abbr {
-    cursor: default;
-    color: $dark-color;
-    border-bottom: none;
+.pika-table {
+    abbr {
+        cursor: default;
+        color: $dark-color;
+        border-bottom: none;
+    }
 }
 
