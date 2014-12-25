@@ -141,8 +141,8 @@
                     strokeColor : "#67d481",
                     pointColor : "#1d9f3c",
                     pointStrokeColor : "#fff",
-                    pointHighlightFill : "#67d481",
-                    pointHighlightStroke : "#1d9f3c",
+                    pointHighlightFill : "#1d9f3c",
+                    pointHighlightStroke : "#67d481",
                     data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
                 },
                 {
@@ -151,8 +151,8 @@
                     strokeColor : "#4fc5ea",
                     pointColor : "#008cee",
                     pointStrokeColor : "#fff",
-                    pointHighlightFill : "$4fc5ea",
-                    pointHighlightStroke : "#008cee",
+                    pointHighlightFill : "$008cee",
+                    pointHighlightStroke : "#4fc5ea",
                     data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
                 }
             ]
