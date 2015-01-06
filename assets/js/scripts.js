@@ -230,20 +230,4 @@
 
 
 
-    // Scroll To Top
-    $("html, body").on('scroll', function() {
-        if ($(this).scrollTop() > 100) {
-            $(".scrollToTop").addClass('fade-in');
-        } else {
-            $(".scrollToTop").removeClass('fade-in');
-        }
-    });
-
-    $(".scrollToTop").on('click', function() {
-        $("html, body").animate({scrollTop : 0}, 300);
-        return false;
-    });
-
-
-
 })();
