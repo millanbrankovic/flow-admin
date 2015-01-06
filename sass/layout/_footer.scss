@@ -28,3 +28,25 @@
         }
     }
 }
+
+.scrollToTop {
+    padding: rem-calc(2);
+    right: rem-calc(15);
+    bottom: rem-calc(15);
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    background: $gray-color;
+    transition: all .4s ease;
+    border-radius: $global-radius;
+
+    .ico {
+        color: #fff;
+    }
+
+    &.fade-in {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
