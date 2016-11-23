@@ -1,3 +1,3 @@
-# Admin Panel Design Concep#t
+## Admin Panel Design Concept
 
-[Demo](http://milanbrankovic.com/flowadmin/dashboard.html#)
+### Demo is available here [Demo](http://milanbrankovic.com/flowadmin/dashboard.html#)
